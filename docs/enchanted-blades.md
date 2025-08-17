@@ -1,8 +1,12 @@
 # The Enchanted Blades
 
-The Enchanted Blades are six legendary katanas forged during a great war, each imbued with immense, world-altering power. It is said a secret seventh blade was also forged in the aftermath.
+The Enchanted Blades are six legendary katanas forged during a great war, each imbued with immense, world-altering power. It is said a secret seventh blade was also forged in the aftermath. These legendary weapons are the key to unlocking their namesake Sorcery.
 
 These blades are the ultimate goal for any warrior or sorcerer. Wielding one is not a simple matter of picking it up; it requires you to form a binding contract with the blade itself, granting you access to its unique and devastating **Sorcery**.
+
+### General Mechanics
+*   **Indestructible & Powerful:** The blades are indestructible and possess high base damage.
+*   **Sheathing:** The blades can be sheathed. Most magical abilities require the blade to be unsheathed.
 
 ## The Blade Contract
 
@@ -11,7 +15,7 @@ When you acquire an Enchanted Blade, you don't just wield it; you form a contrac
 ### Forming a Contract
 The first time you hold an unowned Enchanted Blade in your main hand, a contract is automatically forged.
 - The blade becomes attuned to you, storing your unique signature.
-- You are immediately granted the blade's corresponding Sorcery Type (e.g., holding Enten grants you Enten Sorcery).
+- Your active Sorcery Type is automatically switched to the one corresponding to the blade (e.g., holding Enten grants you Enten Sorcery).
 - A message will appear, confirming the contract, and you will hear a powerful sound as the bond settles.
 
 ### Breaking a Contract
@@ -24,11 +28,15 @@ However, this behavior can be changed. Server administrators or players in singl
 
 ---
 
-## Enten (淵天)
+## Enten 
     
 ![Enten Blade](assets/enten_blade.png)
 
-The "Abyssal Heaven" is the secret seventh Enchanted Blade. Its power is not derived from common elements but from a unique darkness, manifesting as ink-like energy.
+####- **Sorcery:** Forming a contract with Enten is the key to unlocking the **[Enten Sorcery](Sorcery Types\enten.md)**. 
+---
 
-- **Sorcery:** Forming a contract with Enten is the key to unlocking the **[Enten Sorcery](sorcery/enten.md)**. Without this bond, you cannot access its powerful abilities.
-- **Acquisition:** The method of obtaining this blade is a closely guarded secret, a journey that a player must discover for themselves.
+## Tobimune
+
+![Tobimune Blade](assets/tobimune.png)
+
+####- **Sorcery:** Forming a contract with Tobimune is the only way to unlock the **[Tobimune Sorcery](Sorcery Types\tobimune.md)**.

@@ -16,5 +16,6 @@ This wiki will guide you through the key systems of the mod:
 
 - **[Combat Mode](combat.md):** An entirely new combat system with custom attacks, dodges, parries, and a deep mastery progression.
 - **[Sorcery](sorcery.md):** Unleash powerful, unique abilities tied to your chosen Sorcery type.
+- **[Styles](styles.md):** Build up your Style Gauge to unleash spectacular ultimate abilities.
 - **[The Enchanted Blades](enchanted-blades.md):** Legendary weapons of immense power that grant access to their unique Sorcery.
 - **[Commands](commands.md):** A reference for server administrators and testers.
