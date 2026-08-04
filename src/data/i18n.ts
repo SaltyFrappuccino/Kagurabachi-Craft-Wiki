@@ -1,0 +1,17 @@
+export const ui = {
+  search: { en: "Search wiki, controls, commands...", ru: "Поиск по wiki, управлению, командам..." },
+  noResults: { en: "No matching entries.", ru: "Ничего не найдено." },
+  language: { en: "Language", ru: "Язык" },
+  theme: { en: "Theme", ru: "Тема" },
+  dark: { en: "Dark", ru: "Тёмная" },
+  light: { en: "Light", ru: "Светлая" },
+  openMenu: { en: "Open menu", ru: "Открыть меню" },
+  closeMenu: { en: "Close menu", ru: "Закрыть меню" },
+  copied: { en: "Copied", ru: "Скопировано" },
+  copy: { en: "Copy", ru: "Копировать" },
+  assetNote: { en: "Asset placeholder", ru: "Плейсхолдер ассета" },
+  verifiedFrom: {
+    en: "Content references the mod code, Patchouli guide, gamerules, and architecture docs.",
+    ru: "Контент опирается на код мода, Patchouli-гайд, gamerules и архитектурные документы."
+  }
+};
