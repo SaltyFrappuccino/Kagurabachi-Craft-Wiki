@@ -5,12 +5,11 @@ import flameBoneArt from "../assets/FlameBone.png";
 import diAlgodzeArt from "../assets/golden_trident.png";
 import kumeyuriArt from "../assets/kumeyuri_unsheathed.png";
 import magatsumiArt from "../assets/magatsumi_dragonfly_sheathed.png";
+import logoArt from "../assets/renders/kagurabachicraftlogo.png";
 import tobimuneArt from "../assets/tobimune_unsheathed.png";
 
-const base = `${import.meta.env.BASE_URL}mod-assets/`;
-
 export const assets = {
-  logo: `${base}kagurabachicraftlogo.png`,
+  logo: logoArt,
   enten: entenArt,
   cloudGouger: cloudGougerArt,
   flameBone: flameBoneArt,
@@ -18,12 +17,7 @@ export const assets = {
   magatsumi: magatsumiArt,
   tobimune: tobimuneArt,
   coinSorcery: coinSorceryArt,
-  diAlgodze: diAlgodzeArt,
-  sojo: `${base}sojo.png`,
-  samura: `${base}samura.png`,
-  shiba: `${base}shiba.png`,
-  thunder: `${base}particle_thunder.png`,
-  blackFlame: `${base}particle_black_flame.png`
+  diAlgodze: diAlgodzeArt
 };
 
 export const assetPlaceholders = [

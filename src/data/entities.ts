@@ -1,6 +1,10 @@
 import type { EntityEntry } from "../types";
-
-const base = `${import.meta.env.BASE_URL}mod-assets/`;
+import hirotoSogaArt from "../assets/renders/hiroto_soga.png";
+import hiruhikoArt from "../assets/renders/hiruhiko.png";
+import hiyukiArt from "../assets/renders/hiyukitexnew1.png";
+import samuraArt from "../assets/renders/samura.png";
+import shibaArt from "../assets/renders/shiba.png";
+import sojoArt from "../assets/renders/sojo.png";
 
 export const entityEntries: EntityEntry[] = [
   {
@@ -12,7 +16,7 @@ export const entityEntries: EntityEntry[] = [
     recommendedLevel: 12,
     health: 75,
     tags: ["sojo", "hishaku", "hishaku affiliate", "kuregumo", "курегумо", "weather"],
-    asset: `${base}sojo.png`
+    asset: sojoArt
   },
   {
     id: "hiruhiko",
@@ -23,7 +27,7 @@ export const entityEntries: EntityEntry[] = [
     recommendedLevel: 13,
     health: 100,
     tags: ["hiruhiko", "hishaku", "kumeyuri", "illusion"],
-    asset: `${base}hiruhiko.png`
+    asset: hiruhikoArt
   },
   {
     id: "hiyuki",
@@ -34,7 +38,7 @@ export const entityEntries: EntityEntry[] = [
     recommendedLevel: 14,
     health: 125,
     tags: ["hiyuki", "kamunabi", "flame bone", "огненная кость"],
-    asset: `${base}hiyukitexnew1.png`
+    asset: hiyukiArt
   },
   {
     id: "samura",
@@ -45,7 +49,7 @@ export const entityEntries: EntityEntry[] = [
     recommendedLevel: 16,
     health: 125,
     tags: ["samura", "hishaku", "traitor", "предатель", "tobimune", "iai", "suzaku", "судзаку"],
-    asset: `${base}samura.png`
+    asset: samuraArt
   },
   {
     id: "shiba",
@@ -56,7 +60,7 @@ export const entityEntries: EntityEntry[] = [
     recommendedLevel: 16,
     health: 125,
     tags: ["shiba", "boss", "босс", "team chihiro", "teleportation", "hand"],
-    asset: `${base}shiba.png`
+    asset: shibaArt
   },
   {
     id: "hiroto_soga",
@@ -67,6 +71,6 @@ export const entityEntries: EntityEntry[] = [
     recommendedLevel: 18,
     health: 120,
     tags: ["hiroto", "soga", "kamunabi", "kurotsuchi", "gravity"],
-    asset: `${base}hiroto_soga.png`
+    asset: hirotoSogaArt
   }
 ];
