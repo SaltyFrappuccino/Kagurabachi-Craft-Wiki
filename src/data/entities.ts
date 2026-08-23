@@ -47,7 +47,7 @@ export const entityEntries: EntityEntry[] = [
     relation: { en: "Boss · Hishaku affiliate", ru: "Босс · союзник Хисяку" },
     faction: { en: "Hishaku", ru: "Хисяку" },
     sorcery: { en: "Tobimune", ru: "Тобимунэ" },
-    recommendedLevel: 16,
+    recommendedLevel: 18,
     health: 125,
     tags: ["samura_imposter", "samura", "hishaku", "traitor", "предатель", "tobimune", "iai", "suzaku", "судзаку"],
     asset: samuraArt
