@@ -70,7 +70,7 @@ export const entityEntries: EntityEntry[] = [
     sorcery: { en: "Kurotsuchi", ru: "Куротсучи" },
     recommendedLevel: 18,
     health: 120,
-    tags: ["hiroto", "soga", "kamunabi", "kurotsuchi", "gravity"],
+    tags: ["hiroto", "soga", "kamunabi", "kurotsuchi", "gravity", "pressure", "terrain mass", "directional carry", "burning heaven mass"],
     asset: hirotoSogaArt
   }
 ];

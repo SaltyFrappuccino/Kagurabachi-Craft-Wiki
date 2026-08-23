@@ -66,8 +66,8 @@ export const screenshots: ScreenshotEntry[] = [
   {
     src: kurotsuchiIslandBreaker,
     section: "combat",
-    title: { en: "Island Breaker", ru: "Разрушитель островов" },
-    caption: { en: "Kurotsuchi preparing its awakening attack.", ru: "Подготовка пробуждённой атаки Куроцути." },
+    title: { en: "Island Breaker: Burning Heaven Mass", ru: "Разрушитель острова: Пылающая небесная масса" },
+    caption: { en: "Kurotsuchi assembling the enormous burning block mass before its one-shot descent.", ru: "Куротсучи собирает огромную горящую массу из блоков перед её разовым падением." },
     shape: "wide"
   },
   {

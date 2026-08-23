@@ -172,8 +172,8 @@ function SorceryCard({ sorcery, locale, expanded, onToggle }: {
           {sorcery.awakening && (
             <p className="sc2-awakening-note">
               {locale === "ru"
-                ? <>Пробуждение <strong>{sorcery.awakening.ru}</strong>: накопите шкалу до 100% и нажмите <kbd>V</kbd>, чтобы временно усилить набор способностей.{hasAwakenedSet ? " Переключатель выше показывает изменённые приёмы." : ""}</>
-                : <>Awakening <strong>{sorcery.awakening.en}</strong>: charge the meter to 100% and press <kbd>V</kbd> to temporarily empower the ability kit.{hasAwakenedSet ? " Use the switch above to compare the changed abilities." : ""}</>
+                ? <>Пробуждение <strong>{sorcery.awakening.ru}</strong>: накопите шкалу до 100% и нажмите <kbd>V</kbd>, чтобы активировать его особый эффект.{hasAwakenedSet ? " Переключатель выше показывает изменённые приёмы." : ""}</>
+                : <>Awakening <strong>{sorcery.awakening.en}</strong>: charge the meter to 100% and press <kbd>V</kbd> to activate its authored effect.{hasAwakenedSet ? " Use the switch above to compare the changed abilities." : ""}</>
               }
             </p>
           )}
