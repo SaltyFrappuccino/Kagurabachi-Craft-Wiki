@@ -53,8 +53,8 @@ export const faq: FaqEntry[] = [
   {
     question: { en: "Can I use this on a multiplayer server?", ru: "Работает ли это на многопользовательском сервере?" },
     answer: {
-      en: "Yes. Kagurabachi Craft is designed for multiplayer from the ground up. All combat outcomes are server-authoritative, making it fair in PvP. Both players need the mod installed.",
-      ru: "Да. Кагурабати Craft разработан для многопользовательской игры. Все боевые исходы авторитетны серверу, что делает PvP честным. Оба игрока должны иметь мод."
+      en: "Yes. Combat is calculated on the server. Both players need the mod installed.",
+      ru: "Да. Бой рассчитывается на сервере. Мод должен быть установлен у обоих игроков."
     }
   },
   {

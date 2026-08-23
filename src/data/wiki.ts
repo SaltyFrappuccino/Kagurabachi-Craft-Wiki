@@ -12,16 +12,16 @@ export const wikiArticles: WikiArticle[] = [
     },
     body: [
       {
-      en: "Kagurabachi Craft changes Minecraft combat. It adds combat mode, weapon and hand-to-hand styles, signature techniques, parries, clashes, Stability, stamina and block destruction.",
-        ru: "Кагурабати Craft - в первую очередь боевой мод. Он заменяет ванильный бой авторским action-фреймворком: боевой режим, несколько стилей оружия и рукопашного боя, сигнатурные техники, тайминги парирования и столкновений, системы стойки и выносливости, а также полный пайплайн разрушения."
+        en: "Kagurabachi Craft changes Minecraft combat. It adds combat mode, weapon and hand-to-hand styles, signature techniques, parries, clashes, Stability, stamina and block destruction.",
+        ru: "Кагурабати Craft меняет боевую систему Minecraft. Мод добавляет боевой режим, оружейные и рукопашные стили, сигнатурные техники, парирования, столкновения, стабильность, выносливость и разрушение блоков."
       },
       {
         en: "On top of that combat core sits a large library of sorceries - from the canon Enchanted Blades to dozens of standalone abilities like teleportation, illusions, chains, fire, lightning and summons. A survival game mode is currently in development.",
         ru: "Поверх боевого ядра - большая библиотека колдовств: от канонических зачарованных клинков до десятков отдельных способностей вроде телепортации, иллюзий, цепей, огня, молнии и призывов. Режим выживания сейчас в разработке."
       },
       {
-        en: "Major combat NPCs use a shared tactical AI that evaluates range, threat, positioning, defence and cooldowns. Authored effects use the Cascade/Quasar VFX pipeline, with optional Veil shaders for distortion and post-processing.",
-        ru: "Основные боевые NPC используют общий тактический AI, учитывающий дистанцию, угрозу, позицию, защиту и перезарядки. Авторские эффекты работают через VFX-пайплайн Cascade/Quasar, а дополнительные шейдеры Veil отвечают за искажения и постобработку."
+        en: "Major combat NPCs account for range, threats, position, defence and cooldowns. Cascade and Quasar handle their visual effects; Veil adds distortion and post-processing.",
+        ru: "Основные боевые NPC учитывают дистанцию, угрозы, позицию, защиту и перезарядки. За визуальные эффекты отвечают Cascade и Quasar, за искажения и постобработку — Veil."
       }
     ],
     tags: ["overview", "combat", "sorcery"]
@@ -204,7 +204,7 @@ export const wikiArticles: WikiArticle[] = [
         ru: "Когда включено правило kbcBackstabDamage, попадание из задней полусферы цели умножает итоговый входящий урон на 1 + kbcBackstabDamageModifier / 100. По умолчанию бонус равен 25%, поэтому удар на 10 урона становится 12,5. Подходящая боевая цель также даёт 200 очков стиля за удар в спину."
       },
       {
-        en: "Freedom Style has an additional authored rear finish that deals 14 damage and ignores Stability. That technique-specific effect is separate from the global backstab multiplier.",
+        en: "Freedom Style has a separate rear finisher that deals 14 damage and ignores Stability. It is not part of the global backstab multiplier.",
         ru: "У Стиля Свободы дополнительно есть собственный выход за спину на 14 урона, игнорирующий стабильность. Этот эффект техники существует отдельно от глобального множителя удара в спину."
       }
     ],

@@ -32,7 +32,6 @@ const ELEMENT_COLORS: Record<string, string> = {
   yellowchain: "#d4a010",
 };
 
-// Slot → default input binding, shown in the legend.
 const SLOT_KEYS: { slot: string; key: string; ru: string }[] = [
   { slot: "Primary",      key: "R + LMB",   ru: "R + ЛКМ" },
   { slot: "Secondary",    key: "R + RMB",   ru: "R + ПКМ" },
@@ -125,8 +124,6 @@ function SorceryCard({ sorcery, locale, expanded, onToggle }: {
           {sorcery.character[locale] !== "-" && (
             <p className="sc2-character">{sorcery.character[locale]}</p>
           )}
-          <p className="sc2-role">{sorcery.role[locale]}</p>
-          <p className="sc2-summary">{sorcery.summary[locale]}</p>
         </div>
         <button className="sc2-toggle" aria-label="Toggle abilities">
           <span>{expanded ? "▲" : "▼"}</span>
@@ -173,7 +170,7 @@ function SorceryCard({ sorcery, locale, expanded, onToggle }: {
             <p className="sc2-awakening-note">
               {locale === "ru"
                 ? <>Пробуждение <strong>{sorcery.awakening.ru}</strong>: накопите шкалу до 100% и нажмите <kbd>V</kbd>, чтобы активировать его особый эффект.{hasAwakenedSet ? " Переключатель выше показывает изменённые приёмы." : ""}</>
-                : <>Awakening <strong>{sorcery.awakening.en}</strong>: charge the meter to 100% and press <kbd>V</kbd> to activate its authored effect.{hasAwakenedSet ? " Use the switch above to compare the changed abilities." : ""}</>
+                : <>Awakening <strong>{sorcery.awakening.en}</strong>: charge the meter to 100% and press <kbd>V</kbd> to activate its special effect.{hasAwakenedSet ? " Use the switch above to compare the changed abilities." : ""}</>
               }
             </p>
           )}
@@ -189,7 +186,7 @@ export function SorceryGrid({ locale, query = "" }: { locale: Locale; query?: st
 
   const q = query.toLowerCase();
   const filtered = sorceries.filter((s) => {
-    const haystack = `${s.name.en} ${s.name.ru} ${s.role[locale]} ${s.summary[locale]} ${s.character[locale]} ${s.elementLabel[locale]} ${s.abilities.map((a) => a.name[locale]).join(" ")}`.toLowerCase();
+    const haystack = `${s.name.en} ${s.name.ru} ${s.character[locale]} ${s.elementLabel[locale]} ${s.abilities.map((a) => `${a.name[locale]} ${a.desc[locale]}`).join(" ")}`.toLowerCase();
     const matchesQuery = !q || haystack.includes(q);
     const matchesTier = tierFilter === "all" || s.tier === tierFilter;
     return matchesQuery && matchesTier;

@@ -18,8 +18,8 @@ export function HeroPanel({ locale, onSelect }: { locale: Locale; onSelect: (sec
         </h1>
         <p>
           {locale === "en"
-            ? "Controls, combat rules, sorceries, items and progression in one place."
-            : "Управление, правила боя, колдовства, предметы и развитие в одном месте."}
+            ? "Controls, combat, sorceries, items and progression."
+            : "Управление, бой, колдовства, предметы и развитие."}
         </p>
         <div className="hero-actions">
           <button type="button" onClick={() => onSelect("quickstart")}>

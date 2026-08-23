@@ -55,15 +55,15 @@ const sectionMeta: Record<SectionId, { title: Record<Locale, string>; subtitle: 
   },
   sorcery: {
     title: { en: "Sorcery", ru: "Колдовство" },
-    subtitle: { en: "Enchanted Blade kits and the full library of standalone sorceries.", ru: "Наборы зачарованных клинков и полная библиотека отдельных колдовств." }
+    subtitle: { en: "Enchanted Blade kits and standalone sorceries.", ru: "Зачарованные клинки и отдельные колдовства." }
   },
   progression: {
     title: { en: "Character Progression", ru: "Развитие персонажа" },
-    subtitle: { en: "What every level, reputation value, mastery rank and allegiance actually changes.", ru: "На что реально влияют уровни, репутация, мастерство и принадлежность." }
+    subtitle: { en: "Levels, reputation, mastery ranks and allegiance.", ru: "Уровни, репутация, мастерство и принадлежность." }
   },
   entities: {
     title: { en: "Characters & Enemies", ru: "Персонажи и противники" },
-      subtitle: { en: "Actual combatants with faction, sorcery and encounter level.", ru: "Реальные бойцы: фракция, колдовство и уровень встречи." }
+      subtitle: { en: "Factions, sorceries and encounter levels.", ru: "Фракции, колдовства и уровни встреч." }
   },
   movement: {
     title: { en: "Movement", ru: "Движение" },

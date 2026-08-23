@@ -24,7 +24,7 @@ const paths: Array<{
   {
     section: "sorcery", icon: "Sparkles", number: "03",
     title: { en: "Choose a sorcery", ru: "Выбрать колдовство" },
-    text: { en: "Compare every kit, its complete slot layout, role, awakening and WIP status.", ru: "Сравнить все наборы, их слоты, роль, пробуждение и статус готовности." },
+    text: { en: "Browse abilities, slots, awakenings and development status.", ru: "Способности, слоты, пробуждения и статус разработки." },
     meta: { en: "28 kits", ru: "28 наборов" }
   },
   {

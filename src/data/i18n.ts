@@ -8,10 +8,5 @@ export const ui = {
   openMenu: { en: "Open menu", ru: "Открыть меню" },
   closeMenu: { en: "Close menu", ru: "Закрыть меню" },
   copied: { en: "Copied", ru: "Скопировано" },
-  copy: { en: "Copy", ru: "Копировать" },
-  assetNote: { en: "Asset placeholder", ru: "Плейсхолдер ассета" },
-  verifiedFrom: {
-    en: "Content references the mod code, Patchouli guide, gamerules, and architecture docs.",
-    ru: "Контент опирается на код мода, Patchouli-гайд, gamerules и архитектурные документы."
-  }
+  copy: { en: "Copy", ru: "Копировать" }
 };
