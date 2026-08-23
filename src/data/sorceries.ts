@@ -56,7 +56,7 @@ export const sorceries: SorceryEntry[] = [
   {
     id: "kumeyuri",
     name: { en: "Kumeyuri", ru: "Кумэюри" },
-    character: { en: "Hiruhiko", ru: "Хирухико" },
+    character: { en: "Hiruhiko - Kumeyuri", ru: "Хирухико - Кумеюри" },
     element: "illusion",
     elementLabel: { en: "Banquet / Play", ru: "Пир / Игра" },
     tier: "enchanted-blade",
