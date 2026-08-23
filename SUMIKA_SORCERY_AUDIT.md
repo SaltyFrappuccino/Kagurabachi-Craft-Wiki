@@ -1,40 +1,18 @@
 # Sumika sorcery protection audit
 
-`Special / G` uses one registry-driven rule: every attack id owned by a registered sorcery is blocked before the canonical damage, Stability and reaction pipeline. Direct action locks use the same policy at `PlayerActionFlags`. A separate 50% miss roll is then applied to every remaining incoming canonical attack.
+`Special / G` gives its owner one 30% dodge roll per incoming attack. Canonical attacks roll in `AttackData`; raw damage rolls in the damage event, so player targets do not receive a second hidden roll for the same hit. Manifestation presentation no longer grants a temporary blanket invulnerability.
 
-## Enchanted Blade exceptions
+## Guaranteed targeted-technique protection
 
-These sorceries are not nullified. Their damage and direct effects pass through normally, while the independent 50% miss roll still applies:
+Guaranteed protection is explicit rather than inferred from a registered sorcery id. Kurotsuchi is blocked only for these player and NPC actions:
 
-- Enten
-- Cloud Gouger / Kuregumo
-- Kumeyuri
-- Tobimune
-- Magatsumi
+- Primary: `kurotsuchi_gravity_pressure`
+- Supportive 1: `kurotsuchi_wide_gravity_pressure`
+- Supportive 2: `kurotsuchi_gravity_collapse`
+- NPC equivalents with the `npc_` prefix
 
-## Blocked ordinary sorceries
+Kurotsuchi Secondary, Utility, passive pressure and Awakening are not guaranteed misses. Their damage uses the normal 30% roll where it passes through the canonical damage pipeline.
 
-- Adaptation
-- Isou
-- Demon Bite
-- Di Algodze
-- Smoke Axe
-- Shiba Teleportation
-- Flame Bone
-- Twilight Wave
-- Murasama
-- Kurotsuchi
-- Jobaku
-- Gansui
-- Warriors Path
-- Lightning Menace
-- Pine Tree
-- Jikai
-- Yellow Chains
-- Airborne Spikes
-- Storehouse
-- Light
-- Coin
-- Daruma
+Existing direct target rejection remains explicit for Gansui, Shiba Teleportation and Storehouse. Authored action-lock sources are checked separately through `PlayerActionFlags`; they do not turn ordinary melee or all damage from a sorcery user into guaranteed misses.
 
-Sumika itself is excluded from hostile self-interception. New registered sorceries are blocked by default unless they are deliberately added to the Enchanted Blade exception set.
+Self-attacks are excluded. Any new guaranteed immunity must add its stable attack id deliberately; registering a new sorcery never grants automatic blanket protection.
