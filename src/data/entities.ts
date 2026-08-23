@@ -1,5 +1,6 @@
 import type { EntityEntry } from "../types";
 import azamiKamunabiArt from "../assets/renders/azami_kamunabi.png";
+import ariuMikaboshiArt from "../assets/renders/ariu_mikaboshi.png";
 import hirotoSogaArt from "../assets/renders/hiroto_soga.png";
 import hiruhikoArt from "../assets/renders/hiruhiko_kumeyuri.png";
 import hiyukiArt from "../assets/renders/hiyukitexnew1.png";
@@ -84,5 +85,16 @@ export const entityEntries: EntityEntry[] = [
     health: 120,
     tags: ["hiroto", "soga", "kamunabi", "kurotsuchi", "gravity", "pressure", "terrain mass", "directional carry", "burning heaven mass"],
     asset: hirotoSogaArt
+  },
+  {
+    id: "ariu_mikaboshi",
+    title: { en: "Ariu Mikaboshi", ru: "Ариу Микабоси" },
+    relation: { en: "Boss · hostile to every faction", ru: "Босс · враг всех фракций" },
+    faction: { en: "Mikaboshi", ru: "Микабоси" },
+    sorcery: { en: "Sumika", ru: "Сумика" },
+    recommendedLevel: 19,
+    health: 140,
+    tags: ["ariu", "mikaboshi", "ариу", "микабоси", "sumika", "сумика", "true realm", "centipede", "shokoku"],
+    asset: ariuMikaboshiArt
   }
 ];

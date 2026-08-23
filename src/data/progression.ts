@@ -281,5 +281,11 @@ export const clans: ProgressionEntry[] = [
     title: { en: "Kyonagi", ru: "Кьёнаги" },
     summary: { en: "Rare hand-combat lineage with an affinity for Flame Bone.", ru: "Редкая рукопашная линия со склонностью к Пламенной Кости." },
     details: [{ en: "5% birth chance · +15% HP and Stability damage in Hand style · 35% initial Flame Bone chance · guaranteed Flame Bone at level 18.", ru: "Шанс рождения 5% · +15% урона по HP и стабильности в рукопашном стиле · шанс 35% получить Пламенную Кость в начале · гарантия на 18-м уровне." }]
+  },
+  {
+    id: "mikaboshi",
+    title: { en: "Mikaboshi", ru: "Микабоси" },
+    summary: { en: "Placeholder lineage associated with Sumika and Datenseki.", ru: "Заглушка родовой линии, связанной с Сумикой и датенсэки." },
+    details: [{ en: "No birth roll, perk, quest or player bonus is implemented yet. The Mikaboshi combat faction remains separate from the four player contract factions.", ru: "Пока нет стартового шанса, перка, задания или бонуса игроку. Боевая фракция Микабоси остаётся отдельной от четырёх контрактных фракций игроков." }]
   }
 ];
