@@ -4,8 +4,15 @@ export const faq: FaqEntry[] = [
   {
     question: { en: "What version of Minecraft does this mod support?", ru: "Для какой версии Minecraft этот мод?" },
     answer: {
-      en: "Kagurabachi Craft is built for NeoForge 1.21.1. You need NeoForge installed, not Fabric or Forge.",
-      ru: "Кагурабати Craft создан для NeoForge 1.21.1. Вам нужен NeoForge, не Fabric или Forge."
+      en: "Kagurabachi Craft 5.4.0 is built for Minecraft 1.21.1 and requires NeoForge 21.1.217 or newer. Fabric and Forge are not supported.",
+      ru: "Кагурабати Craft 5.4.0 создан для Minecraft 1.21.1 и требует NeoForge 21.1.217 или новее. Fabric и Forge не поддерживаются."
+    }
+  },
+  {
+    question: { en: "Which dependencies are required?", ru: "Какие зависимости нужны?" },
+    answer: {
+      en: "Player Animator 2.0.1+, Patchouli 1.21.1-92+ and Cascade 1.0.x are required. Veil 4.4.1-4.4.x is optional but recommended for the complete shader and distortion effects.",
+      ru: "Обязательны Player Animator 2.0.1+, Patchouli 1.21.1-92+ и Cascade 1.0.x. Veil 4.4.1-4.4.x необязателен, но рекомендуется для полных шейдеров и эффектов искажения."
     }
   },
   {

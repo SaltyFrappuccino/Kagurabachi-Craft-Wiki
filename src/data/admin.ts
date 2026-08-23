@@ -76,6 +76,7 @@ export const gamerules: RuleEntry[] = [
   { key: "kbcAwakeningsEnabled", defaultValue: "true", category: "PLAYER", description: { en: "Enables awakening systems.", ru: "Включает системы пробуждения." } },
   { key: "kbcInfiniteAwakenings", defaultValue: "false", category: "PLAYER", description: { en: "Prevents active awakenings from expiring.", ru: "Не даёт активным пробуждениям завершаться." } },
   { key: "kbcAwakeningDurationTicks", defaultValue: "3600", category: "PLAYER", description: { en: "Awakening duration in ticks.", ru: "Длительность пробуждения в тиках." } },
+  { key: "kbcSumikaTrueRealmCinematicTargets", defaultValue: "10", category: "PLAYER", description: { en: "Maximum number of True Realm targets that receive individual cinematic close-ups; all valid targets are still hit.", ru: "Максимальное число целей Истинного Царства с отдельными крупными планами; удар всё равно получают все допустимые цели." } },
   { key: "kbcPerformanceMode", defaultValue: "false", category: "PLAYER", description: { en: "Enables performance-oriented behavior.", ru: "Включает режим оптимизации производительности." } },
   { key: "kbcDisableAutoMobSpawns", defaultValue: "true", category: "MOBS", description: { en: "Disables automatic mob spawning.", ru: "Отключает автоматическое появление мобов." } },
   { key: "kbcDisableSpawners", defaultValue: "true", category: "MOBS", description: { en: "Disables mob spawners.", ru: "Отключает спавнеры мобов." } },

@@ -18,6 +18,10 @@ export const wikiArticles: WikiArticle[] = [
       {
         en: "On top of that combat core sits a large library of sorceries - from the canon Enchanted Blades to dozens of standalone abilities like teleportation, illusions, chains, fire, lightning and summons. A survival game mode is currently in development.",
         ru: "Поверх боевого ядра - большая библиотека колдовств: от канонических зачарованных клинков до десятков отдельных способностей вроде телепортации, иллюзий, цепей, огня, молнии и призывов. Режим выживания сейчас в разработке."
+      },
+      {
+        en: "Major combat NPCs use a shared tactical AI that evaluates range, threat, positioning, defence and cooldowns. Authored effects use the Cascade/Quasar VFX pipeline, with optional Veil shaders for distortion and post-processing.",
+        ru: "Основные боевые NPC используют общий тактический AI, учитывающий дистанцию, угрозу, позицию, защиту и перезарядки. Авторские эффекты работают через VFX-пайплайн Cascade/Quasar, а дополнительные шейдеры Veil отвечают за искажения и постобработку."
       }
     ],
     tags: ["overview", "combat", "sorcery"]
@@ -212,13 +216,13 @@ export const wikiArticles: WikiArticle[] = [
     section: "combat",
     title: { en: "Awakenings", ru: "Пробуждения" },
     summary: {
-      en: "Some sorceries can Awaken - charge a meter to 100%, press V, and temporarily upgrade your entire kit.",
-      ru: "Некоторые колдовства могут Пробуждаться - заполните шкалу до 100%, нажмите V и временно усильте весь набор."
+      en: "Some sorceries can Awaken - charge a meter to 100% and press V to enter an empowered mode or unleash a one-shot ultimate.",
+      ru: "Некоторые колдовства могут Пробуждаться - заполните шкалу до 100% и нажмите V, чтобы войти в усиленный режим или применить одноразовый ультимейт."
     },
     body: [
       {
-      en: "Some sorceries fill an Awakening meter during combat. At 100%, press V to activate it. Awakening changes or strengthens the ability set for a limited time. Tobimune uses Black Flames, Jikai uses Schizophrenia, and Di Algodze uses Sage of Destruction.",
-      ru: "Некоторые колдовства заполняют шкалу Пробуждения во время боя. При 100% нажмите V. Пробуждение временно меняет или усиливает способности. У Tobimune это Чёрное пламя, у Jikai Шизофрения, у Di Algodze Мудрец разрушения."
+      en: "Some sorceries fill an Awakening meter during combat. At 100%, press V to activate it. Tobimune, Jikai and Di Algodze enter empowered modes, while Sumika's True Realm and Kurotsuchi's Burning Heaven Mass are one-shot cinematic attacks.",
+      ru: "Некоторые колдовства заполняют шкалу Пробуждения во время боя. При 100% нажмите V. Тобимунэ, Дзикай и Ди Аголдзе входят в усиленные режимы, а Истинное Царство Сумики и Пылающая небесная масса Куротсучи являются одноразовыми кинематографичными атаками."
       },
       {
         en: "Server owners control awakenings with gamerules: kbcAwakeningsEnabled toggles the mechanic, kbcAwakeningDurationTicks sets the duration, and kbcInfiniteAwakenings removes the timer entirely.",

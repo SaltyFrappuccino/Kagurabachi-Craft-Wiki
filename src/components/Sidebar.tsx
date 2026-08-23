@@ -23,7 +23,7 @@ export function Sidebar({ locale, active, open, onSelect, onClose }: SidebarProp
           <div>
             <strong>Kagurabachi Craft</strong>
           </div>
-          <span className="brand-version">5.0</span>
+          <span className="brand-version">5.4</span>
         </div>
 
         <nav className="nav-list">
@@ -64,7 +64,7 @@ export function Sidebar({ locale, active, open, onSelect, onClose }: SidebarProp
 
         <div className="sidebar-footer">
           <strong><span className="status-dot" /> {locale === "ru" ? "Стабильный релиз" : "Stable release"}</strong>
-          <span>v5.0.0 / NeoForge 1.21.1</span>
+          <span>v5.4.0 / NeoForge 1.21.1</span>
         </div>
       </aside>
       {open && (

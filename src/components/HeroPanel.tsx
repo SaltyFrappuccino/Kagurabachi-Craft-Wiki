@@ -8,7 +8,7 @@ export function HeroPanel({ locale, onSelect }: { locale: Locale; onSelect: (sec
     <section className="hero-panel">
       <div className="hero-copy">
         <div className="hero-eyebrow">
-          <span /> {locale === "en" ? "Kagurabachi Craft 5.0.0" : "Kagurabachi Craft 5.0.0"}
+          <span /> Kagurabachi Craft 5.4.0
         </div>
         <h1>
           {locale === "en"
