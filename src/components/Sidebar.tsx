@@ -64,7 +64,7 @@ export function Sidebar({ locale, active, open, onSelect, onClose }: SidebarProp
 
         <div className="sidebar-footer">
           <strong><span className="status-dot" /> {locale === "ru" ? "Стабильный релиз" : "Stable release"}</strong>
-          <span>v5.4.0 / NeoForge 1.21.1</span>
+          <span>v5.5.0 / NeoForge 1.21.1</span>
         </div>
       </aside>
       {open && (

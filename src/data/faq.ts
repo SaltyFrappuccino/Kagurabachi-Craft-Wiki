@@ -4,8 +4,8 @@ export const faq: FaqEntry[] = [
   {
     question: { en: "What version of Minecraft does this mod support?", ru: "Для какой версии Minecraft этот мод?" },
     answer: {
-      en: "Kagurabachi Craft 5.4.0 is built for Minecraft 1.21.1 and requires NeoForge 21.1.217 or newer. Fabric and Forge are not supported.",
-      ru: "Кагурабати Craft 5.4.0 создан для Minecraft 1.21.1 и требует NeoForge 21.1.217 или новее. Fabric и Forge не поддерживаются."
+      en: "Kagurabachi Craft 5.5.0 is built for Minecraft 1.21.1 and requires NeoForge 21.1.217 or newer. Fabric and Forge are not supported.",
+      ru: "Kagurabachi Craft 5.5.0 создан для Minecraft 1.21.1 и требует NeoForge 21.1.217 или новее. Fabric и Forge не поддерживаются."
     }
   },
   {

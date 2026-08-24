@@ -35,7 +35,7 @@ export function TopBar({
           </button>
         ) : <kbd>/</kbd>}
       </label>
-      <div className="release-pill"><span /> v5.4.0</div>
+      <div className="release-pill"><span /> v5.5.0</div>
       <div className="toolbar-group" aria-label={ui.language[locale]}>
         <button className={locale === "en" ? "segmented active" : "segmented"} type="button" onClick={() => onLocaleChange("en")}>
           EN

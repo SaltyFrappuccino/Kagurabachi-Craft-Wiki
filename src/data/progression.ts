@@ -121,8 +121,8 @@ export const progressionLoops: ProgressionEntry[] = [
 export const origins: ProgressionEntry[] = [
   {
     id: "civilian_sorcerer",
-    title: { en: "Civilian Sorcerer", ru: "Гражданский колдун" },
-    summary: { en: "An unaffiliated start with freedom to choose an allegiance later.", ru: "Независимый старт со свободой выбрать сторону позднее." },
+    title: { en: "Independent Sorcerer", ru: "Независимый колдун" },
+    summary: { en: "Begin unaffiliated and choose your allies later.", ru: "Начните без фракции и выберите союзников позже." },
     details: [
       { en: "Starts without a faction or clan.", ru: "Начинает без фракции и клана." },
       { en: "Fame: 0 · Infamy: 0 · Renown: 0", ru: "Известность: 0 · Дурная слава: 0 · Признание: 0" },
@@ -131,8 +131,8 @@ export const origins: ProgressionEntry[] = [
   },
   {
     id: "kamunabi_initiate",
-    title: { en: "Kamunabi Initiate", ru: "Послушник Камунаби" },
-    summary: { en: "Official route with immediate Kamunabi access.", ru: "Официальный путь с немедленным доступом к Камунаби." },
+    title: { en: "Kamunabi Recruit", ru: "Новобранец Камунаби" },
+    summary: { en: "Begin as a Kamunabi-backed sorcerer with immediate access to official assignments.", ru: "Начните как колдун под началом Камунаби и сразу получите доступ к официальным заданиям." },
     details: [
       { en: "Starts in Kamunabi with 10 Fame.", ru: "Начинает в Камунаби с 10 известности." },
       { en: "No clan is assigned at creation.", ru: "Клан при создании не назначается." }
@@ -140,8 +140,8 @@ export const origins: ProgressionEntry[] = [
   },
   {
     id: "hishaku_initiate",
-    title: { en: "Hishaku Initiate", ru: "Послушник Хисяку" },
-    summary: { en: "Underworld route with immediate Hishaku access.", ru: "Подпольный путь с немедленным доступом к Хисяку." },
+    title: { en: "Hishaku Agent", ru: "Агент Хисяку" },
+    summary: { en: "Begin as a sorcerer working for the Hishaku, with access to underworld contracts.", ru: "Начните как колдун, работающий на Хисяку, и получите доступ к контрактам преступного мира." },
     details: [
       { en: "Starts in Hishaku with 10 Infamy.", ru: "Начинает в Хисяку с 10 дурной славы." },
       { en: "No clan is assigned at creation.", ru: "Клан при создании не назначается." }
@@ -153,25 +153,25 @@ export const factions: ProgressionEntry[] = [
   {
     id: "kamunabi",
     title: { en: "Kamunabi", ru: "Камунаби" },
-    summary: { en: "State-backed operations against Hishaku, mercenaries and other threats.", ru: "Государственные операции против Хисяку, наёмников и других угроз." },
+    summary: { en: "The government sorcerer organization charged with protecting Japan from supernatural threats.", ru: "Государственная организация колдунов, защищающая Японию от сверхъестественных угроз." },
     details: [
       { en: "Entry: 8 Fame · tiers at contract ranks 0, 2 and 5.", ru: "Вступление: 8 известности · ступени на рангах контрактов 0, 2 и 5." },
-      { en: "Three combat contracts: 1, 3 and 6 Hishaku or Mercenary targets.", ru: "Три боевых контракта: 1, 3 и 6 целей Хисяку или Наёмников." }
+      { en: "Three combat contracts: defeat 1, 3 and 6 Hishaku or Mercenary combatants.", ru: "Три боевых контракта: победите 1, 3 и 6 бойцов Хисяку или наёмников." }
     ]
   },
   {
     id: "hishaku",
     title: { en: "Hishaku", ru: "Хисяку" },
-    summary: { en: "An underworld network built around targeted attacks on its enemies.", ru: "Подпольная сеть, построенная на точечных атаках против своих врагов." },
+    summary: { en: "A secretive organization of powerful sorcerers pursuing the Enchanted Blades.", ru: "Тайная организация могущественных колдунов, охотящаяся за Зачарованными клинками." },
     details: [
       { en: "Entry: 8 Infamy · tiers at contract ranks 0, 2 and 5.", ru: "Вступление: 8 дурной славы · ступени на рангах контрактов 0, 2 и 5." },
-      { en: "Three combat contracts: 1, 3 and 6 Kamunabi or Team Chihiro targets.", ru: "Три боевых контракта: 1, 3 и 6 целей Камунаби или Команды Тихиро." }
+      { en: "Three combat contracts: defeat 1, 3 and 6 Kamunabi or Team Chihiro combatants.", ru: "Три боевых контракта: победите 1, 3 и 6 бойцов Камунаби или команды Тихиро." }
     ]
   },
   {
     id: "team_chihiro",
     title: { en: "Team Chihiro", ru: "Команда Тихиро" },
-    summary: { en: "Chihiro's allied route focused on protecting civilians and stopping Hishaku.", ru: "Союзный путь Тихиро, сосредоточенный на защите мирных жителей и борьбе с Хисяку." },
+    summary: { en: "Chihiro and his allies, protecting civilians and searching for the stolen Enchanted Blades.", ru: "Тихиро и его союзники защищают мирных жителей и ищут украденные Зачарованные клинки." },
     details: [
       { en: "Entry: 6 Fame · tiers and tier rewards are registered.", ru: "Вступление: 6 известности · ступени и награды уже зарегистрированы." },
       { en: "Three combat contracts are active, including dedicated Hishaku hunts.", ru: "Доступны три боевых контракта, включая отдельные задания на Хисяку." }
@@ -180,7 +180,7 @@ export const factions: ProgressionEntry[] = [
   {
     id: "mercenaries",
     title: { en: "Mercenaries", ru: "Наёмники" },
-    summary: { en: "Independent blades-for-hire progressing through increasingly dangerous bounties.", ru: "Независимые наёмные клинки, растущие на всё более опасных заказах." },
+    summary: { en: "Independent sorcerers who take contracts for pay.", ru: "Независимые колдуны, выполняющие заказы за деньги." },
     details: [
       { en: "Entry: 3 Fame and 3 Infamy · tiers at ranks 0, 2 and 5.", ru: "Вступление: 3 известности и 3 дурной славы · ступени на рангах 0, 2 и 5." },
       { en: "Three combat contracts against 1, 3 and 6 hostile targets.", ru: "Три боевых контракта против 1, 3 и 6 враждебных целей." }
@@ -197,8 +197,8 @@ export const contracts: ProgressionEntry[] = [
   },
   {
     id: "kamunabi_rogue_suppression",
-    title: { en: "Kamunabi: Rogue Suppression", ru: "Камунаби: подавление отступников" },
-    summary: { en: "Defeat 3 Hishaku or Mercenary combatants.", ru: "Победить 3 бойцов Хисяку или Наёмников." },
+    title: { en: "Kamunabi: Rogue Sorcerer Hunt", ru: "Камунаби: охота на колдунов-отступников" },
+    summary: { en: "Defeat 3 Hishaku or Mercenary combatants.", ru: "Победите 3 бойцов Хисяку или наёмников." },
     details: [{ en: "Rank 2 · Reward: 42 Sorcery XP, 9 Fame, 1 contract point and 16 Yen coins.", ru: "Ранг 2 · Награда: 42 опыта сорсери, 9 известности, 1 очко контракта и 16 монет по 10 йен." }]
   },
   {
@@ -209,14 +209,14 @@ export const contracts: ProgressionEntry[] = [
   },
   {
     id: "hishaku_datenseki_smuggling",
-    title: { en: "Hishaku: First Blood", ru: "Хисяку: первая кровь" },
+    title: { en: "Hishaku: First Target", ru: "Хисяку: первая цель" },
     summary: { en: "Defeat 1 Kamunabi or Team Chihiro combatant.", ru: "Победить 1 бойца Камунаби или Команды Тихиро." },
     details: [{ en: "Rank 0 · Reward: 30 Sorcery XP, 4 Infamy, 1 contract point and 8 Yen coins.", ru: "Ранг 0 · Награда: 30 опыта сорсери, 4 дурной славы, 1 очко контракта и 8 монет по 10 йен." }]
   },
   {
     id: "hishaku_kamunabi_purge",
-    title: { en: "Hishaku: Kamunabi Purge", ru: "Хисяку: зачистка Камунаби" },
-    summary: { en: "Defeat 3 Kamunabi or Team Chihiro combatants.", ru: "Победить 3 бойцов Камунаби или Команды Тихиро." },
+    title: { en: "Hishaku: Strike at Kamunabi", ru: "Хисяку: удар по Камунаби" },
+    summary: { en: "Defeat 3 Kamunabi or Team Chihiro combatants.", ru: "Победите 3 бойцов Камунаби или команды Тихиро." },
     details: [{ en: "Rank 2 · Reward: 45 Sorcery XP, 10 Infamy, 1 contract point and 16 Yen coins.", ru: "Ранг 2 · Награда: 45 опыта сорсери, 10 дурной славы, 1 очко контракта и 16 монет по 10 йен." }]
   },
   {
@@ -239,7 +239,7 @@ export const contracts: ProgressionEntry[] = [
   },
   {
     id: "team_chihiro_hishaku_interdiction",
-    title: { en: "Team Chihiro: Hishaku Interdiction", ru: "Команда Тихиро: перехват Хисяку" },
+    title: { en: "Team Chihiro: Stop the Hit Squad", ru: "Команда Тихиро: остановить ударную группу" },
     summary: { en: "Defeat 6 Hishaku combatants.", ru: "Победить 6 бойцов Хисяку." },
     details: [{ en: "Rank 5 · Reward: 65 Sorcery XP, 12 Fame, 1 contract point and 28 Yen coins.", ru: "Ранг 5 · Награда: 65 опыта сорсери, 12 известности, 1 очко контракта и 28 монет по 10 йен." }]
   },

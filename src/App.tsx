@@ -237,7 +237,7 @@ export function App() {
           )}
 
           <footer className="site-footer">
-            Kagurabachi Craft &nbsp;·&nbsp; v5.4.0 Stable &nbsp;·&nbsp; NeoForge 1.21.1 &nbsp;·&nbsp;
+        Kagurabachi Craft &nbsp;·&nbsp; v5.5.0 Stable &nbsp;·&nbsp; NeoForge 1.21.1 &nbsp;·&nbsp;
             {locale === "en"
               ? " Based on the Kagurabachi manga by Takeru Hokazono"
               : " По манге Кагурабати Такеру Хоказоно"
