@@ -2,9 +2,10 @@ import type { LocalizedText, Locale } from "../types";
 
 export function SectionHeader({ title, subtitle, locale }: { title: LocalizedText; subtitle: LocalizedText; locale: Locale }) {
   return (
-    <div className="section-header">
-      <h2>{title[locale]}</h2>
+    <header className="section-header">
+      <span className="section-kicker">Kagurabachi Craft / Wiki</span>
+      <h1>{title[locale]}</h1>
       <p>{subtitle[locale]}</p>
-    </div>
+    </header>
   );
 }

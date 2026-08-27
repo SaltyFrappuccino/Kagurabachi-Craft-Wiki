@@ -1,81 +1,82 @@
 import type { FaqEntry } from "../types";
+import { release } from "./release";
 
 export const faq: FaqEntry[] = [
   {
     question: { en: "What version of Minecraft does this mod support?", ru: "Для какой версии Minecraft этот мод?" },
     answer: {
-      en: "Kagurabachi Craft 5.5.0 is built for Minecraft 1.21.1 and requires NeoForge 21.1.217 or newer. Fabric and Forge are not supported.",
-      ru: "Kagurabachi Craft 5.5.0 создан для Minecraft 1.21.1 и требует NeoForge 21.1.217 или новее. Fabric и Forge не поддерживаются."
+      en: `Kagurabachi Craft ${release.version} is built for Minecraft ${release.minecraft} and requires NeoForge 21.1.217 or newer. Fabric and Forge are not supported.`,
+      ru: `Kagurabachi Craft ${release.version} создан для Minecraft ${release.minecraft} и требует NeoForge 21.1.217 или новее. Fabric и Forge не поддерживаются.`
     }
   },
   {
     question: { en: "Which dependencies are required?", ru: "Какие зависимости нужны?" },
     answer: {
-      en: "Player Animator 2.0.1+, Patchouli 1.21.1-92+ and Cascade 1.0.x are required. Veil 4.4.1-4.4.x is optional but recommended for the complete shader and distortion effects.",
-      ru: "Обязательны Player Animator 2.0.1+, Patchouli 1.21.1-92+ и Cascade 1.0.x. Veil 4.4.1-4.4.x необязателен, но рекомендуется для полных шейдеров и эффектов искажения."
+      en: "Player Animator 2.0.1+ and Patchouli 1.21.1-92+ are the only external dependencies. Cascade 1.0.x and Veil 4.4.1-4.4.x are bundled with the mod; Veil support is client-side and optional at runtime.",
+      ru: "Единственные внешние зависимости — Player Animator 2.0.1+ и Patchouli 1.21.1-92+. Cascade 1.0.x и Veil 4.4.1-4.4.x встроены в мод; поддержка Veil работает только на клиенте и необязательна для работы мода."
     }
   },
   {
     question: { en: "How do I get an enchanted blade?", ru: "Как получить зачарованный клинок?" },
     answer: {
-      en: "Use the /give command to obtain blade items, or find them in world loot if generation is configured. Each blade is a unique item that grants its associated sorcery when held.",
-      ru: "Используйте команду /give для получения клинков или найдите их в луте мира при настроенной генерации. Каждый клинок - уникальный предмет, дающий связанное колдовство при ношении."
+      en: "For testing, obtain a blade with /give. Normal acquisition depends on the progression and loot systems enabled by the server. Holding an Enchanted Blade gives access to its sorcery.",
+      ru: "Для тестирования выдайте клинок через /give. Обычный способ получения зависит от включённых на сервере систем развития и добычи. Зачарованный клинок открывает своё колдовство, пока находится в руке."
     }
   },
   {
     question: { en: "How do I switch sorceries?", ru: "Как переключить колдовство?" },
     answer: {
-      en: "Use /kbc set sorceryType <your_name> <id> to switch sorcery type server-side. Sorcery IDs are the lowercase names: Enten, CloudGouger, FlameBone, Kumeyuri, Magatsumi, Tobimune, etc.",
-      ru: "Используйте /kbc set sorceryType <ваше_имя> <id> для серверного переключения. ID колдовства - строчные названия: Enten, CloudGouger, FlameBone, Kumeyuri, Magatsumi, Tobimune и др."
+      en: "Use /kbc set sorceryType <id> [targets]. IDs are case-sensitive internal names such as Enten, CloudGouger, FlameBone, Kumeyuri, Magatsumi and Tobimune. The command requires the appropriate server permissions.",
+      ru: "Используйте /kbc set sorceryType <id> [targets]. Идентификаторы чувствительны к регистру; нужны внутренние названия, например Enten, CloudGouger, FlameBone, Kumeyuri, Magatsumi и Tobimune. Для выполнения требуются соответствующие права на сервере."
     }
   },
   {
-    question: { en: "How do I unlock signature techniques?", ru: "Как открыть сигнатурные техники?" },
+    question: { en: "How do I unlock signature techniques?", ru: "Как открыть фирменные приёмы?" },
     answer: {
-      en: "Use /kbc add signature <player> <technique_name>. Known techniques include: IaiWhitePurity, VillainsExecution, Hiruhiko, CigaretteCrossSlash. Ask your server admin or use the command yourself if you have operator permissions.",
-      ru: "Используйте /kbc add signature <игрок> <название>. Известные техники: IaiWhitePurity, VillainsExecution, Hiruhiko, CigaretteCrossSlash. Попросите администратора или используйте команду самостоятельно при наличии прав."
+      en: "Use /kbc add signature <id> [targets]. Available IDs are iai, execution, hiruhiko and cigarette_cross_slash. Ask a server administrator unless you have permission to run the command yourself.",
+      ru: "Используйте /kbc add signature <id> [targets]. Доступные ID: iai, execution, hiruhiko и cigarette_cross_slash. Если у вас нет нужных прав, обратитесь к администратору сервера."
     }
   },
   {
     question: { en: "Why can't I use my sorcery abilities?", ru: "Почему не работают мои способности колдовства?" },
     answer: {
       en: "Check: (1) Are you in combat mode? Press Y to enable. (2) Is R held or toggled to sorcery mode? (3) Do you have enough SE? (4) Are you in a cooldown period? Check the HUD for resource and cooldown indicators.",
-      ru: "Проверьте: (1) Вы в боевом режиме? Нажмите Y. (2) R удержан или переключён в режим колдовства? (3) Достаточно ли SE? (4) На кулдауне? Смотрите HUD на индикаторы ресурсов и кулдауна."
+      ru: "Проверьте четыре вещи: включён ли боевой режим клавишей Y; активен ли режим колдовства на R; хватает ли духовной энергии; закончилась ли перезарядка. Текущее состояние видно в боевом интерфейсе."
     }
   },
   {
-    question: { en: "What is SE (Spiritual Energy)?", ru: "Что такое SE (Духовная Энергия)?" },
+    question: { en: "What is SE (Spirit Energy)?", ru: "Что такое SE (духовная энергия)?" },
     answer: {
-      en: "SE is the resource that fuels all sorcery abilities. It regenerates over time. You can view your current SE on the HUD while in combat mode. Use /kbc set currentSE to manually set it (admin/debug).",
-      ru: "SE - ресурс, питающий все способности колдовства. Восстанавливается со временем. Текущее SE видно на HUD в боевом режиме. Используйте /kbc set currentSE для ручной установки (admin/debug)."
+      en: "SE powers sorcery abilities and regenerates over time. Your current amount appears on the HUD in combat mode. Administrators can set it manually with /kbc set currentSE <value> [targets].",
+      ru: "SE расходуется на способности колдовства и со временем восстанавливается. Текущий запас показан в боевом интерфейсе. Администратор может изменить его командой /kbc set currentSE <value> [targets]."
     }
   },
   {
     question: { en: "Can I use this on a multiplayer server?", ru: "Работает ли это на многопользовательском сервере?" },
     answer: {
-      en: "Yes. Combat is calculated on the server. Both players need the mod installed.",
-      ru: "Да. Бой рассчитывается на сервере. Мод должен быть установлен у обоих игроков."
+      en: "Yes. Combat is calculated on the server. The server and every connecting player need the same mod version and all required dependencies.",
+      ru: "Да. Бой рассчитывается на сервере. Серверу и каждому подключающемуся игроку нужны одинаковая версия мода и все обязательные зависимости."
     }
   },
   {
-    question: { en: "How does Enten's Aka ability work?", ru: "Как работает способность Aka у Enten?" },
+    question: { en: "How does Enten's Aka ability work?", ru: "Как работает Ака у Энтена?" },
     answer: {
-      en: "Enten's Aka goldfish absorbs an attack the blade comes into contact with and stores it. You can then unleash that stored attack back at the enemy via the secondary slot (R + RMB). Only one attack is held at a time.",
-      ru: "Золотая рыбка Aka у Enten поглощает атаку, которой коснулся клинок, и сохраняет её. Затем вы можете вернуть сохранённую атаку врагу через вторичный слот (R + RMB). Хранится одна атака за раз."
+      en: "Enten's Aka goldfish absorbs an attack the blade comes into contact with and stores it. You can then release that stored attack back at the enemy via the secondary slot (R + RMB). Only one attack is held at a time.",
+      ru: "Золотая рыбка Ака у Энтена поглощает атаку, которой коснулся клинок, и сохраняет её. Затем сохранённую атаку можно вернуть врагу через дополнительный слот (R + ПКМ). Одновременно хранится только одна атака."
     }
   },
   {
-    question: { en: "What does Tobimune's Suzaku awakening do?", ru: "Что делает пробуждение Suzaku у Tobimune?" },
+    question: { en: "What does Tobimune's Suzaku awakening do?", ru: "Что делает пробуждение Судзаку у Тобимунэ?" },
     answer: {
       en: "Suzaku Awakening changes feather abilities into black flame versions. Fired feathers become charges that detonate on contact. A charged mass detonation triggers every active charge.",
-      ru: "Пробуждение Suzaku трансформирует все способности перьев в варианты чёрного пламени. Выпущенные перья становятся зарядами чёрного пламени - детонируются при контакте или все одновременно заряженной массовой детонацией."
+      ru: "Пробуждение Судзаку превращает способности перьев в варианты чёрного пламени. Выпущенные перья становятся огненными зарядами: они взрываются при контакте или все сразу после полной зарядки массовой детонации."
     }
   },
   {
     question: { en: "Does death reset my sorcery progress?", ru: "Сбрасывает ли смерть прогресс колдовства?" },
     answer: {
       en: "It depends on gamerule settings. kbcKeepEnchantedBladesContractAfterDeath controls blade contracts. kbcResetAdaptationOnDeath controls Adaptation resets. Server owners can configure these as needed.",
-      ru: "Зависит от настроек gamerule. kbcKeepEnchantedBladesContractAfterDeath управляет контрактами клинков. kbcResetAdaptationOnDeath управляет сбросом Adaptation. Администраторы могут настроить это по необходимости."
+      ru: "Зависит от настроек правил игры. kbcKeepEnchantedBladesContractAfterDeath управляет контрактами клинков. kbcResetAdaptationOnDeath управляет сбросом адаптации. Администраторы могут настроить это по необходимости."
     }
   }
 ];

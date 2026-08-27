@@ -15,7 +15,7 @@ export function EntityBestiary({ locale, query }: { locale: Locale; query: strin
       <section className="system-callout entity-level-note">
         <strong>{locale === "ru" ? "Как читать уровень колдовства NPC" : "How to read NPC Sorcery Level"}</strong>
         <p>{locale === "ru"
-          ? "Если уровень игрока ниже рекомендации, урон по NPC дополнительно снижается на 10% за каждый недостающий уровень (минимум до 10% от уже уменьшенного урона). Этот же рейтинг задаёт максимальную стабильность NPC."
+          ? "Если уровень игрока ниже рекомендации, урон по NPC дополнительно снижается на 10% за каждый недостающий уровень (вплоть до 10% от уже уменьшенного урона). Этот же показатель определяет максимальную стойкость NPC."
           : "If the player is below the recommendation, damage to the NPC is reduced by another 10% per missing level (down to 10% of the already reduced damage). The same rating determines the NPC's maximum Stability."}</p>
       </section>
       <div className="entity-grid">

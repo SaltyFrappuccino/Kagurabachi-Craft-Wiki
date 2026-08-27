@@ -13,10 +13,10 @@ export function CommandsTable({ locale, query = "" }: { locale: Locale; query?: 
       <table>
         <thead>
           <tr>
-            <th>{locale === "en" ? "Command" : "Команда"}</th>
-            <th>{locale === "en" ? "Access" : "Доступ"}</th>
-            <th>{locale === "en" ? "Description" : "Описание"}</th>
-            <th></th>
+            <th scope="col">{locale === "en" ? "Command" : "Команда"}</th>
+            <th scope="col">{locale === "en" ? "Access" : "Доступ"}</th>
+            <th scope="col">{locale === "en" ? "Description" : "Описание"}</th>
+            <th scope="col"><span className="visually-hidden">{locale === "en" ? "Actions" : "Действия"}</span></th>
           </tr>
         </thead>
         <tbody>
@@ -45,10 +45,10 @@ export function GamerulesTable({ locale, query = "" }: { locale: Locale; query?:
       <table>
         <thead>
           <tr>
-            <th>{locale === "en" ? "Gamerule" : "Правило"}</th>
-            <th>{locale === "en" ? "Default" : "По умолчанию"}</th>
-            <th>{locale === "en" ? "Category" : "Категория"}</th>
-            <th>{locale === "en" ? "Description" : "Описание"}</th>
+            <th scope="col">{locale === "en" ? "Gamerule" : "Правило"}</th>
+            <th scope="col">{locale === "en" ? "Default" : "По умолчанию"}</th>
+            <th scope="col">{locale === "en" ? "Category" : "Категория"}</th>
+            <th scope="col">{locale === "en" ? "Description" : "Описание"}</th>
           </tr>
         </thead>
         <tbody>
@@ -56,7 +56,7 @@ export function GamerulesTable({ locale, query = "" }: { locale: Locale; query?:
             <tr id={`gamerule-${gamerules.indexOf(rule)}`} key={rule.key}>
               <td><code>{rule.key}</code></td>
               <td>{rule.defaultValue}</td>
-              <td>{rule.category}</td>
+              <td>{locale === "ru" ? (rule.category === "PLAYER" ? "Игрок" : "Мобы") : rule.category}</td>
               <td>{rule.description[locale]}</td>
             </tr>
           ))}

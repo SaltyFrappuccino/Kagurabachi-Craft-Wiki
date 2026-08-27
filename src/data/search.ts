@@ -24,13 +24,13 @@ const kinds = {
   sorcery: { en: "Sorcery", ru: "Колдовство" },
   item: { en: "Enchanted blade", ru: "Зачарованный клинок" },
   style: { en: "Fighting style", ru: "Боевой стиль" },
-  signature: { en: "Signature", ru: "Сигнатура" },
-  progression: { en: "Progression", ru: "Прогрессия" },
+  signature: { en: "Signature technique", ru: "Фирменный приём" },
+  progression: { en: "Progression", ru: "Развитие" },
   entity: { en: "Character", ru: "Персонаж" },
   control: { en: "Control", ru: "Управление" },
   command: { en: "Command", ru: "Команда" },
   gamerule: { en: "Server rule", ru: "Правило сервера" },
-  faq: { en: "FAQ", ru: "FAQ" }
+  faq: { en: "FAQ", ru: "Вопросы и ответы" }
 } as const;
 
 function entry(id: string, section: SectionId, kind: Record<Locale, string>, title: string, summary: string, extra = ""): SearchEntry {
@@ -41,7 +41,7 @@ export function createSearchIndex(locale: Locale): SearchEntry[] {
   const progression = [...progressionSystems, ...progressionLoops, ...origins, ...factions, ...contracts, ...clans];
 
   return [
-    ...wikiArticles.map((item) => entry(item.id, item.section, kinds.article, item.title[locale], item.summary[locale], item.tags.join(" "))),
+    ...wikiArticles.map((item) => entry(item.id, item.section, kinds.article, item.title[locale], item.summary[locale], `${item.body.map((paragraph) => paragraph[locale]).join(" ")} ${item.tags.join(" ")}`)),
     ...sorceries.map((item) => entry(`sorcery-${item.id}`, "sorcery", kinds.sorcery, item.name[locale], `${item.character[locale]} · ${item.elementLabel[locale]}`, item.abilities.map((ability) => `${ability.name[locale]} ${ability.desc[locale]}`).join(" "))),
     ...items.map((item) => entry(`item-${item.id}`, "items", kinds.item, item.name[locale], item.summary[locale], item.details.map((detail) => detail[locale]).join(" "))),
     ...styleEntries.map((item) => entry(`style-${item.id}`, "styles", kinds.style, item.title[locale], item.role[locale], `${item.activation[locale]} ${item.actions.map((action) => action[locale]).join(" ")}`)),

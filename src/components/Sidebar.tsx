@@ -1,5 +1,5 @@
 import { navigation } from "../data/navigation";
-import { assets } from "../data/assets";
+import { release } from "../data/release";
 import type { Locale, SectionId } from "../types";
 import { Icon } from "./Icon";
 
@@ -17,29 +17,32 @@ const serverItems = navigation.filter((i) => i.group === "server");
 export function Sidebar({ locale, active, open, onSelect, onClose }: SidebarProps) {
   return (
     <>
-      <aside className={open ? "sidebar open" : "sidebar"}>
+      <aside className={open ? "sidebar open" : "sidebar"} id="wiki-sidebar">
         <div className="brand">
-          <div className="brand-mark"><img src={assets.logo} alt="" /></div>
           <div>
             <strong>Kagurabachi Craft</strong>
           </div>
-          <span className="brand-version">5.4</span>
+          <span className="brand-version">v{release.version}</span>
+          <button className="sidebar-close" type="button" onClick={onClose} aria-label={locale === "ru" ? "Закрыть меню" : "Close menu"}>
+            <Icon name="X" size={16} />
+          </button>
         </div>
 
-        <nav className="nav-list">
+        <nav className="nav-list" aria-label={locale === "ru" ? "Разделы вики" : "Wiki sections"}>
           <div className="nav-group-label">
             {locale === "ru" ? "Изучение мода" : "Explore the mod"}
           </div>
           {mainItems.map((item) => (
-            <button
+            <a
               key={item.id}
-              type="button"
+              href={`#${item.id}`}
+              aria-current={item.id === active ? "page" : undefined}
               className={item.id === active ? "nav-item active" : "nav-item"}
-              onClick={() => { onSelect(item.id); onClose(); }}
+              onClick={() => { onClose(); onSelect(item.id); }}
             >
               <span className="nav-icon"><Icon name={item.icon} size={17} /></span>
               <span>{item.label[locale]}</span>
-            </button>
+            </a>
           ))}
 
           {serverItems.length > 0 && (
@@ -48,15 +51,16 @@ export function Sidebar({ locale, active, open, onSelect, onClose }: SidebarProp
                 {locale === "ru" ? "Сервер и справка" : "Server & reference"}
               </div>
               {serverItems.map((item) => (
-                <button
+                <a
                   key={item.id}
-                  type="button"
+                  href={`#${item.id}`}
+                  aria-current={item.id === active ? "page" : undefined}
                   className={item.id === active ? "nav-item active" : "nav-item"}
-                  onClick={() => { onSelect(item.id); onClose(); }}
+                  onClick={() => { onClose(); onSelect(item.id); }}
                 >
                   <span className="nav-icon"><Icon name={item.icon} size={17} /></span>
                   <span>{item.label[locale]}</span>
-                </button>
+                </a>
               ))}
             </>
           )}
@@ -64,11 +68,11 @@ export function Sidebar({ locale, active, open, onSelect, onClose }: SidebarProp
 
         <div className="sidebar-footer">
           <strong><span className="status-dot" /> {locale === "ru" ? "Стабильный релиз" : "Stable release"}</strong>
-          <span>v5.5.0 / NeoForge 1.21.1</span>
+          <span>v{release.version} / {release.loader} {release.minecraft}</span>
         </div>
       </aside>
       {open && (
-        <button className="sidebar-backdrop" type="button" onClick={onClose} aria-label="Close menu" />
+        <button className="sidebar-backdrop" type="button" onClick={onClose} aria-label={locale === "ru" ? "Закрыть меню" : "Close menu"} />
       )}
     </>
   );

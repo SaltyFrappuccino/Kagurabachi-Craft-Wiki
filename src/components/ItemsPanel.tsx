@@ -18,7 +18,7 @@ function ItemCard({ item, locale }: { item: ItemEntry; locale: Locale }) {
   return (
     <article className="item-card" id={`item-${item.id}`} style={{ "--element-color": color } as React.CSSProperties}>
       <div className="item-visual">
-        <ItemModelPreview src={item.asset} alt={name} fallback={name.slice(0, 2).toUpperCase()} />
+        <ItemModelPreview src={item.asset} alt="" fallback={name.slice(0, 2).toUpperCase()} />
       </div>
       <div className="item-body">
         <div className="item-header">

@@ -14,21 +14,21 @@ export const entityEntries: EntityEntry[] = [
     title: { en: "Genichi Sojo", ru: "Гэнъити Содзё" },
     relation: { en: "Boss · Hishaku affiliate", ru: "Босс · союзник Хисяку" },
     faction: { en: "Hishaku", ru: "Хисяку" },
-    sorcery: { en: "Kuregumo", ru: "Курегумо" },
+    sorcery: { en: "Cloud Gouger", ru: "Рассекающий облака" },
     recommendedLevel: 12,
     health: 75,
-    tags: ["sojo", "hishaku", "hishaku affiliate", "kuregumo", "курегумо", "weather"],
+    tags: ["sojo", "hishaku", "hishaku affiliate", "cloud gouger", "kuregumo", "рассекающий облака", "курэгумо", "weather"],
     asset: sojoArt
   },
   {
     id: "hiruhiko_kumeyuri",
-    title: { en: "Hiruhiko - Kumeyuri", ru: "Хирухико - Кумеюри" },
+    title: { en: "Hiruhiko — Kumeyuri", ru: "Хирухико — Кумэюри" },
     relation: { en: "Boss · Hishaku combatant", ru: "Босс · боец Хисяку" },
     faction: { en: "Hishaku", ru: "Хисяку" },
     sorcery: { en: "Kumeyuri", ru: "Кумэюри" },
     recommendedLevel: 13,
     health: 100,
-    tags: ["hiruhiko_kumeyuri", "hiruhiko", "хирухико", "кумеюри", "hishaku", "kumeyuri", "illusion"],
+    tags: ["hiruhiko_kumeyuri", "hiruhiko", "хирухико", "кумэюри", "hishaku", "kumeyuri", "illusion"],
     asset: hiruhikoArt
   },
   {
@@ -36,10 +36,10 @@ export const entityEntries: EntityEntry[] = [
     title: { en: "Hiyuki Kagari", ru: "Хиюки Кагари" },
     relation: { en: "Boss · Kamunabi combatant", ru: "Босс · боец Камунаби" },
     faction: { en: "Kamunabi", ru: "Камунаби" },
-    sorcery: { en: "Flame Bone", ru: "Пламенная Кость" },
+    sorcery: { en: "Flame Bone of the Starving", ru: "Пламенная кость Голодающего" },
     recommendedLevel: 14,
     health: 125,
-    tags: ["hiyuki", "kamunabi", "flame bone", "огненная кость"],
+    tags: ["hiyuki", "kamunabi", "flame bone", "пламенная кость"],
     asset: hiyukiArt
   },
   {
@@ -58,7 +58,7 @@ export const entityEntries: EntityEntry[] = [
     title: { en: "Azami", ru: "Адзами" },
     relation: { en: "Boss · Kamunabi combatant", ru: "Босс · боец Камунаби" },
     faction: { en: "Kamunabi", ru: "Камунаби" },
-    sorcery: { en: "Coin Sorcery", ru: "Сорсери монет" },
+    sorcery: { en: "Coin Sorcery", ru: "Колдовство монет" },
     recommendedLevel: 16,
     health: 120,
     tags: ["azami_kamunabi", "azami", "adzami", "адзами", "kamunabi", "coin", "монеты"],

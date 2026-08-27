@@ -43,14 +43,14 @@ const SLOT_KEYS: { slot: string; key: string; ru: string }[] = [
 ];
 
 const SLOT_RU: Record<string, string> = {
-  "Primary": "Primary",
-  "Secondary": "Secondary",
-  "Utility": "Utility",
-  "Supportive 1": "Supportive 1",
-  "Supportive 2": "Supportive 2",
-  "Special": "Special",
-  "Passive": "Passive",
-  "Awakening": "Awakening",
+  "Primary": "Основной",
+  "Secondary": "Дополнительный",
+  "Utility": "Вспомогательный",
+  "Supportive 1": "Поддержка 1",
+  "Supportive 2": "Поддержка 2",
+  "Special": "Особый",
+  "Passive": "Пассивный",
+  "Awakening": "Пробуждение",
 };
 
 function SlotLegend({ locale }: { locale: Locale }) {
@@ -62,7 +62,7 @@ function SlotLegend({ locale }: { locale: Locale }) {
       <div className="slot-legend-row">
         {SLOT_KEYS.map((s) => (
           <div className="slot-legend-item" key={s.slot}>
-            <span className="slot-legend-name">{s.slot}</span>
+            <span className="slot-legend-name">{locale === "ru" ? SLOT_RU[s.slot] : s.slot}</span>
             <kbd>{locale === "ru" ? s.ru : s.key}</kbd>
           </div>
         ))}
@@ -91,10 +91,23 @@ function SorceryCard({ sorcery, locale, expanded, onToggle }: {
       className={`sorcery-card2 ${expanded ? "expanded" : ""}`}
       style={{ "--element-color": color } as React.CSSProperties}
     >
-      <div className="sc2-top" onClick={onToggle}>
+      <div
+        className="sc2-top"
+        role="button"
+        tabIndex={0}
+        aria-expanded={expanded}
+        aria-controls={`sorcery-details-${sorcery.id}`}
+        onClick={onToggle}
+        onKeyDown={(event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            onToggle();
+          }
+        }}
+      >
         <div className="sc2-visual">
           {sorcery.asset
-            ? <ItemModelPreview src={sorcery.asset} alt={name} fallback={name.slice(0, 2).toUpperCase()} className="sorcery-model-preview" />
+            ? <ItemModelPreview src={sorcery.asset} alt="" fallback={name.slice(0, 2).toUpperCase()} className="sorcery-model-preview" />
             : <span className="sc2-placeholder">{name.slice(0, 2).toUpperCase()}</span>
           }
         </div>
@@ -115,7 +128,7 @@ function SorceryCard({ sorcery, locale, expanded, onToggle }: {
                 {sorcery.elementLabel[locale]}
               </span>
               {sorcery.awakening && (
-                <span className="sc2-awakening" title="Awakening">
+                <span className="sc2-awakening" title={locale === "ru" ? "Пробуждение" : "Awakening"}>
                   ✦ {sorcery.awakening[locale]}
                 </span>
               )}
@@ -125,13 +138,13 @@ function SorceryCard({ sorcery, locale, expanded, onToggle }: {
             <p className="sc2-character">{sorcery.character[locale]}</p>
           )}
         </div>
-        <button className="sc2-toggle" aria-label="Toggle abilities">
+        <span className="sc2-toggle" aria-hidden="true">
           <span>{expanded ? "▲" : "▼"}</span>
-        </button>
+        </span>
       </div>
 
       {expanded && (
-        <div className="sc2-abilities">
+        <div className="sc2-abilities" id={`sorcery-details-${sorcery.id}`}>
           <div className="sc2-abilities-head">
             <h4 className="sc2-abilities-title">
               {locale === "ru" ? "Способности" : "Abilities"}
@@ -139,12 +152,16 @@ function SorceryCard({ sorcery, locale, expanded, onToggle }: {
             {hasAwakenedSet && (
               <div className="awaken-switch" role="group">
                 <button
+                  type="button"
+                  aria-pressed={!showAwakened}
                   className={!showAwakened ? "active" : ""}
                   onClick={() => setShowAwakened(false)}
                 >
                   {locale === "ru" ? "Базовые" : "Base"}
                 </button>
                 <button
+                  type="button"
+                  aria-pressed={showAwakened}
                   className={showAwakened ? "active awakened" : "awakened"}
                   onClick={() => setShowAwakened(true)}
                 >
@@ -207,6 +224,8 @@ export function SorceryGrid({ locale, query = "" }: { locale: Locale; query?: st
         {(["all", "enchanted-blade", "sorcery"] as const).map((t) => (
           <button
             key={t}
+            type="button"
+            aria-pressed={tierFilter === t}
             className={`filter-pill ${tierFilter === t ? "active" : ""}`}
             onClick={() => setTierFilter(t)}
           >
@@ -223,9 +242,9 @@ export function SorceryGrid({ locale, query = "" }: { locale: Locale; query?: st
       {blades.length > 0 && (
         <section className="sorcery-group">
           {tierFilter === "all" && (
-            <h3 className="sorcery-group-label">
+            <h2 className="sorcery-group-label">
               {locale === "ru" ? "Зачарованные клинки" : "Enchanted Blades"}
-            </h3>
+            </h2>
           )}
           <div className="sorcery-cards-list">
             {blades.map((s) => (
@@ -238,9 +257,9 @@ export function SorceryGrid({ locale, query = "" }: { locale: Locale; query?: st
       {others.length > 0 && (
         <section className="sorcery-group">
           {tierFilter === "all" && (
-            <h3 className="sorcery-group-label">
+            <h2 className="sorcery-group-label">
               {locale === "ru" ? "Отдельные колдовства" : "Standalone Sorceries"}
-            </h3>
+            </h2>
           )}
           <div className="sorcery-cards-list">
             {others.map((s) => (

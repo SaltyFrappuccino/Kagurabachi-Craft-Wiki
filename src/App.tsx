@@ -20,6 +20,7 @@ import { WikiArticles } from "./components/WikiArticles";
 import { createSearchIndex, searchEntries } from "./data/search";
 import type { SearchEntry } from "./data/search";
 import { wikiArticles } from "./data/wiki";
+import { release } from "./data/release";
 import { usePersistentState } from "./hooks/usePersistentState";
 import type { Locale, SectionId, ThemeMode } from "./types";
 
@@ -35,23 +36,23 @@ const sectionMeta: Record<SectionId, { title: Record<Locale, string>; subtitle: 
   },
   quickstart: {
     title: { en: "Getting Started", ru: "Быстрый старт" },
-    subtitle: { en: "First steps, controls, Spiritual Energy and sorcery mode.", ru: "Первые шаги, управление, Духовная Энергия и режим колдовства." }
+    subtitle: { en: "First steps, controls, Spirit Energy and sorcery mode.", ru: "Первые шаги, управление, духовная энергия и режим колдовства." }
   },
   combat: {
     title: { en: "Combat", ru: "Бой" },
-    subtitle: { en: "Attacks, defence, Stability, backstabs, lock-on and combat resources.", ru: "Атаки, защита, стабильность, удары в спину, захват цели и боевые ресурсы." }
+    subtitle: { en: "Attacks, defence, Stability, backstabs, lock-on and combat resources.", ru: "Атаки, защита, стойкость, удары в спину, захват цели и боевые ресурсы." }
   },
   styles: {
     title: { en: "Fighting Styles", ru: "Боевые стили" },
     subtitle: { en: "How equipment changes damage, pressure, defence, reach and target coverage.", ru: "Как экипировка меняет урон, давление, защиту, дальность и число целей." }
   },
   signatures: {
-    title: { en: "Signature Techniques", ru: "Сигнатурные техники" },
-    subtitle: { en: "Tab controls, Style-point economy, requirements and every implemented technique.", ru: "Управление через Tab, очки стиля, требования и все реализованные техники." }
+    title: { en: "Signature Techniques", ru: "Фирменные приёмы" },
+    subtitle: { en: "Tab controls, Style Point costs, requirements and every implemented technique.", ru: "Управление через Tab, стоимость в очках стиля, требования и все доступные фирменные приёмы." }
   },
   items: {
     title: { en: "Enchanted Blades", ru: "Зачарованные клинки" },
-    subtitle: { en: "The canon Enchanted Blades (魔剣) forged by Kunishige Rokuhira.", ru: "Канонические зачарованные клинки (魔剣), выкованные Кунисигэ Рокухира." }
+    subtitle: { en: "Five of the manga's seven Enchanted Blades (妖刀), currently implemented in the mod.", ru: "В моде реализованы пять из семи зачарованных клинков (妖刀) из манги." }
   },
   sorcery: {
     title: { en: "Sorcery", ru: "Колдовство" },
@@ -59,11 +60,11 @@ const sectionMeta: Record<SectionId, { title: Record<Locale, string>; subtitle: 
   },
   progression: {
     title: { en: "Character Progression", ru: "Развитие персонажа" },
-    subtitle: { en: "Levels, reputation, mastery ranks and allegiance.", ru: "Уровни, репутация, мастерство и принадлежность." }
+    subtitle: { en: "Levels, reputation, mastery ranks and factions.", ru: "Уровни, репутация, ранги мастерства и фракции." }
   },
   entities: {
     title: { en: "Characters & Enemies", ru: "Персонажи и противники" },
-      subtitle: { en: "Factions, sorceries and encounter levels.", ru: "Фракции, колдовства и уровни встреч." }
+    subtitle: { en: "Factions, sorceries and recommended combat levels.", ru: "Фракции, колдовства и рекомендуемые уровни для боя." }
   },
   movement: {
     title: { en: "Movement", ru: "Движение" },
@@ -71,14 +72,14 @@ const sectionMeta: Record<SectionId, { title: Record<Locale, string>; subtitle: 
   },
   commands: {
     title: { en: "Commands", ru: "Команды" },
-    subtitle: { en: "Player and admin commands for progression, debug and settings.", ru: "Команды для прогресса, отладки и настроек - для игроков и администраторов." }
+    subtitle: { en: "Player and admin commands for progression, testing and settings.", ru: "Команды для развития персонажа, тестирования и настроек." }
   },
   gamerules: {
     title: { en: "Server Configuration", ru: "Настройка сервера" },
     subtitle: { en: "All gamerules for tuning combat, damage, awakenings and mob difficulty.", ru: "Все правила игры для настройки боя, урона, пробуждений и сложности мобов." }
   },
   faq: {
-    title: { en: "FAQ", ru: "FAQ" },
+    title: { en: "FAQ", ru: "Вопросы и ответы" },
     subtitle: { en: "Common questions from players.", ru: "Частые вопросы от игроков." }
   }
 };
@@ -109,6 +110,16 @@ export function App() {
   }, [locale, theme]);
 
   useEffect(() => {
+    if (!sidebarOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.setTimeout(() => document.querySelector<HTMLButtonElement>(".sidebar-close")?.focus(), 0);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [sidebarOpen]);
+
+  useEffect(() => {
     function syncHash() {
       setActiveSection(getInitialSection());
     }
@@ -124,21 +135,39 @@ export function App() {
         event.preventDefault();
         document.querySelector<HTMLInputElement>("[data-global-search]")?.focus();
       }
-      if (event.key === "Escape" && query) setQuery("");
+      if (event.key === "ArrowDown" && query) {
+        const firstResult = document.querySelector<HTMLElement>("[data-search-result]");
+        if (firstResult) {
+          event.preventDefault();
+          firstResult.focus();
+        }
+      }
+      if (event.key === "Escape" && query) {
+        setQuery("");
+        document.querySelector<HTMLInputElement>("[data-global-search]")?.focus();
+      } else if (event.key === "Escape" && sidebarOpen) {
+        closeSidebar();
+      }
     }
     window.addEventListener("keydown", handleKeyboard);
     return () => window.removeEventListener("keydown", handleKeyboard);
-  }, [query]);
+  }, [query, sidebarOpen]);
 
   const sectionArticles = useMemo(() => wikiArticles.filter((article) => article.section === activeSection), [activeSection]);
   const searchIndex = useMemo(() => createSearchIndex(locale), [locale]);
   const searchResults = useMemo(() => searchEntries(searchIndex, query), [query, searchIndex]);
+
+  function closeSidebar() {
+    setSidebarOpen(false);
+    window.setTimeout(() => document.querySelector<HTMLButtonElement>(".menu-button")?.focus(), 0);
+  }
 
   function selectSection(section: SectionId) {
     setActiveSection(section);
     setQuery("");
     window.location.hash = section;
     window.scrollTo({ top: 0, behavior: "auto" });
+    window.setTimeout(() => document.getElementById("wiki-content")?.focus({ preventScroll: true }), 0);
   }
 
   function selectSearchResult(result: SearchEntry) {
@@ -150,6 +179,11 @@ export function App() {
       const target = document.getElementById(result.id);
       if (target instanceof HTMLDetailsElement) target.open = true;
       target?.scrollIntoView({ behavior: "smooth", block: "center" });
+      if (target) {
+        target.tabIndex = -1;
+        target.focus({ preventScroll: true });
+        target.addEventListener("blur", () => target.removeAttribute("tabindex"), { once: true });
+      }
     }, 60);
   }
 
@@ -157,34 +191,35 @@ export function App() {
 
   return (
     <div className="app" data-theme={theme}>
-      <Sidebar locale={locale} active={activeSection} open={sidebarOpen} onSelect={selectSection} onClose={() => setSidebarOpen(false)} />
+      <a className="skip-link" href="#wiki-content">{locale === "ru" ? "К содержанию" : "Skip to content"}</a>
+      <Sidebar locale={locale} active={activeSection} open={sidebarOpen} onSelect={selectSection} onClose={closeSidebar} />
       <div className="page-shell">
         <TopBar
           locale={locale}
           theme={theme}
           query={query}
+          menuOpen={sidebarOpen}
           onLocaleChange={setLocale}
           onThemeChange={setTheme}
           onQueryChange={setQuery}
           onMenuClick={() => setSidebarOpen(true)}
         />
-        <main>
+        <main id="wiki-content" tabIndex={-1}>
           {activeSection === "overview" ? (
             <>
               <HeroPanel locale={locale} onSelect={selectSection} />
               <ExploreHub locale={locale} onSelect={selectSection} />
+              <ScreenshotShowcase section={activeSection} locale={locale} />
             </>
           ) : (
             <SectionHeader title={sectionMeta[activeSection].title} subtitle={sectionMeta[activeSection].subtitle} locale={locale} />
           )}
 
-          <ScreenshotShowcase section={activeSection} locale={locale} />
-
           {activeSection === "overview" && (
             <section className="overview-reference">
               <div className="overview-reference-heading">
                 <span>{locale === "ru" ? "Что меняет мод" : "What the mod changes"}</span>
-                <h2>{locale === "ru" ? "Сначала пойми систему" : "Understand the system first"}</h2>
+                <h2>{locale === "ru" ? "Основные системы мода" : "Core mod systems"}</h2>
               </div>
               <WikiArticles articles={sectionArticles} locale={locale} />
             </section>
@@ -236,11 +271,13 @@ export function App() {
             <FaqList locale={locale} />
           )}
 
+          {activeSection !== "overview" && <ScreenshotShowcase section={activeSection} locale={locale} />}
+
           <footer className="site-footer">
-        Kagurabachi Craft &nbsp;·&nbsp; v5.5.0 Stable &nbsp;·&nbsp; NeoForge 1.21.1 &nbsp;·&nbsp;
+            Kagurabachi Craft &nbsp;·&nbsp; v{release.version} &nbsp;·&nbsp; {release.loader} {release.minecraft} &nbsp;·&nbsp;
             {locale === "en"
               ? " Based on the Kagurabachi manga by Takeru Hokazono"
-              : " По манге Кагурабати Такеру Хоказоно"
+              : " По мотивам манги «Кагурабати» Такэру Хокадзоно"
             }
           </footer>
         </main>

@@ -1,5 +1,5 @@
 export const ui = {
-  search: { en: "Search wiki, controls, commands...", ru: "Поиск по wiki, управлению, командам..." },
+  search: { en: "Search wiki, controls, commands...", ru: "Поиск по вики, управлению и командам..." },
   noResults: { en: "No matching entries.", ru: "Ничего не найдено." },
   language: { en: "Language", ru: "Язык" },
   theme: { en: "Theme", ru: "Тема" },

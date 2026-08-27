@@ -42,7 +42,7 @@ export function ProgressionPanel({ locale, query }: { locale: Locale; query: str
           : "Choose a start → fight and earn XP → join a faction → complete contracts → develop mastery and clan"}</span>
       </div>
       <EntryGroup title={locale === "ru" ? "Что означает каждый показатель" : "What every value means"} entries={progressionSystems} locale={locale} query={query} />
-      <EntryGroup title={locale === "ru" ? "Основной цикл прокачки" : "Core progression loop"} entries={progressionLoops} locale={locale} query={query} />
+      <EntryGroup title={locale === "ru" ? "Как развивается персонаж" : "How your character progresses"} entries={progressionLoops} locale={locale} query={query} />
       <EntryGroup title={locale === "ru" ? "Происхождения" : "Origins"} entries={origins} locale={locale} query={query} />
       <EntryGroup title={locale === "ru" ? "Фракции" : "Factions"} entries={factions} locale={locale} query={query} />
       <EntryGroup title={locale === "ru" ? "Контракты" : "Contracts"} entries={contracts} locale={locale} query={query} />

@@ -60,14 +60,14 @@ export const screenshots: ScreenshotEntry[] = [
     src: tobimuneBlackFlames,
     section: "combat",
     title: { en: "Black Flames", ru: "Чёрное пламя" },
-    caption: { en: "Tobimune combat with the main HUD visible.", ru: "Бой с Тобимунэ и основными элементами HUD." },
+    caption: { en: "Tobimune combat with the main HUD visible.", ru: "Бой с Тобимунэ и основными элементами интерфейса." },
     shape: "wide"
   },
   {
     src: kurotsuchiIslandBreaker,
     section: "combat",
     title: { en: "Island Breaker: Burning Heaven Mass", ru: "Разрушитель острова: Пылающая небесная масса" },
-    caption: { en: "Kurotsuchi assembling the enormous burning block mass before its one-shot descent.", ru: "Куротсучи собирает огромную горящую массу из блоков перед её разовым падением." },
+    caption: { en: "Kurotsuchi assembling the enormous burning block mass before it crashes down in a single strike.", ru: "Куротсучи собирает огромную горящую массу из блоков перед тем, как она обрушится одним ударом." },
     shape: "wide"
   },
   {
@@ -108,7 +108,7 @@ export const screenshots: ScreenshotEntry[] = [
   {
     src: signatureSelector,
     section: "signatures",
-    title: { en: "Signature selector", ru: "Выбор сигнатурной техники" },
+    title: { en: "Signature selector", ru: "Выбор фирменного приёма" },
     caption: { en: "Hold Tab, choose a technique and release to confirm.", ru: "Удерживайте Tab, выберите технику и отпустите клавишу." }
   },
   {
@@ -156,21 +156,21 @@ export const screenshots: ScreenshotEntry[] = [
   {
     src: targetLock,
     section: "combat",
-    title: { en: "Target lock", ru: "Таргет-лок" },
+    title: { en: "Target lock", ru: "Захват цели" },
     caption: { en: "The lock-on marker around the selected target.", ru: "Маркер захвата вокруг выбранной цели." },
     shape: "portrait"
   },
   {
     src: stylePointFarmAura,
     section: "signatures",
-    title: { en: "Style-point farming aura", ru: "Аура фарма очков стиля" },
-    caption: { en: "The aura shown while farming Style points with N.", ru: "Аура, которая появляется при фарме очков стиля на N." },
+    title: { en: "Style Point aura", ru: "Аура накопления очков стиля" },
+    caption: { en: "The aura shown while building Style Points with N.", ru: "Аура, которая появляется при накоплении очков стиля клавишей N." },
     shape: "portrait"
   },
   {
     src: blockEffect,
     section: "combat",
-    title: { en: "Block effect", ru: "Эффект блока" },
+    title: { en: "Guard effect", ru: "Эффект защиты" },
     caption: { en: "The visual effect shown while blocking an attack.", ru: "Визуальный эффект во время блокирования атаки." },
     shape: "portrait"
   },

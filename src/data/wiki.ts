@@ -5,23 +5,23 @@ export const wikiArticles: WikiArticle[] = [
   {
     id: "what-is-kbc",
     section: "overview",
-    title: { en: "What is Kagurabachi Craft?", ru: "Что такое Кагурабати Craft?" },
+    title: { en: "What is Kagurabachi Craft?", ru: "Что такое Kagurabachi Craft?" },
     summary: {
-      en: "A combat-first NeoForge 1.21.1 mod inspired by the Kagurabachi manga - deep melee combat, fighting styles, hand-to-hand and a huge roster of sorceries.",
-      ru: "Боевой мод по манге Кагурабати для NeoForge 1.21.1. В моде есть оружейные стили, рукопашный бой и колдовства."
+      en: "A NeoForge 1.21.1 combat mod inspired by Kagurabachi, with weapon styles, hand-to-hand combat, signature techniques and sorcery.",
+      ru: "Боевой мод по манге Кагурабати для NeoForge 1.21.1. В моде есть оружейные стили, рукопашный бой, фирменные приёмы и колдовство."
     },
     body: [
       {
         en: "Kagurabachi Craft changes Minecraft combat. It adds combat mode, weapon and hand-to-hand styles, signature techniques, parries, clashes, Stability, stamina and block destruction.",
-        ru: "Кагурабати Craft меняет боевую систему Minecraft. Мод добавляет боевой режим, оружейные и рукопашные стили, сигнатурные техники, парирования, столкновения, стабильность, выносливость и разрушение блоков."
+        ru: "Kagurabachi Craft меняет боевую систему Minecraft. Мод добавляет боевой режим, оружейные и рукопашные стили, фирменные приёмы, парирование, столкновения атак, стойкость, выносливость и разрушение блоков."
       },
       {
-        en: "On top of that combat core sits a large library of sorceries - from the canon Enchanted Blades to dozens of standalone abilities like teleportation, illusions, chains, fire, lightning and summons. A survival game mode is currently in development.",
-        ru: "Поверх боевого ядра - большая библиотека колдовств: от канонических зачарованных клинков до десятков отдельных способностей вроде телепортации, иллюзий, цепей, огня, молнии и призывов. Режим выживания сейчас в разработке."
+        en: "The mod also includes Enchanted Blades from the manga and many standalone sorceries built around teleportation, illusions, chains, fire, lightning and summons. A survival mode is in development.",
+        ru: "В моде также есть зачарованные клинки из манги и множество отдельных колдовств: телепортация, иллюзии, цепи, огонь, молния и призывы. Режим выживания находится в разработке."
       },
       {
-        en: "Major combat NPCs account for range, threats, position, defence and cooldowns. Cascade and Quasar handle their visual effects; Veil adds distortion and post-processing.",
-        ru: "Основные боевые NPC учитывают дистанцию, угрозы, позицию, защиту и перезарядки. За визуальные эффекты отвечают Cascade и Quasar, за искажения и постобработку — Veil."
+        en: "Major combat NPCs react to distance, threats, position, defence and cooldowns. Cascade and Quasar provide their visual effects, while Veil adds distortion and post-processing.",
+        ru: "Основные боевые NPC учитывают дистанцию, угрозы, положение, защиту и перезарядки. Cascade и Quasar отвечают за визуальные эффекты, а Veil — за искажения и постобработку."
       }
     ],
     tags: ["overview", "combat", "sorcery"]
@@ -37,8 +37,8 @@ export const wikiArticles: WikiArticle[] = [
     },
     body: [
       {
-        en: "Your weapon determines the active style automatically. This changes HP and Stability damage, guard pressure, block strength, parry timing, reach, attack arcs, target count, heavy attacks and which signatures can execute. The Fighting Styles section shows every exact profile.",
-        ru: "Оружие автоматически определяет активный стиль. От него зависят урон по HP и стабильности, давление на блок, сила защиты, окно парирования, дальность, дуги атак, число целей, тяжёлые атаки и доступные сигнатуры. Точные профили собраны в разделе «Боевые стили»."
+      en: "Your weapon determines the active style automatically. This changes HP and Stability damage, guard pressure, block strength, parry timing, reach, attack arcs, target count, heavy attacks and which signature techniques are available. The Fighting Styles section lists the exact values.",
+        ru: "Оружие автоматически определяет активный стиль. От него зависят урон по здоровью и стойкости, давление на блок, сила защиты, окно парирования, дальность, ширина атак, число целей, тяжёлые атаки и доступные фирменные приёмы. Точные значения собраны в разделе «Боевые стили»."
       }
     ],
     tags: ["styles", "hand-to-hand", "combat"]
@@ -51,12 +51,12 @@ export const wikiArticles: WikiArticle[] = [
     title: { en: "First five minutes", ru: "Первые пять минут" },
     summary: {
       en: "Enter combat mode, learn spacing and styles, then layer sorcery on top.",
-      ru: "Войдите в боевой режим, освойте дистанцию и стили, затем добавьте колдовство."
+      ru: "Включите боевой режим, освойте дистанцию и выбранный стиль, а затем подключайте колдовство."
     },
     body: [
       {
       en: "Choose an origin, then press Y to enter combat mode. LMB attacks, Shift blocks and parries, and Ctrl dodges. Press R for sorcery controls and Tab for signature techniques.",
-      ru: "Выберите происхождение и нажмите Y для входа в боевой режим. LMB отвечает за атаки, Shift за блок и парирование, Ctrl за уклонение. R включает управление колдовством, Tab применяет сигнатурные техники."
+      ru: "Выберите происхождение и нажмите Y, чтобы войти в боевой режим. ЛКМ отвечает за атаки, Shift — за блок и парирование, Ctrl — за уклонение. R включает управление колдовством, а Tab применяет фирменные приёмы."
       },
       {
         en: "Learn one style and its rhythm before piling on sorcery - combat fundamentals carry every fight.",
@@ -69,15 +69,15 @@ export const wikiArticles: WikiArticle[] = [
   {
     id: "se-system",
     section: "quickstart",
-    title: { en: "Spiritual Energy (SE)", ru: "Духовная Энергия (SE)" },
+    title: { en: "Spirit Energy (SE)", ru: "Духовная энергия (SE)" },
     summary: {
-      en: "SE is your sorcery fuel. All active abilities cost SE - manage it carefully.",
-      ru: "SE - топливо колдовства. Все активные способности стоят SE - расходуйте с умом."
+      en: "SE powers active sorcery abilities and regenerates over time.",
+      ru: "SE расходуется на активные способности колдовства и со временем восстанавливается."
     },
     body: [
       {
-        en: "SE regenerates over time. Some sorceries have per-tick costs (sustained abilities), others have flat activation costs. Check each ability's description for the exact cost. Use /kbc set currentSE to refill it for testing.",
-        ru: "SE восстанавливается со временем. У одних колдовств затраты за тик (длительные способности), у других - фиксированная стоимость активации. Смотрите описание способности для точной цены. Команда /kbc set currentSE пополняет его для тестов."
+        en: "Sustained abilities spend SE continuously, while others charge a fixed amount when activated. Check each ability for its exact cost. Administrators can set the resource for testing with /kbc set currentSE <value> [targets].",
+        ru: "Длительные способности постоянно расходуют SE, а другие списывают фиксированную стоимость при активации. Точная цена указана в описании каждого приёма. Для тестирования администратор может использовать /kbc set currentSE <value> [targets]."
       }
     ],
     tags: ["se", "energy", "resource", "quickstart"]
@@ -88,17 +88,17 @@ export const wikiArticles: WikiArticle[] = [
     section: "quickstart",
     title: { en: "Sorcery mode & slots", ru: "Режим колдовства и слоты" },
     summary: {
-      en: "Hold R for sorcery mode. Every sorcery has six slots bound to the same keys.",
-      ru: "Удержите R для режима колдовства. У каждого колдовства шесть слотов на одних и тех же клавишах."
+      en: "Use R to enter sorcery mode. Every sorcery has six slots bound to the same keys.",
+      ru: "R включает режим колдовства. У каждого колдовства шесть слотов с одинаковыми клавишами."
     },
     body: [
       {
-        en: "The slot bindings are the same for every sorcery: Primary = R + LMB, Secondary = R + RMB, Utility = R + Shift, Supportive 1 = Z, Supportive 2 = X, Special = G. So once you learn the controls, you can pick up any new sorcery instantly - only the abilities in each slot change.",
-        ru: "Привязки слотов одинаковы для всех колдовств: Primary = R + ЛКМ, Secondary = R + ПКМ, Utility = R + Shift, Supportive 1 = Z, Supportive 2 = X, Special = G. Освоив управление, вы мгновенно берёте любое новое колдовство - меняются только способности в слотах."
+        en: "Every sorcery uses the same bindings: Primary = R + LMB, Secondary = R + RMB, Utility = R + Shift, Support 1 = Z, Support 2 = X and Special = G. Only the abilities assigned to those slots change.",
+        ru: "Все колдовства используют одинаковые клавиши: основной слот — R + ЛКМ, дополнительный — R + ПКМ, вспомогательный — R + Shift, поддержка 1 — Z, поддержка 2 — X, особый — G. Меняются только способности в этих слотах."
       },
       {
-        en: "Set your control style with /kbc settings sorceryMode toggle (or hold) - toggle keeps sorcery mode active after releasing R.",
-        ru: "Настройте управление командой /kbc settings sorceryMode toggle (или hold) - toggle оставляет режим колдовства активным после отпускания R."
+        en: "Choose how R behaves with /kbc settings sorceryMode toggle or /kbc settings sorceryMode hold. Toggle mode stays active after R is released; hold mode does not.",
+        ru: "Выберите поведение R командой /kbc settings sorceryMode toggle или /kbc settings sorceryMode hold. В режиме переключения колдовство остаётся активным после отпускания R, а в режиме удержания — нет."
       }
     ],
     tags: ["sorcery", "controls", "slots", "quickstart"]
@@ -110,13 +110,13 @@ export const wikiArticles: WikiArticle[] = [
     section: "combat",
     title: { en: "Combat basics", ru: "Основы боя" },
     summary: {
-      en: "Combat is about reading openings and applying pressure - not spamming attacks.",
-      ru: "Бой - это чтение открытий и давление, а не спам атаками."
+      en: "Combat rewards timing, distance control and deliberate attacks.",
+      ru: "В бою важны точный момент, контроль дистанции и осмысленные атаки."
     },
     body: [
       {
-        en: "Combat mode (Y) enables the full attack stack and HUD. Tap LMB for a light attack or keep holding the same press for 5 ticks to promote it into your style's heavy. Inputs made shortly before a cooldown ends can be buffered, but the server still validates the action. Shift opens a one-shot parry window and then remains a block while held; it does not repeatedly re-parry.",
-        ru: "Боевой режим (Y) включает полный стек атак и HUD. Коротко нажмите LMB для лёгкой атаки или продолжайте удерживать то же нажатие 5 тиков, чтобы повысить его до тяжёлой атаки текущего стиля. Ввод незадолго до конца перезарядки может попасть в буфер, но действие всё равно проверяет сервер. Shift открывает одно окно парирования, а затем остаётся блоком при удержании; повторное парирование само не запускается."
+        en: "Press Y to enable combat controls and the HUD. Tap LMB for a light attack or hold it for 5 ticks to use your style's heavy attack. An input just before the cooldown ends may be queued. Pressing Shift attempts one parry, then continues as a block while held.",
+        ru: "Нажмите Y, чтобы включить боевое управление и интерфейс. Коротко нажмите ЛКМ для лёгкой атаки или удерживайте её 5 тиков для тяжёлой атаки текущего стиля. Нажатие перед концом перезарядки может встать в очередь. Shift сначала выполняет одну попытку парирования, а затем работает как блок, пока клавиша удерживается."
       }
     ],
     tags: ["combat", "attack", "basics"]
@@ -125,15 +125,15 @@ export const wikiArticles: WikiArticle[] = [
   {
     id: "resources",
     section: "combat",
-    title: { en: "HP is not the only way to lose", ru: "HP - не единственный способ проиграть" },
+    title: { en: "HP is not the only way to lose", ru: "HP — не единственный способ проиграть" },
     summary: {
-      en: "Stability, guard stress, fatigue, adrenaline and effective power all decide a duel.",
-      ru: "Стабильность, напряжение защиты, усталость, адреналин и эффективная сила решают исход дуэли."
+      en: "Stability, guard stress, fatigue, adrenaline and Style Points all affect a duel.",
+      ru: "На исход дуэли влияют стойкость, нагрузка на защиту, усталость, адреналин и очки стиля."
     },
     body: [
       {
-        en: "Stability is posture: drain it to stagger and expose the target. Guard stress makes repeated blocking less sustainable. Fatigue punishes repeated demanding actions. Adrenaline is a temporary survival response under pressure. Style points are a separate temporary offensive resource generated by varied combat and spent on signatures. Style Mastery is persistent progression and must not be confused with that meter.",
-        ru: "Стабильность - это стойка: истощите её, чтобы ошеломить и открыть цель. Напряжение защиты делает постоянный блок менее устойчивым. Усталость наказывает за повторение требовательных действий. Адреналин - временная реакция выживания под давлением. Очки стиля - отдельный временный наступательный ресурс за разнообразный бой, который расходуется на сигнатуры. Не путайте его с постоянным мастерством стиля."
+        en: "Drain Stability to stagger an opponent and create an opening. Repeated blocking builds guard stress, while repeating costly actions builds fatigue. Adrenaline briefly helps you survive under pressure. Varied combat earns temporary Style Points for signature techniques; Style Mastery is separate, permanent progression.",
+        ru: "Истощите стойкость противника, чтобы ошеломить его и открыть для атаки. Постоянный блок накапливает нагрузку на защиту, а повторение затратных действий — усталость. Адреналин ненадолго помогает выжить под давлением. Разнообразный бой приносит временные очки стиля для фирменных приёмов; мастерство стиля развивается отдельно и сохраняется."
       }
     ],
     tags: ["stability", "guard", "fatigue", "adrenaline", "combat"]
@@ -144,13 +144,13 @@ export const wikiArticles: WikiArticle[] = [
     section: "combat",
     title: { en: "Block, parry and clash", ru: "Блок, парирование и столкновение" },
     summary: {
-      en: "Block to reduce damage, parry on perfect timing to negate it, and clash when two attacks meet.",
-      ru: "Блок снижает урон, парирование в идеальный тайминг отменяет его, а столкновение - когда встречаются две атаки."
+      en: "Block to reduce damage, parry with precise timing to stop it, and clash when two attacks meet.",
+      ru: "Блок снижает урон, своевременное парирование отменяет его, а две встречные атаки могут столкнуться."
     },
     body: [
       {
-        en: "Pressing Shift creates one parry attempt; keeping Shift held continues as block after that opening window. Releasing and pressing again is required for another parry. Blocking reduces incoming damage according to your style profile and builds guard stress under repeated pressure. A clash is resolved when compatible attack intents meet before confirmed damage.",
-        ru: "Нажатие Shift создаёт одну попытку парирования; дальнейшее удержание продолжает работать как блок после стартового окна. Для нового парирования Shift нужно отпустить и нажать снова. Блок снижает входящий урон по профилю текущего стиля и накапливает напряжение защиты под серией ударов. Столкновение разрешается, когда совместимые атаки встречаются до подтверждённого урона."
+        en: "Pressing Shift creates one parry attempt; after that brief window, holding Shift continues as a block. Release and press it again for another parry. Blocking reduces damage according to your style and builds guard stress under repeated hits. A clash occurs when two compatible attacks meet before either one lands.",
+        ru: "Нажатие Shift даёт одну попытку парирования; после короткого окна удержание продолжает работать как блок. Для следующей попытки отпустите и снова нажмите Shift. Блок снижает урон в зависимости от стиля и накапливает нагрузку на защиту под серией ударов. Столкновение возникает, когда две совместимые атаки встречаются раньше, чем одна из них попадёт в цель."
       }
     ],
     tags: ["parry", "block", "clash", "combat", "timing"]
@@ -161,13 +161,13 @@ export const wikiArticles: WikiArticle[] = [
     section: "combat",
     title: { en: "Light-to-heavy input", ru: "Переход от лёгкой к тяжёлой атаке" },
     summary: {
-      en: "One LMB press carries both intents: release early for light, hold for heavy.",
-      ru: "Одно нажатие LMB несёт оба намерения: раннее отпускание даёт лёгкую атаку, удержание - тяжёлую."
+      en: "Release LMB early for a light attack; keep holding for a heavy attack.",
+      ru: "Быстро отпустите ЛКМ для лёгкой атаки или продолжайте удерживать её для тяжёлой."
     },
     body: [
       {
-        en: "The server records the initial press. Releasing before 5 ticks requests a light attack; reaching 5 ticks promotes it into the current style's heavy and prevents the release from firing a second action. Sword, Hand, Dual Katana, Sheathed Katana and Trident each route to a different heavy and dash attack.",
-        ru: "Сервер запоминает начальное нажатие. Отпускание раньше 5 тиков запрашивает лёгкую атаку; на 5-м тике ввод повышается до тяжёлой атаки текущего стиля, а отпускание уже не запускает второе действие. У одного меча, рук, двух катан, катаны в ножнах и трезубца разные тяжёлые атаки и атаки в рывке."
+        en: "Release LMB before 5 ticks for a light attack. Hold it for 5 ticks to use the heavy attack of your current style; releasing afterward does not trigger a second move. Sword, Hand, Dual Katana, Sheathed Katana and Trident each have different heavy and dash attacks.",
+        ru: "Отпустите ЛКМ раньше 5 тиков для лёгкой атаки. Удерживайте её 5 тиков для тяжёлой атаки текущего стиля; последующее отпускание не запустит второй приём. У стилей одного меча, рукопашного боя, двух катан, катаны в ножнах и трезубца разные тяжёлые атаки и атаки в рывке."
       }
     ],
     tags: ["heavy", "combat", "input", "style"]
@@ -176,15 +176,15 @@ export const wikiArticles: WikiArticle[] = [
   {
     id: "signature-techniques",
     section: "combat",
-    title: { en: "Signature techniques", ru: "Сигнатурные техники" },
+    title: { en: "Signature techniques", ru: "Фирменные приёмы" },
     summary: {
-      en: "Tap Tab to execute; hold it for 200 ms to choose. Signatures spend Style points, not SE.",
-      ru: "Нажмите Tab для применения. Удержание Tab в течение 200 мс открывает выбор. Расходуется шкала стиля."
+      en: "Tap Tab to use the selected technique; hold it for 200 ms to choose another. Signature techniques spend Style Points, not SE.",
+      ru: "Нажмите Tab, чтобы применить выбранный приём, или удерживайте 200 мс, чтобы выбрать другой. Фирменные приёмы расходуют очки стиля, а не SE."
     },
     body: [
       {
-        en: "The implemented set is Iai, Execution, Freedom Style and Cigarette Cross Slash. Each has an equipment requirement, its own Style-point cost and cooldown. The dedicated Signature Techniques section lists exact controls, requirements and numbers. Unlocks are managed by the progression state or /kbc add signature for testing.",
-        ru: "Реализованный набор: Иай, Экзекуция, Стиль Свободы и Сигаретный разрез. У каждой техники есть требование к экипировке, собственная цена в очках стиля и перезарядка. Точные кнопки, требования и числа собраны в отдельном разделе «Сигнатурные техники». Для тестов разблокировкой можно управлять через /kbc add signature."
+        en: "The current set is Iai, Execution, Freedom Style and Cigarette Cross Slash. Each requires particular equipment and has its own Style Point cost and cooldown. The Signature Techniques section lists the exact controls, requirements and values. For testing, administrators can unlock them with /kbc add signature.",
+        ru: "Сейчас доступны Иай, Казнь, Свободный стиль и Крестовый сигаретный разрез. Для каждого приёма нужны определённое снаряжение, очки стиля и время на перезарядку. Точные требования и значения собраны в разделе «Фирменные приёмы». Для тестирования администратор может открыть их командой /kbc add signature."
       }
     ],
     tags: ["signature", "technique", "tab", "combat"]
@@ -196,16 +196,16 @@ export const wikiArticles: WikiArticle[] = [
     title: { en: "Backstab bonus", ru: "Бонус за удар в спину" },
     summary: {
       en: "A global positional rule: player-attributed damage is increased when the target is facing away.",
-      ru: "Глобальное позиционное правило: урон игрока повышается, когда цель смотрит от атакующего."
+      ru: "Глобальное позиционное правило: урон игрока повышается, когда цель отворачивается от атакующего."
     },
     body: [
       {
-        en: "When kbcBackstabDamage is enabled, a hit from the target's rear arc multiplies final incoming damage by 1 + kbcBackstabDamageModifier / 100. The default modifier is 25%, so a 10-damage hit becomes 12.5. Eligible combat targets also grant 200 Style points for the backstab.",
-        ru: "Когда включено правило kbcBackstabDamage, попадание из задней полусферы цели умножает итоговый входящий урон на 1 + kbcBackstabDamageModifier / 100. По умолчанию бонус равен 25%, поэтому удар на 10 урона становится 12,5. Подходящая боевая цель также даёт 200 очков стиля за удар в спину."
+      en: "When kbcBackstabDamage is enabled, a hit from the target's rear arc multiplies final incoming damage by 1 + kbcBackstabDamageModifier / 100. The default modifier is 25%, so a 10-damage hit becomes 12.5. Eligible combat targets also grant 200 Style Points for the backstab.",
+        ru: "Когда включено правило kbcBackstabDamage, попадание из задней полусферы цели умножает итоговый получаемый урон на 1 + kbcBackstabDamageModifier / 100. По умолчанию бонус равен 25%, поэтому удар на 10 урона становится 12,5. Подходящая боевая цель также даёт 200 очков стиля за удар в спину."
       },
       {
         en: "Freedom Style has a separate rear finisher that deals 14 damage and ignores Stability. It is not part of the global backstab multiplier.",
-        ru: "У Стиля Свободы дополнительно есть собственный выход за спину на 14 урона, игнорирующий стабильность. Этот эффект техники существует отдельно от глобального множителя удара в спину."
+        ru: "У Свободного стиля есть отдельный удар со спины на 14 урона, игнорирующий стойкость. Он не зависит от общего множителя урона за удар в спину."
       }
     ],
     tags: ["backstab", "rear", "damage", "style points", "combat"]
@@ -216,17 +216,17 @@ export const wikiArticles: WikiArticle[] = [
     section: "combat",
     title: { en: "Awakenings", ru: "Пробуждения" },
     summary: {
-      en: "Some sorceries can Awaken - charge a meter to 100% and press V to enter an empowered mode or unleash a one-shot ultimate.",
-      ru: "Некоторые колдовства могут Пробуждаться - заполните шкалу до 100% и нажмите V, чтобы войти в усиленный режим или применить одноразовый ультимейт."
+      en: "In the mod, some sorceries fill an Awakening meter and unlock a stronger mode or a single finishing attack at 100%.",
+      ru: "В моде некоторые колдовства заполняют шкалу пробуждения и при 100% открывают усиленный режим или один завершающий приём."
     },
     body: [
       {
-      en: "Some sorceries fill an Awakening meter during combat. At 100%, press V to activate it. Tobimune, Jikai and Di Algodze enter empowered modes, while Sumika's True Realm and Kurotsuchi's Burning Heaven Mass are one-shot cinematic attacks.",
-      ru: "Некоторые колдовства заполняют шкалу Пробуждения во время боя. При 100% нажмите V. Тобимунэ, Дзикай и Ди Аголдзе входят в усиленные режимы, а Истинное Царство Сумики и Пылающая небесная масса Куротсучи являются одноразовыми кинематографичными атаками."
+      en: "When the meter reaches 100%, press V. Tobimune, Jikai and Diagoldze enter empowered modes, while Sumika's True Realm and Kurotsuchi's Burning Heaven Mass are single finishing attacks.",
+      ru: "Когда шкала заполнится до 100%, нажмите V. Тобимунэ, Дзикай и Диагользе входят в усиленные режимы, а Истинная область Сумики и Пылающая небесная масса Куротсучи срабатывают как одиночные завершающие атаки."
       },
       {
-        en: "Server owners control awakenings with gamerules: kbcAwakeningsEnabled toggles the mechanic, kbcAwakeningDurationTicks sets the duration, and kbcInfiniteAwakenings removes the timer entirely.",
-        ru: "Администраторы управляют пробуждениями через gamerules: kbcAwakeningsEnabled включает механику, kbcAwakeningDurationTicks задаёт длительность, а kbcInfiniteAwakenings полностью убирает таймер."
+        en: "Server rules control Awakenings: kbcAwakeningsEnabled enables the mechanic, kbcAwakeningDurationTicks sets its duration, and kbcInfiniteAwakenings removes the timer.",
+        ru: "Пробуждения настраиваются правилами сервера: kbcAwakeningsEnabled включает механику, kbcAwakeningDurationTicks задаёт длительность, а kbcInfiniteAwakenings убирает ограничение по времени."
       }
     ],
     tags: ["awakening", "black-flames", "combat", "v-key"]
@@ -238,13 +238,13 @@ export const wikiArticles: WikiArticle[] = [
     section: "movement",
     title: { en: "Dodge", ru: "Уклонение" },
     summary: {
-      en: "Ctrl dodge is a charged burst for spacing - not free invulnerability.",
-      ru: "Уклонение Ctrl - заряжаемый рывок для дистанции, а не бесплатная неуязвимость."
+      en: "Ctrl spends one dodge charge to move quickly in your chosen direction.",
+      ru: "Ctrl расходует один заряд уклонения и быстро перемещает вас в выбранном направлении."
     },
     body: [
       {
-        en: "Dodge has a charge pool that depletes on use and regenerates over time (default cooldown ~0.5s). Use it to escape stagger windows, reposition after a guard break, or close distance for a follow-up.",
-        ru: "Уклонение имеет пул зарядов, тратящихся при использовании и восстанавливающихся со временем (кулдаун ~0.5с). Используйте, чтобы выйти из окна шатания, перестроиться после пробития блока или закрыть дистанцию."
+        en: "Dodge spends one charge. The move has a 10-tick cooldown; by default, one charge regenerates every 100 ticks (5 seconds). Use it to escape pressure, recover after a guard break or close the distance.",
+        ru: "Уклонение расходует один заряд. Между рывками проходит 10 тиков, а один заряд по умолчанию восстанавливается за 100 тиков (5 секунд). Используйте уклонение, чтобы выйти из-под давления, прийти в себя после пробития защиты или сократить дистанцию."
       }
     ],
     tags: ["dodge", "movement", "spacing"]
@@ -255,13 +255,13 @@ export const wikiArticles: WikiArticle[] = [
     section: "movement",
     title: { en: "Advanced movement", ru: "Продвинутое движение" },
     summary: {
-      en: "Extra jump, wall running and water walking are gameplay states, gated by sorcery and gear.",
-      ru: "Доп. прыжок, бег по стенам и хождение по воде - игровые состояния, зависящие от колдовства и снаряжения."
+      en: "Extra jumps, wall running and water walking depend on your sorcery and equipment.",
+      ru: "Дополнительные прыжки, бег по стенам и хождение по воде зависят от колдовства и снаряжения."
     },
     body: [
       {
-        en: "These options are unlocked by sorcery state, equipment and server-validated conditions - they aren't always available. Check your current sorcery's passive mobility grants. Movement locks during some abilities release automatically when the ability resolves.",
-        ru: "Эти возможности открываются состоянием колдовства, снаряжением и серверными условиями - они доступны не всегда. Смотрите пассивные мобильные бонусы текущего колдовства. Блокировки движения во время способностей снимаются автоматически по их завершении."
+        en: "These movement options are not always available. Check the passive effects of your current sorcery and equipment. If an ability temporarily locks movement, the lock ends automatically with the ability.",
+        ru: "Эти способы перемещения доступны не всегда. Проверяйте пассивные свойства текущего колдовства и снаряжения. Если способность временно ограничивает движение, ограничение снимается после её завершения."
       }
     ],
     tags: ["movement", "wall-run", "water-walk", "jump"]

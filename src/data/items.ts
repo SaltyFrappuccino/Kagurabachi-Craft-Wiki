@@ -1,7 +1,7 @@
 import { assets } from "./assets";
 import type { ItemEntry } from "../types";
 
-// Only the canon Enchanted Blades (魔剣) forged by Kunishige Rokuhira.
+// Enchanted Blades (妖刀) currently implemented in the mod.
 export const items: ItemEntry[] = [
   {
     id: "enten-blade",
@@ -14,7 +14,7 @@ export const items: ItemEntry[] = [
       ru: "Клинок Тихиро. У трёх его способностей разные задачи: Куро атакует на расстоянии, Ака сохраняет коснувшуюся клинка атаку, а Нисики ускоряет владельца и усиливает ближний бой."
     },
     details: [
-      { en: "Kuro fires spirit-energy slashes; charged and alternate versions change their size and coverage.", ru: "Куро выпускает разрезы духовной энергии; зарядка и дополнительные варианты меняют размер и охват." },
+      { en: "Kuro fires Spirit Energy slashes; charged and alternate versions change their size and coverage.", ru: "Куро выпускает разрезы духовной энергии; зарядка и дополнительные варианты меняют размер и охват." },
       { en: "Aka absorbs one compatible attack on contact and keeps it for a later counter.", ru: "Ака поглощает одну подходящую атаку при контакте и сохраняет её для ответного применения." },
       { en: "Nishiki is the movement mode. Additional Nishiki options require Mastery II.", ru: "Нисики отвечает за движение. Дополнительные режимы Нисики требуют II ранга мастерства." }
     ],
@@ -24,16 +24,16 @@ export const items: ItemEntry[] = [
 
   {
     id: "cloud-gouger-blade",
-    name: { en: "Kuregumo", ru: "Курегумо" },
+    name: { en: "Cloud Gouger", ru: "Рассекающий облака" },
     type: { en: "Enchanted Blade", ru: "Зачарованный клинок" },
     element: "ice",
     elementLabel: { en: "Weather", ru: "Погода" },
     summary: {
-      en: "Kuregumo uses Thunder charges for lightning, ice and water techniques. It can fight at several ranges and control space with weather effects, but none of its slots is a dedicated block or counter.",
-      ru: "Курегумо расходует заряды Грома на техники молнии, льда и воды. Он работает на нескольких дистанциях и контролирует пространство погодными эффектами, но отдельного блока или контратаки в наборе нет."
+      en: "Cloud Gouger spends Thunder charges on lightning, ice and water techniques. It works at several ranges and shapes the battlefield with weather effects, but has no dedicated guard or counter ability.",
+      ru: "Рассекающий облака расходует заряды грома на техники молнии, льда и воды. Клинок работает на разных дистанциях и меняет поле боя погодными эффектами, но не даёт отдельной защитной способности или контратаки."
     },
     details: [
-      { en: "Thunder charges accumulate during combat and are shown by the blade's HUD.", ru: "Заряды Грома накапливаются в бою и отображаются на HUD клинка." },
+      { en: "Thunder charges accumulate during combat and appear on the blade's HUD.", ru: "Заряды грома накапливаются в бою и отображаются на интерфейсе клинка." },
       { en: "Placed ice is temporary: changed terrain restores itself after the ability ends.", ru: "Созданный лёд временный: изменённые блоки восстанавливаются после завершения способности." }
     ],
     asset: assets.cloudGouger,
@@ -60,18 +60,18 @@ export const items: ItemEntry[] = [
 
   {
     id: "magatsumi-blade",
-    name: { en: "Magatsumi", ru: "Магатсуми" },
+    name: { en: "Magatsumi", ru: "Магацуми" },
     status: { en: "WIP", ru: "В разработке" },
     type: { en: "Enchanted Blade", ru: "Зачарованный клинок" },
     element: "wither",
     elementLabel: { en: "Curse / Creatures", ru: "Проклятие / Существа" },
     summary: {
-      en: "Magatsumi has five insect techniques: Spider, Dragonfly, Centipede, Butterfly and Bee. While unsheathed, it also applies a Curse around the wielder. The kit is marked WIP because several mechanics and visuals are still changing.",
-      ru: "У Магатсуми пять техник: Паук, Стрекоза, Сороконожка, Бабочка и Пчела. Пока клинок обнажён, он также накладывает Проклятие вокруг владельца. Набор помечен WIP: часть механик и визуальных эффектов ещё меняется."
+      en: "The current build implements five insect manifestations shown in the manga: Spider, Dragonfly, Centipede, Butterfly and Bee. While unsheathed, the blade also applies a Curse around its wielder. The kit is still in development, so some mechanics and visuals may change.",
+      ru: "В текущей версии реализованы пять показанных в манге образов-насекомых: Паук, Стрекоза, Сороконожка, Бабочка и Пчела. Пока клинок обнажён, он также накладывает проклятие на ближайшие цели. Набор ещё в разработке, поэтому часть механик и визуальных эффектов может измениться."
     },
     details: [
       { en: "Spider controls movement; Dragonfly handles repositioning; the remaining insects provide direct attacks.", ru: "Паук ограничивает движение, Стрекоза отвечает за перемещение, остальные насекомые дают прямые атаки." },
-      { en: "The passive Curse deals periodic damage that ignores Stability.", ru: "Пассивное Проклятие наносит периодический урон, игнорирующий Стабильность." }
+      { en: "The passive Curse deals periodic damage that ignores Stability.", ru: "Пассивное проклятие периодически наносит урон, игнорируя стойкость." }
     ],
     asset: assets.magatsumi,
     sorceryId: "magatsumi"
@@ -84,8 +84,8 @@ export const items: ItemEntry[] = [
     element: "feather",
     elementLabel: { en: "Birds / Suzaku", ru: "Птицы / Судзаку" },
     summary: {
-      en: "Samura's blade. Its regular kit uses feathers for teleport points, flight and position swaps. Suzaku restores health and clears common debuffs; full Awakening adds Black Flames to several attacks.",
-      ru: "Клинок Самуры. Обычный набор использует перья как точки телепортации, даёт полёт и обмен позициями. Судзаку восстанавливает здоровье и снимает обычные негативные эффекты; полное Пробуждение добавляет Чёрное пламя к нескольким атакам."
+      en: "Samura's blade. The manga names Crow, Owl and Suzaku; the mod adapts Crow and Suzaku and adds its own feather-based movement. In the mod, Black Flames is represented as an Awakening that changes several attacks.",
+      ru: "Клинок Самуры. В манге названы Ворон, Сова и Судзаку; мод развивает Ворона и Судзаку и добавляет собственные приёмы движения с перьями. Чёрное пламя в моде представлено как пробуждение, меняющее несколько атак."
     },
     details: [
       { en: "Feather Step places a point and teleports the wielder to it on release.", ru: "Шаг пера ставит точку и при отпускании телепортирует к ней владельца." },

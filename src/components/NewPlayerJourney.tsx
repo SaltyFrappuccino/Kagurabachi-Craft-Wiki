@@ -9,14 +9,14 @@ const steps = [
   },
   {
     number: "02",
-      title: { en: "Choose a combat style", ru: "Выберите боевой стиль" },
+    title: { en: "Choose a combat style", ru: "Выберите боевой стиль" },
     text: { en: "The held weapon selects the style automatically: Hand, Sword, Dual Katana, Sheathed Katana or Trident.", ru: "Стиль выбирается автоматически по оружию в руках: рукопашный, меч, две катаны, катана в ножнах или трезубец." },
     link: "#styles"
   },
   {
     number: "03",
-    title: { en: "Add sorcery and signatures", ru: "Добавьте колдовство и сигнатуры" },
-    text: { en: "Sorcery uses Spiritual Energy. Signatures use Style points and are selected or activated with Tab.", ru: "Колдовство тратит Духовную энергию. Сигнатуры используют очки стиля и выбираются либо активируются через Tab." },
+    title: { en: "Add sorcery and signature techniques", ru: "Освойте колдовство и фирменные приёмы" },
+    text: { en: "Sorcery uses Spirit Energy. Signature techniques use Style Points and are selected or activated with Tab.", ru: "Колдовство расходует духовную энергию. Для фирменных приёмов нужны очки стиля; выбирать и применять их можно через Tab." },
     link: "#signatures"
   },
   {

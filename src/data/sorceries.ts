@@ -1,12 +1,12 @@
 import { assets } from "./assets";
 import type { SorceryEntry } from "../types";
 
-// Ability data mirrors the mod's lang file (en_us.json) - slots are authoritative.
+// Player-facing summary of the abilities currently implemented in the mod.
 // Slot → input: Primary = R+LMB, Secondary = R+RMB, Utility = R+Shift,
 //               Supportive 1 = Z, Supportive 2 = X, Special = G, Awakening = V (at 100%).
 
 export const sorceries: SorceryEntry[] = [
-  // ── ENCHANTED BLADES (canon 魔剣) ────────────────────────────────────────────
+  // ── ENCHANTED BLADES (妖刀) CURRENTLY IMPLEMENTED IN THE MOD ────────────────
   {
     id: "enten",
     name: { en: "Enten", ru: "Энтен" },
@@ -14,41 +14,41 @@ export const sorceries: SorceryEntry[] = [
     element: "mirror",
     elementLabel: { en: "Spirit Energy / Goldfish", ru: "Духовная энергия / Рыбки" },
     tier: "enchanted-blade",
-    role: { en: "Kuro attacks, Aka counters, Nishiki handles movement", ru: "Куро атакует, Ака отвечает на удары, Нисики ускоряет владельца" },
+    role: { en: "A flexible blade kit built around Kuro, Aka and Nishiki", ru: "Гибкий набор приёмов Куро, Ака и Нисики" },
     summary: {
-      en: "Kuro fires spirit-energy slashes. Aka catches an attack on the blade and returns it later. Nishiki wraps the wielder in spirit energy for speed and close-range pressure; its extra modes unlock at Mastery II.",
-      ru: "Куро выпускает разрезы духовной энергии. Ака принимает атаку на клинок и позволяет вернуть её позже. Нисики окутывает владельца энергией, ускоряя движение и ближний бой; дополнительные режимы открываются на II ранге мастерства."
+      en: "Enten can change the pace of a fight without changing weapons. Kuro covers distance, Aka turns a well-timed defence into a stored counter, and Nishiki trades some of Kuro's power for speed and close-range pressure. The extra Nishiki modes unlock at Mastery II.",
+      ru: "Энтен позволяет менять темп боя, не меняя оружие. Куро достаёт врагов на расстоянии, Ака превращает своевременную защиту в ответный удар, а Нисики жертвует частью силы Куро ради скорости и ближнего натиска. Дополнительные режимы Нисики открываются на II ранге мастерства."
     },
     abilities: [
-      { slot: "Primary",  name: { en: "Kuro: Slash", ru: "Kuro: Разрез" }, desc: { en: "A long-range spirit-energy slash. In Nishiki mode it's faster but shorter-ranged (-30%) and weaker (-40%).", ru: "Дальний разрез духовной энергии. В режиме Nishiki быстрее, но короче (-30%) и слабее (-40%)." } },
-      { slot: "Secondary", name: { en: "Kuro: Shred", ru: "Kuro: Шред" }, desc: { en: "A fixed dash slash (1000 SE) that pierces every target in a line.", ru: "Фиксированный рывок-разрез (1000 SE), пронзающий все цели на линии." } },
-      { slot: "Utility",  name: { en: "Aka (Red)", ru: "Aka (Красный)" }, desc: { en: "A 1.5s defensive stance - block, then copy one attacking sorcery for 20 seconds.", ru: "Защитная стойка 1.5с - блокирует и копирует одно атакующее колдовство на 20с." } },
-      { slot: "Special",  name: { en: "Nishiki Mode", ru: "Режим Nishiki" }, desc: { en: "Toggle (Mastery II): +50% speed and +30% melee damage, but Kuro abilities become weaker.", ru: "Переключатель (Mastery II): +50% скорости и +30% урона в ближнем бою, но способности Kuro слабее." } },
-      { slot: "Supportive 1", name: { en: "Summon Kuro", ru: "Призыв Kuro" }, desc: { en: "Summon a Kuro fish. The fish is vulnerable - enemies can kill it to disrupt you.", ru: "Призвать рыбу Kuro. Рыба уязвима - враги могут убить её, сорвав ваши планы." } },
-      { slot: "Supportive 2", name: { en: "Nishiki: Support", ru: "Nishiki: Поддержка" }, desc: { en: "Defensive toggle (Mastery II): +20% speed, +5 armor, absorption and regeneration.", ru: "Защитный переключатель (Mastery II): +20% скорости, +5 брони, поглощение и регенерация." } }
+      { slot: "Primary",  name: { en: "Kuro: Slash", ru: "Куро: Разрез" }, desc: { en: "A quick Spirit Energy cut for fighting at range. Nishiki makes it faster, but trims 30% of its reach and 40% of its damage.", ru: "Быстрый разрез духовной энергии для боя на расстоянии. В режиме Нисики он становится быстрее, но теряет 30% дальности и 40% урона." } },
+      { slot: "Secondary", name: { en: "Kuro: Shred", ru: "Куро: Кромсание" }, desc: { en: "Spend 1000 SE to carve through every enemy in a straight dash.", ru: "Рывок по прямой за 1000 SE, рассекающий всех врагов на пути." } },
+      { slot: "Utility",  name: { en: "Aka (Red)", ru: "Ака (Красный)" }, desc: { en: "Hold the stance for up to 1.5 seconds. Catch one compatible sorcery attack and you can return it within the next 20 seconds.", ru: "Стойка длится до 1,5 секунды. Поймайте одну подходящую колдовскую атаку, чтобы вернуть её противнику в течение следующих 20 секунд." } },
+      { slot: "Special",  name: { en: "Nishiki Mode", ru: "Режим Нисики" }, desc: { en: "Unlocked at Mastery II. Gain 50% movement speed and 30% melee damage at the cost of a weaker Kuro.", ru: "Открывается на II ранге мастерства. Даёт +50% к скорости и +30% к урону в ближнем бою, но ослабляет Куро." } },
+      { slot: "Supportive 1", name: { en: "Summon Kuro", ru: "Призыв Куро" }, desc: { en: "Call out the Kuro goldfish. It is vulnerable, and the ability ends if an enemy kills it.", ru: "Призывает золотую рыбку Куро. Она уязвима: если враг убьёт рыбку, способность прервётся." } },
+      { slot: "Supportive 2", name: { en: "Nishiki: Support", ru: "Нисики: Поддержка" }, desc: { en: "A defensive Nishiki mode unlocked at Mastery II: 20% movement speed, 5 armor, Absorption and Regeneration.", ru: "Защитный режим Нисики, доступный со II ранга мастерства: +20% к скорости, +5 к броне, Поглощение и Регенерация." } }
     ],
     asset: assets.enten
   },
 
   {
     id: "cloud-gouger",
-    name: { en: "Kuregumo", ru: "Курегумо" },
+    name: { en: "Cloud Gouger", ru: "Рассекающий облака" },
     character: { en: "Genichi Sojo", ru: "Гэнъити Содзё" },
     element: "ice",
     elementLabel: { en: "Weather / Thunder", ru: "Погода / Гром" },
     tier: "enchanted-blade",
-    role: { en: "Spend Thunder charges on lightning, ice and water", ru: "Заряды Грома тратятся на молнию, лёд и воду" },
+    role: { en: "Weather control that rewards careful use of Thunder charges", ru: "Управление погодой с расчётливым расходом зарядов грома" },
     summary: {
-      en: "Kuregumo stores Thunder charges during combat. Use them for direct lightning strikes, ice walls and spikes, rain, fog or a stream of cold water. The kit covers several ranges, but has no dedicated defensive move.",
-      ru: "Курегумо накапливает заряды Грома в бою. Они расходуются на прямые удары молнии, ледяные стены и шипы, дождь, туман и поток холодной воды. Набор работает на разных дистанциях, но отдельной защиты у него нет."
+      en: "Cloud Gouger turns Mei, Yui and Kou into a broad weather-control kit. Thunder charges can be spent on a precise strike, chain lightning or a full storm, while fog, rain and ice make it easier to control the fight. Wet enemies take extra damage from Mei.",
+      ru: "Рассекающий облака превращает Мэй, Юи и Ко в полноценный набор для управления погодой. Заряды грома можно потратить на точный удар, цепную молнию или целую грозу, а туман, дождь и лёд помогают держать поле боя под контролем. Мэй наносит больше урона мокрым целям."
     },
     abilities: [
-      { slot: "Primary",  name: { en: "Thunder Strike", ru: "Удар грома" }, desc: { en: "Instant strike for 1 Thunder + 300 SE. Deals x1.5 stability damage; wet targets take x1.5.", ru: "Мгновенный удар за 1 Гром + 300 SE. x1.5 урона по стабильности; по мокрым целям x1.5." } },
-      { slot: "Secondary", name: { en: "Lightning / Storm", ru: "Молния / Гроза" }, desc: { en: "1-2 Thunder: chain lightning to the target. 3+ Thunder: a large storm around you.", ru: "1-2 Грома: цепная молния по цели. 3+ Грома: большая гроза вокруг вас." } },
-      { slot: "Utility",  name: { en: "Fog / Rain", ru: "Туман / Дождь" }, desc: { en: "Tap for fog (blindness, slowness, weakness); hold for rain that makes targets Wet for a minute.", ru: "Нажатие - туман (слепота, замедление, слабость); удержание - дождь, делающий цели Мокрыми на минуту." } },
-      { slot: "Special",  name: { en: "Thunder Dash", ru: "Громовой рывок" }, desc: { en: "Toggle: Speed II, blue afterimages and contact damage to enemies. Drains SE per tick.", ru: "Переключатель: Скорость II, синие афтеримиджи и контактный урон. Расходует SE за тик." } },
-      { slot: "Supportive 1", name: { en: "Cold Stream", ru: "Холодный поток" }, desc: { en: "A stream that damages, freezes and applies Slowness V; blocks it touches turn to ice.", ru: "Поток, наносящий урон, замораживающий и дающий Замедление V; задетые блоки становятся льдом." } },
-      { slot: "Supportive 2", name: { en: "Ice Spikes", ru: "Ледяные шипы" }, desc: { en: "A 32-block field of ice spikes - damage, freeze, weakness; traps enemies in ice.", ru: "Поле ледяных шипов 32 блока - урон, заморозка, слабость; запирает врагов во льду." } }
+      { slot: "Primary",  name: { en: "Mei: Thunder Strike", ru: "Мэй: Удар грома" }, desc: { en: "A near-instant lightning strike for 1 Thunder charge and 300 SE. It deals 50% more Stability damage, and wet targets take 50% more damage.", ru: "Почти мгновенный удар молнии за 1 заряд грома и 300 SE. Он наносит на 50% больше урона по стойкости, а мокрые цели получают на 50% больше обычного урона." } },
+      { slot: "Secondary", name: { en: "Mei: Lightning / Storm", ru: "Мэй: Молния / Гроза" }, desc: { en: "Spend 1–2 Thunder charges on chain lightning. Save at least 3 to unleash a large storm around you.", ru: "За 1–2 заряда грома по цели проходит цепная молния. Накопите не меньше трёх, чтобы вызвать большую грозу вокруг себя." } },
+      { slot: "Utility",  name: { en: "Kou: Fog / Rain", ru: "Ко: Туман / Дождь" }, desc: { en: "Tap for blinding, weakening fog; hold for rain that leaves targets wet for one minute.", ru: "Короткое нажатие укрывает область туманом, который ослепляет, замедляет и ослабляет. Удержание вызывает дождь и оставляет цели мокрыми на минуту." } },
+      { slot: "Special",  name: { en: "Mei: Thunder Dash", ru: "Мэй: Громовой рывок" }, desc: { en: "Move with Speed II and hurt enemies on contact while blue echoes trail behind you. The mode drains SE until switched off.", ru: "Даёт Скорость II и позволяет ранить врагов при столкновении, оставляя за собой синие следы. Режим расходует SE, пока не будет выключен." } },
+      { slot: "Supportive 1", name: { en: "Kou: Cold Stream", ru: "Ко: Холодный поток" }, desc: { en: "A freezing stream that deals damage and inflicts Slowness V. Any suitable blocks it touches turn to ice.", ru: "Ледяной поток наносит урон, замораживает и накладывает Замедление V. Подходящие блоки на его пути превращаются в лёд." } },
+      { slot: "Supportive 2", name: { en: "Yui: Ice Spikes", ru: "Юи: Ледяные шипы" }, desc: { en: "Fill a 32-block area with ice spikes that damage, freeze and weaken enemies. Some targets become trapped in ice.", ru: "Заполняет область шириной 32 блока ледяными шипами. Они ранят, замораживают и ослабляют врагов, а некоторых запирают во льду." } }
     ],
     asset: assets.cloudGouger
   },
@@ -56,46 +56,46 @@ export const sorceries: SorceryEntry[] = [
   {
     id: "kumeyuri",
     name: { en: "Kumeyuri", ru: "Кумэюри" },
-    character: { en: "Hiruhiko - Kumeyuri", ru: "Хирухико - Кумеюри" },
+    character: { en: "Hiruhiko — Kumeyuri", ru: "Хирухико — Кумэюри" },
     element: "illusion",
     elementLabel: { en: "Banquet / Play", ru: "Пир / Игра" },
     tier: "enchanted-blade",
-    role: { en: "Intoxication marks and telekinetic attacks with nearby objects", ru: "Опьянение и телекинетические атаки предметами вокруг" },
+    role: { en: "Build Intoxication, then turn the surroundings into weapons", ru: "Накопление Опьянения и превращение окружения в оружие" },
     summary: {
-      en: "Banquet places Intoxication on enemies and makes their reads less reliable. Play tears loose blocks or objects, gathers them and throws them. Several abilities become stronger against targets that already have Intoxication.",
-      ru: "Пир накладывает на врагов Опьянение и мешает им читать атаки. Игра вырывает блоки и предметы, собирает их и бросает в цель. Часть способностей сильнее действует по уже опьянённым противникам."
+      en: "Kumeyuri fights in two steps. Banquet builds Intoxication and marks valuable targets; Play then tears loose nearby blocks and objects and hurls them across the arena. Several attacks become easier to land once the enemy is intoxicated.",
+      ru: "Кумэюри строит бой в два этапа. Пир накапливает Опьянение и помечает важные цели, а Игра вырывает из окружения блоки и предметы и швыряет их по полю боя. По опьянённому врагу легче провести несколько ключевых приёмов."
     },
     abilities: [
-      { slot: "Primary",  name: { en: "Banquet: First Cup", ru: "Пир: Первая чаша" }, desc: { en: "A forward geisha-scene projectile that pressures on contact and applies the first Intoxication stacks.", ru: "Снаряд гейша-сцены вперёд: давит при контакте и накладывает первые стаки Опьянения." } },
-      { slot: "Secondary", name: { en: "Play: String Pull", ru: "Игра: Натяжение струн" }, desc: { en: "Tap to rip and throw one object; hold to gather several and release a wave. Drunk targets are controlled harder.", ru: "Нажатие - вырвать и бросить один объект; удержание - собрать несколько и выпустить волну. Пьяные цели контролируются сильнее." } },
-      { slot: "Utility",  name: { en: "Banquet: Wake", ru: "Пир: Пробуждение" }, desc: { en: "Spreads Intoxication and grants a 15s safeguard - a lethal hit restores 30% HP and teleports you to safety.", ru: "Распространяет Опьянение и даёт защиту на 15с - смертельный удар восстанавливает 30% HP и телепортирует в безопасность." } },
-      { slot: "Special",  name: { en: "Future", ru: "Будущее" }, desc: { en: "Reserved for a future canon Kumeyuri ability - no gameplay effect yet.", ru: "Зарезервировано под будущую каноничную способность Кумэюри - пока без эффекта." } },
-      { slot: "Supportive 1", name: { en: "Banquet: Designated Guest", ru: "Пир: Назначенный гость" }, desc: { en: "Tap for a strong mark on one target; hold for up to 3 weaker marks on already-intoxicated enemies.", ru: "Нажатие - сильная метка на одной цели; удержание - до 3 слабых меток на уже опьянённых врагах." } },
-      { slot: "Supportive 2", name: { en: "Play: Destructive Play", ru: "Игра: Разрушительная игра" }, desc: { en: "Tap to rip apart a structure section; hold to escalate into repeated tearing waves.", ru: "Нажатие - разорвать часть постройки; удержание - нарастающие волны разрушения." } }
+      { slot: "Primary",  name: { en: "Banquet: First Cup", ru: "Пир: Первая чаша" }, desc: { en: "Send a geisha apparition through the enemy to start building Intoxication and put them under pressure.", ru: "Образ гейши проходит сквозь врага, начинает накапливать Опьянение и мешает ему действовать свободно." } },
+      { slot: "Secondary", name: { en: "Play: String Pull", ru: "Игра: Натяжение струн" }, desc: { en: "Tap to tear loose and throw one object, or hold to gather several for a full wave. Intoxicated targets are easier to control.", ru: "Короткое нажатие вырывает и бросает один объект; удержание собирает несколько для целой волны. Опьянёнными целями управлять легче." } },
+      { slot: "Utility",  name: { en: "Banquet: Wake", ru: "Пир: Пробуждение" }, desc: { en: "Spread Intoxication and gain a 15-second safeguard. If a hit would kill you, it restores 30% health and moves you to safety instead.", ru: "Распространяет Опьянение и на 15 секунд страхует от гибели. Смертельный удар вместо этого восстановит 30% здоровья и перенесёт в безопасное место." } },
+      { slot: "Special",  name: { en: "Unrevealed Third Ability", ru: "Неназванная третья способность" }, desc: { en: "Kumeyuri's third primary ability has been confirmed in the manga, but its name and effect have not been revealed. This slot currently has no gameplay effect.", ru: "Третья основная способность Кумэюри подтверждена в манге, но её название и эффект пока не раскрыты. Сейчас этот слот ничего не делает." } },
+      { slot: "Supportive 1", name: { en: "Banquet: Designated Guest", ru: "Пир: Назначенный гость" }, desc: { en: "Tap to place one strong mark. Hold to spread up to three weaker marks among enemies who are already intoxicated.", ru: "Короткое нажатие оставляет одну сильную метку. Удержание распределяет до трёх более слабых меток между уже опьянёнными врагами." } },
+      { slot: "Supportive 2", name: { en: "Play: Destructive Play", ru: "Игра: Разрушительная игра" }, desc: { en: "Tap to rip open one section of a structure. Hold to follow it with repeated waves of destruction.", ru: "Короткое нажатие разрывает часть постройки. Удержание продолжает атаку серией разрушительных волн." } }
     ],
     asset: assets.kumeyuri
   },
 
   {
     id: "magatsumi",
-    name: { en: "Magatsumi", ru: "Магатсуми" },
+    name: { en: "Magatsumi", ru: "Магацуми" },
     status: { en: "WIP", ru: "В разработке" },
-    character: { en: "-", ru: "-" },
+    character: { en: "Akemura Soga", ru: "Акэмура Сога" },
     element: "wither",
     elementLabel: { en: "Insects / Curse", ru: "Насекомые / Проклятие" },
     tier: "enchanted-blade",
-    role: { en: "Five insect techniques and a Curse active while unsheathed", ru: "Пять техник насекомых и Проклятие обнажённого клинка" },
+    role: { en: "Five insect manifestations backed by the blade's Curse", ru: "Пять образов насекомых и проклятие обнажённого клинка" },
     summary: {
-      en: "Magatsumi has five insect techniques: Dragonfly, Centipede, Spider, Bee and Butterfly. They cover movement, control and large cuts. While the blade is unsheathed, nearby targets accumulate its Curse; the periodic damage ignores Stability.",
-      ru: "У Магатсуми пять техник: Стрекоза, Сороконожка, Паук, Пчела и Бабочка. Они отвечают за перемещение, контроль и крупные разрезы. Пока клинок обнажён, цели рядом получают Проклятие; его периодический урон игнорирует Стабильность."
+      en: "Magatsumi covers movement, restraint and heavy cuts through five insect manifestations: Dragonfly, Centipede, Spider, Bee and Butterfly. Keeping the blade unsheathed also spreads its Curse to nearby targets. The Curse deals periodic damage that bypasses Stability.",
+      ru: "Магацуми использует пять образов насекомых — Стрекозу, Сороконожку, Паука, Пчелу и Бабочку — для перемещения, сдерживания и тяжёлых разрезов. Пока клинок обнажён, на ближайших врагах накапливается Проклятие. Его периодический урон обходит стойкость."
     },
     abilities: [
-      { slot: "Primary",  name: { en: "Dragonfly", ru: "Стрекоза" }, desc: { en: "A fixed-damage blast - hold and release when ready (500 SE, 5s cooldown).", ru: "Взрыв фиксированного урона - удержать и отпустить при готовности (500 SE, кулдаун 5с)." } },
-      { slot: "Secondary", name: { en: "Centipede", ru: "Сороконожка" }, desc: { en: "Charge to max for a 360° blast; releasing early cancels it (~1000 SE/sec while charging).", ru: "Зарядить до максимума для 360° взрыва; ранний отпуск отменяет (~1000 SE/с при зарядке)." } },
-      { slot: "Utility",  name: { en: "Spider", ru: "Паук" }, desc: { en: "Weave a cobweb that immobilizes enemies and applies True Wound for its lifetime.", ru: "Сплести паутину, обездвиживающую врагов и накладывающую True Wound на время жизни." } },
-      { slot: "Special",  name: { en: "Butterfly", ru: "Бабочка" }, desc: { en: "Unsheathed only: shows the violet title Chō, then unleashes a near-horizontal world-cutting slash.", ru: "Только обнажённым: показывает фиолетовый титул Chō, затем - почти горизонтальный мирорежущий разрез." } },
-      { slot: "Supportive 1", name: { en: "Bee", ru: "Пчела" }, desc: { en: "Unsheathed only: after a full charge, breach a 50-block cylinder and teleport to its endpoint.", ru: "Только обнажённым: после полной зарядки пробить 50-блочный цилиндр и телепортироваться в его конец." } },
-      { slot: "Passive",  name: { en: "Curse", ru: "Проклятие" }, desc: { en: "While the blade is unsheathed, nearby targets accumulate Magatsumi's Curse. Its periodic damage ignores Stability.", ru: "Пока клинок обнажён, цели рядом получают Проклятие Магатсуми. Периодический урон Проклятия игнорирует Стабильность." } }
+      { slot: "Primary",  name: { en: "Dragonfly", ru: "Стрекоза" }, desc: { en: "Hold and release for a fixed-damage blast. It costs 500 SE and takes 5 seconds to recover.", ru: "После удержания выпускает взрыв с фиксированным уроном. Приём стоит 500 SE и восстанавливается 5 секунд." } },
+      { slot: "Secondary", name: { en: "Centipede", ru: "Сороконожка" }, desc: { en: "Only a full charge releases the 360° blast; let go early and the attack is lost. Charging drains about 1000 SE per second.", ru: "Круговой взрыв срабатывает только при полном заряде; раннее отпускание отменяет атаку. Зарядка расходует около 1000 SE в секунду." } },
+      { slot: "Utility",  name: { en: "Spider", ru: "Паук" }, desc: { en: "Spread a web that holds enemies in place and inflicts True Wound while it lasts.", ru: "Расстилает паутину, которая удерживает врагов на месте и накладывает Истинную рану, пока остаётся активной." } },
+      { slot: "Special",  name: { en: "Butterfly", ru: "Бабочка" }, desc: { en: "With the blade drawn, the violet title Chō appears before a sweeping slash tears through the terrain.", ru: "С обнажённым клинком появляется фиолетовая надпись Chō, после чего широкий разрез проходит сквозь рельеф." } },
+      { slot: "Supportive 1", name: { en: "Bee", ru: "Пчела" }, desc: { en: "With the blade drawn, finish the charge to carve through a 50-block line and appear at its far end.", ru: "С обнажённым клинком полностью зарядите приём, чтобы прорубить линию длиной 50 блоков и оказаться в её конце." } },
+      { slot: "Passive",  name: { en: "Curse", ru: "Проклятие" }, desc: { en: "While the blade is drawn, nearby targets accumulate Magatsumi's Curse. Its periodic damage ignores Stability.", ru: "Пока клинок обнажён, ближайшие цели получают проклятие Магацуми. Его периодический урон игнорирует стойкость." } }
     ],
     asset: assets.magatsumi
   },
@@ -108,24 +108,24 @@ export const sorceries: SorceryEntry[] = [
     elementLabel: { en: "Crow / Suzaku", ru: "Ворон / Судзаку" },
     tier: "enchanted-blade",
     awakening: { en: "Black Flames", ru: "Чёрное пламя" },
-    role: { en: "Feather teleports, flight and the Suzaku support mode", ru: "Телепорты по перьям, полёт и режим поддержки Судзаку" },
+    role: { en: "Feather movement, sustained flight and Suzaku support", ru: "Перемещения по перьям, долгий полёт и поддержка Судзаку" },
     summary: {
-      en: "Place feathers and teleport to them, fly with Crow Rush or swap positions with another entity. Suzaku restores health and removes common debuffs. At full awakening, Black Flames adds fire to the movement and attack abilities.",
-      ru: "Расставляйте перья и телепортируйтесь к ним, летите через Натиск ворона или меняйтесь местами с другой сущностью. Судзаку восстанавливает здоровье и снимает обычные негативные эффекты. При полном Пробуждении Чёрное пламя добавляет огонь к перемещению и атакам."
+      en: "Tobimune is built for constant movement. Feather Step and External Crow rearrange positions, Crow Rush keeps you airborne, and Suzaku handles healing and recovery. Black Flames turns that mobility into a more aggressive set of attacks.",
+      ru: "Тобимунэ рассчитан на непрерывное движение. Шаг пера и Внешний ворон меняют позиции участников боя, Натиск ворона удерживает владельца в воздухе, а Судзаку отвечает за лечение и восстановление. Чёрное пламя делает этот подвижный набор заметно агрессивнее."
     },
     abilities: [
-      { slot: "Primary",  name: { en: "Feather Step", ru: "Шаг пера" }, desc: { en: "Create a feather cluster; releasing teleports you to it. During Phoenix Evasion it teleports to the nearest enemy.", ru: "Создать пучок перьев; отпускание телепортирует к нему. В Phoenix Evasion - к ближайшему врагу." } },
-      { slot: "Secondary", name: { en: "Crow Rush", ru: "Натиск ворона" }, desc: { en: "Hold to fly with a damaging feather trail (15s reserve, regenerates +1s every 3s). Costs SE per tick.", ru: "Удержание - полёт с уроносящим следом перьев (запас 15с, +1с каждые 3с). Расход SE за тик." } },
-      { slot: "Utility",  name: { en: "External Crow", ru: "Внешний ворон" }, desc: { en: "No Suzaku: swap with the nearest entity, or hold for a mass swap in a 40-block area. With Suzaku: a feather+flame knockback burst.", ru: "Без Судзаку: обмен с ближайшей сущностью или удержание для массового обмена в 40 блоках. С Судзаку: вспышка перьев и пламени с отбросом." } },
-      { slot: "Special",  name: { en: "Suzaku", ru: "Судзаку" }, desc: { en: "Toggle: regeneration, cleanse and block restoration. Drains 300 SE/tick (disabled while Black Flames is active).", ru: "Переключатель: регенерация, очищение и восстановление блока. Расход 300 SE/тик (отключён при активном Чёрном пламени)." } },
-      { slot: "Supportive 1", name: { en: "Phoenix Strike", ru: "Удар феникса" }, desc: { en: "Mark a target, then after a short delay teleport in for an auto-strike (15s cooldown).", ru: "Пометить цель, затем после задержки телепортироваться для авто-удара (кд 15с)." } }
+      { slot: "Primary",  name: { en: "Feather Step", ru: "Шаг пера" }, desc: { en: "Leave a cluster of feathers and release to blink to it. During Phoenix Evasion, the blink takes you to the nearest enemy instead.", ru: "Оставляет скопление перьев и при отпускании переносит к нему. Во время Уклонения феникса телепортирует к ближайшему врагу." } },
+      { slot: "Secondary", name: { en: "Crow Rush", ru: "Натиск ворона" }, desc: { en: "Hold to fly and leave a damaging feather trail. The 15-second reserve regains 1 second every 3 seconds, and flight drains SE each tick.", ru: "Удержание позволяет лететь и оставлять ранящий след из перьев. Запас рассчитан на 15 секунд, восстанавливает 1 секунду каждые 3 секунды и во время полёта расходует SE." } },
+      { slot: "Utility",  name: { en: "External Crow", ru: "Внешний ворон" }, desc: { en: "Without Suzaku, swap with the nearest target or hold to rearrange several targets within 40 blocks. With Suzaku, the move becomes a feather-and-flame burst that knocks enemies away.", ru: "Без Судзаку меняет вас местами с ближайшей целью; удержание позволяет переставить несколько целей в радиусе 40 блоков. С Судзаку приём превращается во вспышку перьев и пламени, отбрасывающую врагов." } },
+      { slot: "Special",  name: { en: "Suzaku", ru: "Судзаку" }, desc: { en: "Sustain regeneration, cleanse harmful effects and restore blocks for 300 SE per tick. Black Flames removes that drain while active.", ru: "Поддерживает регенерацию, снимает вредные эффекты и восстанавливает блоки за 300 SE в тик. Чёрное пламя временно убирает этот расход." } },
+      { slot: "Supportive 1", name: { en: "Phoenix Strike", ru: "Удар феникса" }, desc: { en: "Mark an enemy; after a short pause, you blink to it and strike automatically. The move has a 15-second cooldown.", ru: "Помечает врага; после короткой паузы владелец телепортируется к нему и автоматически наносит удар. Перезарядка — 15 секунд." } }
     ],
     awakenedAbilities: [
-      { slot: "Primary",  name: { en: "Feather Step (Black Flames)", ru: "Шаг пера (Чёрное пламя)" }, desc: { en: "During Phoenix Evasion, the feather teleport snaps you to the nearest enemy instead of the cluster.", ru: "В Phoenix Evasion телепорт пера переносит к ближайшему врагу, а не к пучку." } },
-      { slot: "Secondary", name: { en: "Crow Rush", ru: "Натиск ворона" }, desc: { en: "Fly with a damaging feather trail. Reserve still applies, but Suzaku's SE drain is paused while Black Flames burns.", ru: "Полёт с уроносящим следом перьев. Запас работает, но расход SE от Судзаку приостановлен, пока горит Чёрное пламя." } },
-      { slot: "Utility",  name: { en: "External Crow (Flame Burst)", ru: "Внешний ворон (огневзрыв)" }, desc: { en: "Tap for a feather + black-flame burst that knocks targets back and sets them alight.", ru: "Нажатие - вспышка перьев и чёрного пламени, отбрасывающая и поджигающая цели." } },
-      { slot: "Special",  name: { en: "Suzaku", ru: "Судзаку" }, desc: { en: "The regeneration/cleanse support stays active, and its 300 SE/tick drain is disabled while Black Flames is up.", ru: "Поддержка регенерации и очищения активна, а её расход 300 SE/тик отключён, пока активно Чёрное пламя." } },
-      { slot: "Supportive 1", name: { en: "Phoenix Strike (Cross Slash)", ru: "Удар феникса (крест-разрез)" }, desc: { en: "Fires a 60-block cross flame slash that ignites and cuts everything along its path.", ru: "Выпускает 60-блочный крестовой огненный разрез, поджигающий и режущий всё на пути." } }
+      { slot: "Primary",  name: { en: "Feather Step (Black Flames)", ru: "Шаг пера (Чёрное пламя)" }, desc: { en: "Phoenix Evasion redirects Feather Step to the nearest enemy instead of the feather cluster.", ru: "Во время Уклонения феникса Шаг пера переносит к ближайшему врагу вместо скопления перьев." } },
+      { slot: "Secondary", name: { en: "Crow Rush", ru: "Натиск ворона" }, desc: { en: "The damaging flight still uses its limited reserve, but Suzaku stops draining SE while Black Flames are burning.", ru: "Ранящий полёт по-прежнему расходует ограниченный запас, но Судзаку не тратит SE, пока горит Чёрное пламя." } },
+      { slot: "Utility",  name: { en: "External Crow (Flame Burst)", ru: "Внешний ворон (огневзрыв)" }, desc: { en: "A burst of feathers and black fire knocks enemies back and leaves them burning.", ru: "Вспышка перьев и чёрного пламени отбрасывает врагов и оставляет их гореть." } },
+      { slot: "Special",  name: { en: "Suzaku", ru: "Судзаку" }, desc: { en: "Regeneration and cleansing remain active, but their usual 300 SE-per-tick drain is suspended for the Awakening.", ru: "Регенерация и очищение продолжают работать, а обычный расход 300 SE в тик отключается до конца Пробуждения." } },
+      { slot: "Supportive 1", name: { en: "Phoenix Strike (Cross Slash)", ru: "Удар феникса (крестовый разрез)" }, desc: { en: "Send a burning cross slash across 60 blocks, cutting and igniting everything in its path.", ru: "Огненный крестовый разрез проходит 60 блоков, рассекая и поджигая всё на пути." } }
     ],
     asset: assets.tobimune
   },
@@ -133,46 +133,46 @@ export const sorceries: SorceryEntry[] = [
   // ── STANDALONE SORCERIES & WEAPONS ───────────────────────────────────────────
   {
     id: "flame-bone",
-    name: { en: "Flame Bone", ru: "Пламенная Кость" },
+    name: { en: "Flame Bone of the Starving", ru: "Пламенная кость Голодающего" },
     character: { en: "Hiyuki Kagari", ru: "Хиюки Кагари" },
     element: "fire",
     elementLabel: { en: "Bone / Flame", ru: "Кость / Пламя" },
     tier: "sorcery",
-    role: { en: "Summon the Flame Bone for punches, projectiles and rib shields", ru: "Призыв Пламенной Кости: удары, рука-снаряд и защита рёбрами" },
+    role: { en: "Explosive hand-to-hand pressure backed by the Flame Bone's ribs", ru: "Взрывной ближний бой и защита рёбрами Пламенной кости" },
     summary: {
-      en: "The Special slot summons or dismisses the Flame Bone. With it active, the Primary becomes an explosive punch, the Secondary launches the hand, and the support slots create rib attacks or a rib shield.",
-      ru: "Особая способность призывает или убирает Пламенную Кость. Пока она активна, Primary становится взрывным ударом, Secondary запускает отделённую руку, а вспомогательные слоты создают атаку рёбрами или щит."
+      en: "Summon the Flame Bone, then choose between staying close with explosive punches or sending its hand out as a guided projectile. The ribs can lock down a position, shield the owner or erupt beneath an enemy. Most of the kit is unavailable until the weapon is summoned.",
+      ru: "Сначала призовите Пламенную кость, а затем решайте: давить врага взрывными ударами вблизи или отправить её руку в полёт как управляемый снаряд. Рёбра удерживают позицию, защищают владельца и вырываются из-под противника. Большая часть набора недоступна без призванного оружия."
     },
     abilities: [
-      { slot: "Special",  name: { en: "Summon Flame Bone", ru: "Призыв Пламенной Кости" }, desc: { en: "Summon the Flame Bone into your main hand; use again to despawn it.", ru: "Призвать Пламенную Кость в основную руку; повторно - убрать." } },
-      { slot: "Primary",  name: { en: "Bone Burst", ru: "Костяной взрыв" }, desc: { en: "Tap for a short rush and explosive punch; hold for a stronger burst. Unavailable while the hand is detached.", ru: "Нажатие - короткий рывок и взрывной удар; удержание - мощнее. Недоступно, пока рука отделена." } },
-      { slot: "Secondary", name: { en: "Hand Launch", ru: "Запуск руки" }, desc: { en: "Launch the detached hand: it steers with your aim, breaches blocks, explodes on impact and returns.", ru: "Запустить отделённую руку: наводится прицелом, пробивает блоки, взрывается при ударе и возвращается." } },
-      { slot: "Utility",  name: { en: "Bone Fortress", ru: "Костяная крепость" }, desc: { en: "Toggle: anchors you and routes incoming damage into a rib shield. Blocks movement until release.", ru: "Переключатель: фиксирует и направляет урон в щит из рёбер. Блокирует движение до отпускания." } },
-      { slot: "Supportive 1", name: { en: "Ribs: Uprise", ru: "Рёбра: Восход" }, desc: { en: "Summon temporary bone-flame rib constructs at a zone that trigger delayed eruptive strikes.", ru: "Призвать временные костяно-огненные рёбра в зоне с отложенными извержениями." } },
-      { slot: "Supportive 2", name: { en: "Ribs: Rampart", ru: "Рёбра: Вал" }, desc: { en: "Raise defensive ribs around you; they open for you and collapse after their lifetime.", ru: "Поднять защитные рёбра вокруг себя; открываются для вас и рушатся со временем." } }
+      { slot: "Special",  name: { en: "Summon Flame Bone of the Starving", ru: "Призыв Пламенной кости Голодающего" }, desc: { en: "Call the Flame Bone into your main hand. Use the slot again when you want to dismiss it.", ru: "Призывает Пламенную кость в основную руку. Повторное применение убирает оружие." } },
+      { slot: "Primary",  name: { en: "Bone Burst", ru: "Костяной взрыв" }, desc: { en: "Tap for a short rush into an explosive punch, or hold for a heavier blast. The move is locked while the hand is detached.", ru: "Короткое нажатие переходит из рывка во взрывной удар; удержание готовит более тяжёлый взрыв. Пока рука отделена, приём недоступен." } },
+      { slot: "Secondary", name: { en: "Hand Launch", ru: "Запуск руки" }, desc: { en: "Detach the hand and steer it with your aim. It punches through blocks, explodes on impact and then returns.", ru: "Отделяет руку и позволяет вести её прицелом. Она пробивает блоки, взрывается при столкновении и затем возвращается." } },
+      { slot: "Utility",  name: { en: "Bone Fortress", ru: "Костяная крепость" }, desc: { en: "Close a rib cage around yourself to absorb incoming damage. You cannot move until the shield is released.", ru: "Смыкает вокруг владельца клетку из рёбер, принимающую входящий урон. Двигаться нельзя, пока защита не будет снята." } },
+      { slot: "Supportive 1", name: { en: "Ribs: Uprise", ru: "Рёбра: Всплеск" }, desc: { en: "Mark an area for a delayed eruption of flaming ribs.", ru: "Отмечает область, где после короткой задержки вырвутся пылающие рёбра." } },
+      { slot: "Supportive 2", name: { en: "Ribs: Rampart", ru: "Рёбра: Бастион" }, desc: { en: "Grow a temporary barricade of ribs around yourself. It parts for its owner and crumbles when the duration ends.", ru: "Возводит вокруг владельца временную преграду из рёбер. Она расступается перед ним и рассыпается по окончании действия." } }
     ],
     asset: assets.flameBone
   },
 
   {
     id: "shiba-teleportation",
-    name: { en: "Shiba Teleportation", ru: "Телепортация Сибы" },
+    name: { en: "Itazura", ru: "Итадзура" },
     character: { en: "Togo Shiba", ru: "Того Сиба" },
     element: "teleport",
     elementLabel: { en: "Teleportation", ru: "Телепортация" },
     tier: "sorcery",
-    role: { en: "Short teleports, target grabs, ally rescue and return marks", ru: "Короткие телепорты, захват цели, спасение союзника и метки возврата" },
+    role: { en: "Reposition yourself, your allies and your enemies", ru: "Перемещение себя, союзников и противников" },
     summary: {
-      en: "Blink in the direction of movement, grab and relocate an enemy, pull an ally out of danger or leave a point to return to later. Most abilities change position without dealing damage by themselves.",
-      ru: "Телепортируйтесь по направлению движения, хватайте и переносите врага, вытаскивайте союзника из опасности или оставляйте точку для последующего возврата. Большинство способностей меняют позицию и сами по себе не наносят урон."
+      en: "Itazura wins fights by putting everyone in the wrong place at the right time. Blink behind a target, drop an enemy from the sky, pull an ally out of danger or prepare a return point before committing. Most of these moves deal no damage on their own.",
+      ru: "Итадзура выигрывает бой правильной расстановкой участников. Можно оказаться за спиной врага, сбросить его с высоты, вытащить союзника из опасности или заранее оставить точку возврата. Большинство этих приёмов сами по себе не наносят урон."
     },
     abilities: [
-      { slot: "Primary",  name: { en: "Tactical Shift", ru: "Тактический сдвиг" }, desc: { en: "Teleport forward instantly; if aimed at an entity, teleport behind it.", ru: "Мгновенный телепорт вперёд; при наведении на сущность - за её спину." } },
-      { slot: "Secondary", name: { en: "High-Altitude Drop", ru: "Сброс с высоты" }, desc: { en: "Grab a nearby entity and teleport both of you high up; the follow-up strike ignores Stability.", ru: "Схватить сущность и телепортировать обоих ввысь; добивающий удар игнорирует Стабильность." } },
-      { slot: "Utility",  name: { en: "Rescue Evacuation", ru: "Спасательная эвакуация" }, desc: { en: "Teleport you and a targeted ally to a safe spot away from enemies.", ru: "Телепортировать вас и выбранного союзника в безопасное место от врагов." } },
-      { slot: "Special",  name: { en: "Mass Teleport", ru: "Массовый телепорт" }, desc: { en: "Toggle: while ON, your next teleport drags nearby enemies along with you.", ru: "Переключатель: пока ВКЛ, следующий телепорт утащит с собой ближних врагов." } },
-      { slot: "Supportive 1", name: { en: "Set / Use Return Mark", ru: "Метка возврата" }, desc: { en: "First press sets a return point; second press teleports you back to it.", ru: "Первое нажатие - точка возврата; второе - телепорт к ней." } },
-      { slot: "Supportive 2", name: { en: "Mark / Pursue Entity", ru: "Метка / Преследование" }, desc: { en: "First press marks a nearby entity; second press teleports you to it.", ru: "Первое нажатие - метка сущности; второе - телепорт к ней." } }
+      { slot: "Primary",  name: { en: "Tactical Shift", ru: "Тактический сдвиг" }, desc: { en: "Blink forward, or aim at an enemy to appear directly behind it.", ru: "Переносит вперёд, а при наведении на врага — прямо ему за спину." } },
+      { slot: "Secondary", name: { en: "High-Altitude Drop", ru: "Сброс с высоты" }, desc: { en: "Take a nearby target high into the air with you. The strike that follows bypasses Stability.", ru: "Захватывает ближайшую цель и переносит вас обоих высоко в воздух. Следующий удар обходит стойкость." } },
+      { slot: "Utility",  name: { en: "Ally Rescue", ru: "Спасение союзника" }, desc: { en: "Pull the chosen ally out of danger and reappear together at a safer position.", ru: "Выдёргивает выбранного союзника из опасности и переносит вас обоих в более безопасное место." } },
+      { slot: "Special",  name: { en: "Mass Teleport", ru: "Массовый телепорт" }, desc: { en: "Arm your next teleport so it drags nearby enemies along. The mode switches off after the jump.", ru: "Следующий телепорт утащит с собой ближайших врагов, после чего режим отключится." } },
+      { slot: "Supportive 1", name: { en: "Set / Use Return Mark", ru: "Метка возврата" }, desc: { en: "The first press saves your position; the second takes you straight back to it.", ru: "Первое нажатие запоминает позицию, второе мгновенно возвращает к ней." } },
+      { slot: "Supportive 2", name: { en: "Mark / Pursue Target", ru: "Метка / Преследование" }, desc: { en: "Mark a nearby target, then use the slot again to blink to it.", ru: "Помечает ближайшую цель. Повторное применение телепортирует прямо к ней." } }
     ],
     asset: undefined
   },
@@ -184,16 +184,16 @@ export const sorceries: SorceryEntry[] = [
     element: "blade",
     elementLabel: { en: "Crimson Blade", ru: "Багровый клинок" },
     tier: "sorcery",
-    role: { en: "Charged slashes, forward dashes and a spinning area attack", ru: "Заряжаемые разрезы, рывки вперёд и круговая атака" },
+    role: { en: "Charged sword pressure with a taunt-based counter", ru: "Заряжаемые атаки клинком и контратака через провокацию" },
     summary: {
-      en: "Hold the main attacks to increase their reach or damage, dash through a target with Reaper, or use the spinning attack when surrounded. Taunt creates an opening if the enemy commits to an attack.",
-      ru: "Удерживайте основные атаки, чтобы увеличить дальность или урон, проходите сквозь цель рывком Жнеца и используйте вращение против группы. Провокация создаёт окно для ответа, если враг начинает атаку."
+      en: "Murasama is a bonus crossover weapon for players who like deliberate sword pressure. Charge a burst of slashes, cut through a target with Reaper's Flash or clear space with Blade Vortex. Taunt rewards you for reading the enemy and answering at the right moment.",
+      ru: "Мурасама — бонусное кроссоверное оружие для размеренного давления клинком. Заряжайте серию разрезов, проходите сквозь цель Вспышкой жнеца или освобождайте пространство Вихрем клинков. Провокация награждает за верно прочитанную атаку врага и своевременный ответ."
     },
     abilities: [
-      { slot: "Primary",  name: { en: "Crimson Slashes", ru: "Багровые разрезы" }, desc: { en: "Charge the attack, then release a burst of slashes. Charging drains energy.", ru: "Зарядить атаку и выпустить серию разрезов. Зарядка расходует энергию." } },
-      { slot: "Secondary", name: { en: "Reaper's Flash", ru: "Вспышка жнеца" }, desc: { en: "Charge a dash to your target. Charging drains energy.", ru: "Зарядить рывок к цели. Зарядка расходует энергию." } },
-      { slot: "Utility",  name: { en: "Blade Blender", ru: "Клинковый блендер" }, desc: { en: "Spin in place, damaging all enemies within 7 blocks.", ru: "Вращение на месте, урон всем врагам в 7 блоках." } },
-      { slot: "Supportive 1", name: { en: "Taunt", ru: "Провокация" }, desc: { en: "Taunt enemies; a successful taunt grants +1 Strength and counters when you take damage.", ru: "Спровоцировать врагов; успех даёт +1 Силы и контратаку при получении урона." } }
+      { slot: "Primary",  name: { en: "Crimson Slashes", ru: "Багровые разрезы" }, desc: { en: "Pour energy into the blade, then release the charge as a rapid series of cuts.", ru: "Наполняет клинок энергией, а при отпускании обрушивает на цель быструю серию разрезов." } },
+      { slot: "Secondary", name: { en: "Reaper's Flash", ru: "Вспышка жнеца" }, desc: { en: "Charge an energy-hungry dash that closes the distance to your target.", ru: "Заряжает требовательный к энергии рывок, который мгновенно сокращает дистанцию до цели." } },
+      { slot: "Utility",  name: { en: "Blade Vortex", ru: "Вихрь клинков" }, desc: { en: "A spinning cut that catches every enemy within 7 blocks.", ru: "Круговой разрез, задевающий всех врагов в радиусе 7 блоков." } },
+      { slot: "Supportive 1", name: { en: "Taunt", ru: "Провокация" }, desc: { en: "Bait the enemy into attacking. A successful taunt grants +1 Strength and primes a counter when you are hit.", ru: "Вынуждает врага атаковать. Успешная провокация даёт +1 к Силе и готовит контратаку на полученный удар." } }
     ],
     asset: undefined
   },
@@ -201,41 +201,41 @@ export const sorceries: SorceryEntry[] = [
   {
     id: "isou",
     name: { en: "Isou", ru: "Исоу" },
-    character: { en: "-", ru: "-" },
+    character: { en: "Sazanami Clan", ru: "клан Садзанами" },
     element: "void",
     elementLabel: { en: "Shockwave", ru: "Ударная волна" },
     tier: "sorcery",
-    role: { en: "Shockwaves at range, a charged blast and an air dash", ru: "Ударные волны на дистанции, заряжаемый взрыв и рывок в воздухе" },
+    role: { en: "Fast ranged pressure, a charged blast and an air dash", ru: "Быстрый натиск с расстояния, заряженный взрыв и воздушный рывок" },
     summary: {
-      en: "Primary fires a quick shockwave. Secondary can be charged for a larger blast, while Utility moves you through the air. The kit is simple: pressure from range, then change position before the next shot.",
-      ru: "Primary выпускает быструю ударную волну. Secondary заряжается для более крупного взрыва, а Utility перемещает вас по воздуху. Схема простая: держать дистанцию и менять позицию между выстрелами."
+      en: "Isou is all about keeping a clean rhythm. Use the quick wave to check an approaching enemy, commit to the charged blast when you have room, then take a new angle with the air dash.",
+      ru: "Исоу держится на ритме. Быстрая волна останавливает сближение, заряд превращает следующий удар в крупный взрыв, а воздушный рывок помогает сразу занять новый угол."
     },
     abilities: [
-      { slot: "Primary",  name: { en: "Shockwave", ru: "Ударная волна" }, desc: { en: "Fire a shockwave forward.", ru: "Выпустить ударную волну вперёд." } },
-      { slot: "Secondary", name: { en: "Charge Blast", ru: "Заряд-взрыв" }, desc: { en: "Hold to charge a larger blast, consuming energy over time for a bigger explosion.", ru: "Удержание заряжает больший взрыв, расходуя энергию для большего поражения." } },
-      { slot: "Utility",  name: { en: "Aerial Dash", ru: "Воздушный рывок" }, desc: { en: "Propel yourself through the air.", ru: "Рвануть по воздуху." } }
+      { slot: "Primary",  name: { en: "Shockwave", ru: "Ударная волна" }, desc: { en: "A fast, straight shockwave for keeping enemies at mid-range.", ru: "Быстрая прямая волна, которой удобно сдерживать врага на средней дистанции." } },
+      { slot: "Secondary", name: { en: "Charge Blast", ru: "Заряд-взрыв" }, desc: { en: "Hold to feed energy into a larger, harder-hitting explosion.", ru: "Удержание расходует энергию и готовит более крупный и сильный взрыв." } },
+      { slot: "Utility",  name: { en: "Aerial Dash", ru: "Воздушный рывок" }, desc: { en: "A quick air dash for escaping pressure or lining up the next shot.", ru: "Короткий рывок по воздуху — чтобы уйти из-под удара или выстроить следующий выстрел." } }
     ],
     asset: undefined
   },
 
   {
     id: "twilight-wave",
-    name: { en: "Twilight Wave", ru: "Сумеречная Волна" },
-    character: { en: "-", ru: "-" },
+    name: { en: "Twilight Wave", ru: "Сумеречная волна" },
+    character: { en: "Kuguri", ru: "Кугури" },
     element: "wave",
     elementLabel: { en: "Heat / Stored Heat", ru: "Жар / Запас жара" },
     tier: "sorcery",
-    role: { en: "Generate Stored Heat and spend it on stronger attacks", ru: "Накопление Запаса жара и его расход на усиленные атаки" },
+    role: { en: "Build heat, then cash it out in high-impact attacks", ru: "Накопление жара и его расход на решающие атаки" },
     summary: {
-      en: "One ability fills the Stored Heat meter. The other slots consume that meter for a burning touch, a channelled beam, an area burst or Hagure. Saving more heat gives you access to the expensive attacks sooner.",
-      ru: "Одна способность заполняет шкалу Запаса жара. Остальные тратят её на обжигающее касание, поддерживаемый луч, вспышку по площади или Хагурэ. Чем больше жара сохранено, тем раньше доступны дорогие атаки."
+      en: "Stored Heat sets the pace of this kit. Build it while you have breathing room, spend a little on Scorch or Flashpoint, or protect the meter until Heat Ray and Hagure are ready. The strongest answer is not always the best one if it leaves you empty.",
+      ru: "Запас жара задаёт темп всего набора. Накапливайте его в безопасный момент, тратьте понемногу на Ожог и Вспышку или берегите шкалу ради Теплового луча и Хагуре. Самый мощный ответ не всегда лучший, если после него ничего не остаётся."
     },
     abilities: [
-      { slot: "Primary",  name: { en: "Scorch Touch", ru: "Обжигающее касание" }, desc: { en: "Burn a nearby enemy, consuming Stored Heat.", ru: "Сжечь ближнего врага, расходуя Запас жара." } },
-      { slot: "Secondary", name: { en: "Heat Ray", ru: "Тепловой луч" }, desc: { en: "Channel Stored Heat into a beam until fully charged.", ru: "Направить Запас жара в луч до полной зарядки." } },
-      { slot: "Utility",  name: { en: "Flashpoint", ru: "Вспышка" }, desc: { en: "Charge up, then release a wave of heat around you.", ru: "Зарядиться и выпустить волну жара вокруг себя." } },
-      { slot: "Special",  name: { en: "Hagure", ru: "Hagure" }, desc: { en: "Spend all Stored Heat on one beam.", ru: "Потратить весь Запас жара на один луч." } },
-      { slot: "Supportive 1", name: { en: "Heat Generation", ru: "Генерация жара" }, desc: { en: "Toggle: constantly spend SE to build Stored Heat.", ru: "Переключатель: постоянно тратить SE, накапливая Запас жара." } }
+      { slot: "Primary",  name: { en: "Scorch", ru: "Ожог" }, desc: { en: "Spend some Stored Heat to sear the nearest enemy at close range.", ru: "Расходует часть запаса жара и обжигает ближайшего врага." } },
+      { slot: "Secondary", name: { en: "Heat Ray", ru: "Тепловой луч" }, desc: { en: "Feed Stored Heat into a focused beam and release it once the charge is complete.", ru: "Направляет запас жара в сфокусированный луч, который срабатывает после полной зарядки." } },
+      { slot: "Utility",  name: { en: "Flashpoint", ru: "Вспышка" }, desc: { en: "Build the charge, then wash the space around you in a wave of heat.", ru: "Накапливает заряд, а затем накрывает пространство вокруг волной жара." } },
+      { slot: "Special",  name: { en: "Hagure", ru: "Хагуре" }, desc: { en: "Empty the entire Stored Heat meter into one decisive beam.", ru: "Вкладывает весь запас жара в один решающий луч." } },
+      { slot: "Supportive 1", name: { en: "Heat Generation", ru: "Генерация жара" }, desc: { en: "Convert SE into Stored Heat until the mode is switched off.", ru: "Преобразует SE в запас жара, пока режим не будет отключён." } }
     ],
     asset: undefined
   },
@@ -243,20 +243,20 @@ export const sorceries: SorceryEntry[] = [
   {
     id: "jobaku",
     name: { en: "Jobaku", ru: "Дзёбаку" },
-    character: { en: "-", ru: "-" },
+    character: { en: "Kiyohiko Uzuki", ru: "Киёхико Удзуки" },
     element: "chain",
     elementLabel: { en: "Pegs / Binding", ru: "Колья / Связывание" },
     tier: "sorcery",
-    role: { en: "Place pegs and connect them with restraining tendrils", ru: "Установка кольев и связывание целей между ними" },
+    role: { en: "Prepare the ground with pegs, then lock enemies between them", ru: "Подготовка поля кольями и связывание врагов между ними" },
     summary: {
-      en: "Place pegs around the fight, then activate the links between them. Targets caught in a link are pulled and held; the binding can also apply True Wound. Jobaku is strongest after the area has been prepared.",
-      ru: "Расставьте колья вокруг места боя, затем активируйте связи между ними. Попавшие в связь цели притягиваются и удерживаются; связывание также может наложить Истинную рану. Дзёбаку лучше работает на заранее подготовленной территории."
+      en: "Jobaku needs a little setup. Place the pegs where the fight is going, then connect them with tendrils that pull enemies off their path and hold them in place. A prepared area is dangerous; an empty one gives the technique almost nothing to work with.",
+      ru: "Дзёбаку требует небольшой подготовки. Ставьте колья там, куда смещается бой, а затем соединяйте их щупальцами, которые стягивают врагов с маршрута и удерживают на месте. На подготовленной территории техника опасна, без кольев ей почти нечем работать."
     },
     abilities: [
-      { slot: "Primary",  name: { en: "Place Peg", ru: "Установить кол" }, desc: { en: "Place magical pegs (up to 4) used to bind targets.", ru: "Установить магические колья (до 4) для связывания целей." } },
-      { slot: "Secondary", name: { en: "Binding Tendrils", ru: "Связывающие усики" }, desc: { en: "Activate black tendrils that restrain and pull targets to the center. Inflicts True Wound; drains SE.", ru: "Активировать чёрные усики, сковывающие и тянущие цели к центру. Накладывает True Wound; расходует SE." } },
-      { slot: "Utility",  name: { en: "Clear Pegs", ru: "Убрать колья" }, desc: { en: "Remove all placed pegs.", ru: "Убрать все установленные колья." } },
-      { slot: "Supportive 1", name: { en: "Quadrant Deploy", ru: "Развёртка квадранта" }, desc: { en: "Instantly deploy all 4 pegs in a square around a target point.", ru: "Мгновенно развернуть все 4 кола квадратом вокруг точки." } }
+      { slot: "Primary",  name: { en: "Place Peg", ru: "Установить кол" }, desc: { en: "Set one of up to four pegs that define where Jobaku can bind its targets.", ru: "Ставит один из четырёх кольев, между которыми Дзёбаку сможет связывать цели." } },
+      { slot: "Secondary", name: { en: "Binding Tendrils", ru: "Связующие щупальца" }, desc: { en: "Bring the links to life. Black tendrils pull targets inward, hold them and inflict True Wound while draining SE.", ru: "Оживляет связи между кольями. Чёрные щупальца стягивают цели к центру, удерживают их и накладывают Истинную рану, постепенно расходуя SE." } },
+      { slot: "Utility",  name: { en: "Clear Pegs", ru: "Убрать колья" }, desc: { en: "Clear the field by dismissing every peg you placed.", ru: "Очищает поле и убирает все поставленные колья." } },
+      { slot: "Supportive 1", name: { en: "Quadrant Deploy", ru: "Развёртка квадранта" }, desc: { en: "Skip the setup and drop all four pegs in a square around the chosen point.", ru: "Позволяет пропустить подготовку и сразу поставить четыре кола квадратом вокруг выбранной точки." } }
     ],
     asset: undefined
   },
@@ -265,106 +265,106 @@ export const sorceries: SorceryEntry[] = [
     id: "gansui",
     name: { en: "Gansui", ru: "Гансуй" },
     status: { en: "WIP", ru: "В разработке" },
-    character: { en: "-", ru: "-" },
+    character: { en: "Shiyumi Harima", ru: "Сиюми Харима" },
     element: "spike",
     elementLabel: { en: "Earth / Rock", ru: "Земля / Камень" },
     tier: "sorcery",
-    role: { en: "Move terrain: throw rocks, raise walls and lift platforms", ru: "Управление рельефом: камни, стены, столбы и подъём платформ" },
+    role: { en: "Turn the terrain into weapons, walls and moving platforms", ru: "Превращение рельефа в оружие, стены и движущиеся платформы" },
     summary: {
-      en: "Gansui directly changes the terrain. It can throw loose rock, raise a wall or pillar, drop a large boulder and lift a selected platform high above the ground. Use it to cut routes or move the fight vertically.",
-      ru: "Гансуй напрямую меняет рельеф. Он бросает камни, поднимает стену или столб, обрушивает крупный валун и может поднять выбранную площадку над землёй. Это позволяет перекрывать пути и переносить бой по вертикали."
+      en: "Gansui treats the ground as part of the moveset. Loose stone becomes ammunition, walls and pillars change the route of a fight, and Platform Lift can carry an entire patch of terrain into the sky. It is strongest where there is enough solid ground to reshape.",
+      ru: "Для Гансуя земля — часть набора приёмов. Камни становятся снарядами, стены и столбы меняют маршрут боя, а Подъём платформы уносит в небо целый участок рельефа. Лучше всего техника работает там, где вокруг достаточно твёрдых блоков."
     },
     abilities: [
-      { slot: "Primary",  name: { en: "Launch Rock", ru: "Бросок камня" }, desc: { en: "Launch rocks at enemies with telekinetic force.", ru: "Запускать камни во врагов телекинетической силой." } },
-      { slot: "Secondary", name: { en: "Earth Pillar", ru: "Земляной столб" }, desc: { en: "Launch a targeted enemy upward on a rising stone pillar.", ru: "Подбросить цель вверх на поднимающемся каменном столбе." } },
-      { slot: "Utility",  name: { en: "Build Wall", ru: "Возвести стену" }, desc: { en: "Summon an earth wall that builds block by block around you.", ru: "Призвать земляную стену, строящуюся блок за блоком вокруг вас." } },
-      { slot: "Special",  name: { en: "Platform Lift", ru: "Подъём платформы" }, desc: { en: "Charge to lift terrain up to 150 blocks high. Lasts 90s or drops on a second press.", ru: "Зарядить подъём рельефа до 150 блоков. Держится 90с или падает по повторному нажатию." } },
-      { slot: "Supportive 1", name: { en: "Boulder Throw", ru: "Бросок валуна" }, desc: { en: "Launch a 5×5×5 boulder. It explodes on impact.", ru: "Запустить валун размером 5×5×5. При ударе он взрывается." } },
-      { slot: "Supportive 2", name: { en: "Seismic Slam", ru: "Сейсмический удар" }, desc: { en: "Hit the ground, damaging targets and breaking nearby blocks.", ru: "Ударить по земле, нанести урон целям и разрушить блоки рядом." } }
+      { slot: "Primary",  name: { en: "Launch Rock", ru: "Бросок камня" }, desc: { en: "Rip loose stone from the ground and hurl it at an enemy.", ru: "Вырывает камень из земли и швыряет его во врага." } },
+      { slot: "Secondary", name: { en: "Earth Pillar", ru: "Земляной столп" }, desc: { en: "Drive a stone pillar up beneath the chosen enemy and throw it into the air.", ru: "Поднимает под выбранным врагом каменный столб и подбрасывает цель в воздух." } },
+      { slot: "Utility",  name: { en: "Build Wall", ru: "Возведение стены" }, desc: { en: "Build a rough wall around yourself, one block at a time.", ru: "Блок за блоком возводит вокруг владельца грубую земляную стену." } },
+      { slot: "Special",  name: { en: "Platform Lift", ru: "Подъём платформы" }, desc: { en: "Charge to lift a patch of terrain as high as 150 blocks. It stays up for 90 seconds, or descends when the slot is pressed again.", ru: "После зарядки поднимает участок земли на высоту до 150 блоков. Он держится 90 секунд или опускается по повторному нажатию." } },
+      { slot: "Supportive 1", name: { en: "Boulder Throw", ru: "Бросок валуна" }, desc: { en: "Hurl a 5×5×5 boulder that explodes when it hits.", ru: "Швыряет валун размером 5×5×5, который взрывается при столкновении." } },
+      { slot: "Supportive 2", name: { en: "Seismic Slam", ru: "Сейсмический удар" }, desc: { en: "Smash the ground hard enough to hurt nearby targets and tear up the surrounding blocks.", ru: "Сотрясает землю, ранит ближайшие цели и разносит блоки вокруг точки удара." } }
     ],
     asset: undefined
   },
 
   {
     id: "warriors-path",
-    name: { en: "Warrior's Path", ru: "Путь Воина" },
-    character: { en: "-", ru: "-" },
+    name: { en: "Warrior's Path", ru: "Путь воина" },
+    character: { en: "Kudo", ru: "Кудо" },
     element: "warrior",
-    elementLabel: { en: "Marks / Peel & Rescue", ru: "Метки / Спасение и пил" },
+    elementLabel: { en: "Marks / Rescue & Displacement", ru: "Метки / спасение и смещение" },
     tier: "sorcery",
-    role: { en: "Mark allies for rescue and enemies for forced movement", ru: "Метки для спасения союзников и принудительного перемещения врагов" },
+    role: { en: "Remote rescue and displacement through marked targets", ru: "Спасение и смещение отмеченных целей на расстоянии" },
     summary: {
-      en: "Mark an ally or enemy, then use the mark to intervene from a distance. Allies can be pulled out of danger; enemies can be pushed off their route. One movement ability passes through solid geometry to reach the marked position.",
-      ru: "Пометьте союзника или врага, чтобы вмешаться с расстояния. Союзника можно вытащить из опасности, а врага - сбить с выбранного маршрута. Одна из способностей позволяет пройти сквозь препятствие к отмеченной позиции."
+      en: "Warrior's Path is about intervening before a bad situation gets worse. Mark the person who matters, then pull an ally clear or drag an enemy away from its target. Phase Step and Emergency Route give the whole team safer ways through a crowded fight.",
+      ru: "Путь воина позволяет вмешаться до того, как неудачная ситуация станет критической. Отметьте нужную цель, а затем вытащите союзника или оторвите врага от его жертвы. Фазовый шаг и Аварийный маршрут помогают безопаснее проходить через плотный бой."
     },
     abilities: [
-      { slot: "Primary",  name: { en: "Path Mark", ru: "Метка пути" }, desc: { en: "Mark an ally for rescue or an enemy for peel routing.", ru: "Пометить союзника для спасения или врага для смещения." } },
-      { slot: "Secondary", name: { en: "Intervention", ru: "Вмешательство" }, desc: { en: "Consume a mark to rescue an ally or displace an enemy from its target.", ru: "Потратить метку, чтобы спасти союзника или оттащить врага от его цели." } },
-      { slot: "Utility",  name: { en: "Phase Step", ru: "Фазовый шаг" }, desc: { en: "Traverse through geometry to reposition without dealing damage.", ru: "Пройти сквозь геометрию для перестановки без урона." } },
-      { slot: "Special",  name: { en: "Emergency Route", ru: "Аварийный маршрут" }, desc: { en: "Reposition yourself and nearby allies through safe spatial lanes.", ru: "Переместить себя и ближних союзников безопасными коридорами." } }
+      { slot: "Primary",  name: { en: "Path Mark", ru: "Метка пути" }, desc: { en: "Mark an ally who may need rescuing, or an enemy you want to pull off its target.", ru: "Помечает союзника, которому может понадобиться помощь, или врага, которого нужно оттащить от его цели." } },
+      { slot: "Secondary", name: { en: "Intervention", ru: "Вмешательство" }, desc: { en: "Spend the active mark to pull an ally to safety or force an enemy away from its target.", ru: "Расходует активную метку: союзника вытаскивает в безопасное место, а врага отбрасывает от его цели." } },
+      { slot: "Utility",  name: { en: "Phase Step", ru: "Фазовый шаг" }, desc: { en: "Slip through a solid obstacle without harming anyone on the other side.", ru: "Позволяет проскользнуть сквозь твёрдое препятствие, не задевая тех, кто находится по другую сторону." } },
+      { slot: "Special",  name: { en: "Emergency Route", ru: "Аварийный маршрут" }, desc: { en: "Carry yourself and nearby allies along a protected escape route.", ru: "Проводит владельца и ближайших союзников по защищённому пути отхода." } }
     ],
     asset: undefined
   },
 
   {
     id: "lightning-menace",
-    name: { en: "Lightning Menace", ru: "Грозовая Угроза" },
-    character: { en: "-", ru: "-" },
+    name: { en: "Lightning Menace", ru: "Грозовая угроза" },
+    character: { en: "Natsuki Misaka", ru: "Нацуки Мисаки" },
     element: "lightning",
     elementLabel: { en: "High Voltage", ru: "Высокое напряжение" },
     tier: "sorcery",
-    role: { en: "Close lightning attacks, a carrying charge and Flash Step", ru: "Ближние атаки молнией, таран с захватом и Молниеносный шаг" },
+    role: { en: "Break guard up close, then carry the target through the fight", ru: "Пролом защиты вблизи и таран с переносом цели" },
     summary: {
-      en: "The close-range attacks deal high Stability and guard damage. Thunder Ram carries a caught target along the dash. Lightning Shot gives the kit one narrow ranged option, and Flash Step is used to enter or leave close range.",
-      ru: "Ближние атаки сильно бьют по Стабильности и защите. Грозовой таран захватывает цель и тащит её по траектории рывка. Узкий выстрел молнией даёт один вариант на дистанции, а Молниеносный шаг помогает войти в ближний бой или выйти из него."
+      en: "Lightning Menace wants to stay close. Voltage Strike chews through Stability and guard, while Thunder Ram catches an enemy and carries it into the next collision. Lightning Shot covers a narrow lane at range, and Flash Step gets you in or out without spending an attack.",
+      ru: "Грозовая угроза раскрывается вблизи. Разрядный удар быстро ломает стойкость и защиту, а Громовой таран подхватывает врага и тащит его до следующего столкновения. Выстрел молнии держит узкую линию на расстоянии, а Молниеносный шаг позволяет войти в бой или выйти из него без лишней атаки."
     },
     abilities: [
-      { slot: "Primary",  name: { en: "Voltage Strike", ru: "Удар напряжения" }, desc: { en: "A high-voltage close strike with heavy guard and stability pressure.", ru: "Высоковольтный ближний удар с сильным давлением на защиту и стабильность." } },
-      { slot: "Secondary", name: { en: "Thunder Ram", ru: "Громовой таран" }, desc: { en: "Charge and release a long carry dash that captures a target, drags it along, and cashes out on impact.", ru: "Зарядить и выпустить длинный рывок-захват: подхватывает цель, тащит и выбивает при ударе." } },
-      { slot: "Utility",  name: { en: "Lightning Shot", ru: "Выстрел молнии" }, desc: { en: "A fast, narrow shot that launches targets and carves a thin readable beam path.", ru: "Быстрый узкий выстрел, подбрасывающий цели и прорезающий тонкий читаемый путь луча." } },
-      { slot: "Supportive 1", name: { en: "Flash Step", ru: "Вспышка-шаг" }, desc: { en: "A damage-free mobility dash. 3 charges, one restored every 3 seconds.", ru: "Мобильный рывок без урона. 3 заряда, восстановление каждые 3с." } }
+      { slot: "Primary",  name: { en: "Voltage Strike", ru: "Разрядный удар" }, desc: { en: "A point-blank lightning blow that hits Stability and blocking enemies especially hard.", ru: "Удар молнией в упор, особенно сильно бьющий по стойкости и поставленной защите." } },
+      { slot: "Secondary", name: { en: "Thunder Ram", ru: "Громовой таран" }, desc: { en: "Charge a long rush that catches one target and drags it with you. The next collision delivers the finishing hit.", ru: "Заряжаемый дальний рывок подхватывает одну цель и тащит её за собой. Следующее столкновение завершает приём ударом." } },
+      { slot: "Utility",  name: { en: "Lightning Shot", ru: "Выстрел молнии" }, desc: { en: "A narrow lightning shot that launches its target and burns a thin path through obstacles.", ru: "Узкий разряд подбрасывает цель и прожигает тонкий путь сквозь препятствия." } },
+      { slot: "Supportive 1", name: { en: "Flash Step", ru: "Молниеносный шаг" }, desc: { en: "A harmless movement dash with three charges. One charge returns every 3 seconds.", ru: "Рывок без урона с тремя зарядами. Один заряд восстанавливается каждые 3 секунды." } }
     ],
     asset: undefined
   },
 
   {
     id: "yellow-chains",
-    name: { en: "Yellow Chains", ru: "Жёлтые Цепи" },
-    character: { en: "-", ru: "-" },
+    name: { en: "Yellow Chains", ru: "Жёлтые цепи" },
+    character: { en: "Elder Shigyu brother", ru: "старший брат Сигю" },
     element: "yellowchain",
     elementLabel: { en: "Chains / Restraint", ru: "Цепи / Удержание" },
     tier: "sorcery",
-    role: { en: "Bind targets with chains and pull them toward you", ru: "Связывание целей цепями и притягивание к владельцу" },
+    role: { en: "Catch enemies with chains and reel them out of position", ru: "Захват врагов цепями и вытягивание с позиции" },
     summary: {
-      en: "Hit one target with the chain projectile, keep the chain active to reel it in, or use the area version to catch several enemies. The initial bind can apply True Wound.",
-      ru: "Попадите цепью в одну цель, удерживайте связь, чтобы подтянуть её, или используйте вариант по площади против группы. Первичное связывание может наложить Истинную рану."
+      en: "Yellow Chains turns one clean hit into control. Catch a single enemy for a stronger bind or spread the chains across a group, then keep spending SE to reel the captives toward you. Release tools let you drop one link without throwing away the whole setup.",
+      ru: "Жёлтые цепи превращают одно точное попадание в контроль над позицией. Поймайте одного врага прочной связью или накройте цепями группу, а затем расходуйте SE, чтобы подтягивать пленников к себе. Отдельные команды позволяют снять одну связь, не разрушая всю расстановку."
     },
     abilities: [
-      { slot: "Primary",  name: { en: "Chain Bind", ru: "Цепное связывание" }, desc: { en: "Launch a chain that binds the target on hit and inflicts True Wound.", ru: "Запустить цепь, связывающую цель при попадании и накладывающую True Wound." } },
-      { slot: "Secondary", name: { en: "Maintain Chains", ru: "Удержание цепей" }, desc: { en: "Keep the chains active, pulling bound targets toward you. Drains SE over time.", ru: "Держать цепи активными, притягивая связанных. Расходует SE со временем." } },
-      { slot: "Utility",  name: { en: "Area Chain Bind", ru: "Связывание области" }, desc: { en: "Bind multiple targets in an area at once.", ru: "Связать несколько целей в области сразу." } },
-      { slot: "Supportive 1", name: { en: "Release Chain", ru: "Снять цепь" }, desc: { en: "Remove the chain from the target you're looking at.", ru: "Снять цепь с цели, на которую смотрите." } },
-      { slot: "Supportive 2", name: { en: "Release All Chains", ru: "Снять все цепи" }, desc: { en: "Remove every active chain.", ru: "Снять все активные цепи." } }
+      { slot: "Primary",  name: { en: "Chain Bind", ru: "Цепное связывание" }, desc: { en: "Land the chain projectile to bind one target and inflict True Wound.", ru: "Попадание цепью связывает одну цель и накладывает Истинную рану." } },
+      { slot: "Secondary", name: { en: "Maintain Chains", ru: "Удержание цепей" }, desc: { en: "Keep every active chain taut and pull its captive toward you. SE drains for as long as you maintain the links.", ru: "Натягивает все активные цепи и тянет связанных врагов к владельцу. Пока связи поддерживаются, расходуется SE." } },
+      { slot: "Utility",  name: { en: "Area Chain Bind", ru: "Связывание области" }, desc: { en: "Trade precision for coverage and bind several targets in the same area.", ru: "Жертвует точностью ради охвата и связывает сразу несколько целей в одной области." } },
+      { slot: "Supportive 1", name: { en: "Release Chain", ru: "Снять цепь" }, desc: { en: "Cut the link to the target under your crosshair and leave the other chains intact.", ru: "Снимает цепь с цели под прицелом, не затрагивая остальные связи." } },
+      { slot: "Supportive 2", name: { en: "Release All Chains", ru: "Снять все цепи" }, desc: { en: "Drop every active chain at once.", ru: "Одним действием снимает все активные цепи." } }
     ],
     asset: undefined
   },
 
   {
     id: "airborne-spikes",
-    name: { en: "Airborne Spikes", ru: "Воздушные Шипы" },
-    character: { en: "-", ru: "-" },
+    name: { en: "Airborne Spikes", ru: "Воздушные шипы" },
+    character: { en: "Younger Shigyu brother", ru: "младший брат Сигю" },
     element: "spike",
     elementLabel: { en: "Aerial Spikes", ru: "Воздушные шипы" },
     tier: "sorcery",
-    role: { en: "Quick spike volleys or one charged block-breaking shot", ru: "Быстрые залпы шипов или один заряженный пробивающий выстрел" },
+    role: { en: "Choose between wide volleys and one focused piercing shot", ru: "Выбор между широким залпом и одним пробивающим выстрелом" },
     summary: {
-      en: "Tap for a small volley, hold for more projectiles, or focus the charge into one heavy spike. The focused shot travels through blocks along its route.",
-      ru: "Нажатие выпускает небольшой залп, удержание добавляет снаряды, а отдельный режим собирает заряд в один тяжёлый шип. Сфокусированный выстрел пробивает блоки на своей линии."
+      en: "Airborne Spikes has a simple choice: cover more space or punch through one line. Quick volleys keep several enemies busy, a longer charge adds more projectiles, and Focused Spike trades that spread for a single shot that can break through terrain.",
+      ru: "Воздушные шипы предлагают простой выбор: накрыть больше пространства или пробить одну линию. Быстрые залпы сдерживают группу, долгий заряд добавляет снаряды, а Сфокусированный шип меняет разброс на один выстрел, способный пройти сквозь рельеф."
     },
     abilities: [
-      { slot: "Primary",  name: { en: "Spike Volley", ru: "Залп шипов" }, desc: { en: "Launch multiple air-spike projectiles at targets.", ru: "Запустить несколько воздушных шипов по целям." } },
-      { slot: "Secondary", name: { en: "Charged Spikes", ru: "Заряженные шипы" }, desc: { en: "Charge a volley. Longer charge adds more spikes.", ru: "Зарядить залп. Длительность зарядки увеличивает число шипов." } },
-      { slot: "Utility",  name: { en: "Focused Spike", ru: "Сфокусированный шип" }, desc: { en: "Charge one spike that breaks suitable blocks on its path.", ru: "Зарядить один шип, который ломает подходящие блоки на пути." } }
+      { slot: "Primary",  name: { en: "Spike Volley", ru: "Залп шипов" }, desc: { en: "Scatter several airborne spikes across the targets ahead.", ru: "Рассыпает несколько воздушных шипов по целям впереди." } },
+      { slot: "Secondary", name: { en: "Charged Spikes", ru: "Заряженные шипы" }, desc: { en: "Keep charging to add more spikes to the next volley.", ru: "Чем дольше длится зарядка, тем больше шипов будет в следующем залпе." } },
+      { slot: "Utility",  name: { en: "Focused Spike", ru: "Сфокусированный шип" }, desc: { en: "Put the full charge into one spike that breaks suitable blocks along its path.", ru: "Собирает весь заряд в одном шипе, который ломает подходящие блоки на пути." } }
     ],
     asset: undefined
   },
@@ -373,22 +373,22 @@ export const sorceries: SorceryEntry[] = [
     id: "storehouse",
     name: { en: "Storehouse", ru: "Хранилище" },
     status: { en: "WIP", ru: "В разработке" },
-    character: { en: "-", ru: "-" },
+    character: { en: "Sazanami Clan", ru: "клан Садзанами" },
     element: "storage",
-    elementLabel: { en: "Territory / Storehouse", ru: "Территория / Склад" },
+    elementLabel: { en: "Territory / Storehouse", ru: "Территория / Хранилище" },
     tier: "sorcery",
-    role: { en: "Katana attacks outside; corridor control inside the Storehouse", ru: "Катаны снаружи; управление проходами внутри Хранилища" },
+    role: { en: "A different control kit inside and outside the Storehouse", ru: "Два набора контроля: внутри Хранилища и за его пределами" },
     summary: {
-      en: "Outside the Storehouse, the kit fires katana volleys, moves targets and places projection anchors. Entering the Storehouse replaces those actions with shelf spears, temporary aisle walls, door jumps and false corridors. This kit is still WIP.",
-      ru: "Снаружи Хранилища набор выпускает катаны, перемещает цели и ставит проекционные якоря. После входа способности меняются на копья из полок, временные стены в проходах, прыжки через двери и ложные коридоры. Набор ещё в разработке."
+      en: "Storehouse plays like two connected kits. Outside, it uses katana volleys, target displacement and projection anchors; inside, the same slots become shelf spears, temporary walls, door jumps and false corridors. The system is playable but still being developed.",
+      ru: "Хранилище работает как два связанных набора. Снаружи доступны залпы катан, смещение целей и якоря проекции; внутри те же слоты превращаются в копья из полок, временные стены, прыжки через двери и ложные коридоры. Система уже работает, но всё ещё дорабатывается."
     },
     abilities: [
-      { slot: "Primary",  name: { en: "Hidden Arsenal / Shelf Spears", ru: "Скрытый арсенал / Полки-копья" }, desc: { en: "Outside: katana volleys in front of you. Inside: shelf-spears erupt along your lane.", ru: "Снаружи: залпы катан перед вами. Внутри: полки-копья вырываются вдоль линии." } },
-      { slot: "Secondary", name: { en: "Route Shift / Aisle Rewrite", ru: "Сдвиг маршрута / Переписать проход" }, desc: { en: "Outside: spatial reposition. Inside: rewrite aisles with temporary matter walls.", ru: "Снаружи: пространственная перестановка. Внутри: переписать проходы временными стенами материи." } },
-      { slot: "Utility",  name: { en: "Storehouse Gate", ru: "Врата склада" }, desc: { en: "Enter your Storehouse territory or exit back to saved return coordinates.", ru: "Войти в территорию Склада или выйти к сохранённым координатам." } },
-      { slot: "Special",  name: { en: "Projection / Auction Floor", ru: "Проекция / Аукционный зал" }, desc: { en: "Outside: deploy projection anchors. Inside: activate the territory-empowering Auction Floor phase.", ru: "Снаружи: разместить якоря проекции. Внутри: включить фазу Auction Floor, усиливающую контроль." } },
-      { slot: "Supportive 1", name: { en: "Claim / Door Jump", ru: "Захват / Прыжок через дверь" }, desc: { en: "Outside: apply a tactical claim. Inside: fast door-jump through local space.", ru: "Снаружи: тактический захват. Внутри: быстрый прыжок через дверь в локальном пространстве." } },
-      { slot: "Supportive 2", name: { en: "Emergency Door / False Corridor", ru: "Аварийная дверь / Ложный коридор" }, desc: { en: "Outside: emergency pull via slit-door. Inside: decoy corridors and a short enemy slow.", ru: "Снаружи: аварийное притягивание через дверь-щель. Внутри: ложные коридоры и короткое замедление врагов." } }
+      { slot: "Primary",  name: { en: "Hidden Arsenal / Shelf Spears", ru: "Скрытый арсенал / Полки-копья" }, desc: { en: "Outside, send katana volleys across the space ahead. Inside, make shelf-spears erupt down the aisle.", ru: "Снаружи выпускает залпы катан по пространству впереди. Внутри заставляет полки-копья вырываться вдоль прохода." } },
+      { slot: "Secondary", name: { en: "Route Shift / Aisle Rewrite", ru: "Сдвиг маршрута / Перестройка прохода" }, desc: { en: "Outside, force a target into a new position. Inside, close and reopen routes with temporary walls.", ru: "Снаружи принудительно перемещает цель. Внутри перекрывает и открывает маршруты временными стенами." } },
+      { slot: "Utility",  name: { en: "Storehouse Gate", ru: "Врата Хранилища" }, desc: { en: "Step into the Storehouse, or leave it and return to the position saved on entry.", ru: "Переносит в Хранилище, а при выходе возвращает к позиции, сохранённой перед входом." } },
+      { slot: "Special",  name: { en: "Projection / Auction Floor", ru: "Проекция / Аукционный зал" }, desc: { en: "Outside, set anchors for Storehouse projections. Inside, claim the Auction Floor for stronger territorial control.", ru: "Снаружи ставит якоря для проекций Хранилища. Внутри захватывает Аукционный зал и усиливает контроль над территорией." } },
+      { slot: "Supportive 1", name: { en: "Claim / Door Jump", ru: "Метка владения / Прыжок через дверь" }, desc: { en: "Outside, mark a target as Storehouse property. Inside, use a nearby door for a quick jump.", ru: "Снаружи помечает цель как собственность Хранилища. Внутри позволяет быстро переместиться через ближайшую дверь." } },
+      { slot: "Supportive 2", name: { en: "Emergency Door / False Corridor", ru: "Аварийная дверь / Ложный коридор" }, desc: { en: "Outside, drag a target through a slit-door in an emergency. Inside, mislead enemies with false corridors and a brief slow.", ru: "Снаружи в экстренный момент утаскивает цель через дверь-щель. Внутри сбивает врагов с пути ложными коридорами и ненадолго замедляет их." } }
     ],
     asset: undefined
   },
@@ -400,17 +400,17 @@ export const sorceries: SorceryEntry[] = [
     element: "light",
     elementLabel: { en: "Hard Light", ru: "Твёрдый свет" },
     tier: "sorcery",
-    role: { en: "Hard-light projectiles, a beam and a movement pin", ru: "Снаряды твёрдого света, луч и фиксация цели" },
+    role: { en: "Hard-light weapons that pierce, pin and cut through space", ru: "Оружие твёрдого света для пробивания, фиксации и контроля линии" },
     summary: {
-      en: "Fire hard-light lances for regular ranged pressure or channel the photon beam through a line. One ability pins a hit target in place; another calls several vertical beams around the caster.",
-      ru: "Копья твёрдого света используются как обычная дальняя атака, а фотонный луч проводится по прямой линии. Одна способность фиксирует попавшуюся цель на месте, другая вызывает несколько вертикальных лучей вокруг владельца."
+      en: "Light controls straight lines with solid constructs. Lances provide steady ranged pressure, Photon Beam commits to a full pierce, and Light Impale pins one target in place. Skyfall Beams punishes enemies who stay too close together.",
+      ru: "Свет контролирует прямые линии с помощью твёрдых конструкций. Копья держат постоянное давление на расстоянии, Фотонный луч пробивает линию насквозь, а Пронзание светом фиксирует одну цель. Лучи с небес наказывают врагов, которые держатся слишком близко друг к другу."
     },
     abilities: [
-      { slot: "Primary",  name: { en: "Hard Light Lance", ru: "Копьё твёрдого света" }, desc: { en: "Launch a hard-light rod that breaks tagged blocks and stays embedded in targets or walls briefly.", ru: "Запустить стержень твёрдого света: ломает помеченные блоки и ненадолго застревает в целях или стенах." } },
-      { slot: "Secondary", name: { en: "Photon Beam", ru: "Фотонный луч" }, desc: { en: "Hold to extend a hard-light beam; if a target is caught at activation, snap to it and fire straight through.", ru: "Удержание вытягивает луч; если цель поймана при активации - притянуться и пробить насквозь." } },
-      { slot: "Utility",  name: { en: "Light Impale", ru: "Пронзание светом" }, desc: { en: "Drive multiple light rods through the nearest target, applying PIERCED and locking its movement.", ru: "Вонзить несколько стержней в ближайшую цель, накладывая PIERCED и блокируя движение." } },
-      { slot: "Special",  name: { en: "Skyfall Beams", ru: "Лучи с небес" }, desc: { en: "Call repeated vertical beams of light around you that destroy blocks and damage on the way down.", ru: "Призвать вертикальные лучи света вокруг себя, разрушающие блоки и наносящие урон при падении." } },
-      { slot: "Supportive 1", name: { en: "Lightspeed Kick", ru: "Удар светоскорости" }, desc: { en: "Charge 2.5s, then rush in a straight line at extreme speed and stop before the first target with a heavy kick.", ru: "Зарядить 2.5с, затем рвануть по прямой на огромной скорости и встать перед первой целью мощным ударом." } }
+      { slot: "Primary",  name: { en: "Hard Light Lance", ru: "Копьё твёрдого света" }, desc: { en: "Throw a solid rod of light that breaks tagged blocks and remains lodged in a target or wall for a moment.", ru: "Бросает твёрдый стержень света, который ломает помеченные блоки и ненадолго остаётся в цели или стене." } },
+      { slot: "Secondary", name: { en: "Photon Beam", ru: "Фотонный луч" }, desc: { en: "Hold to extend the beam. If it catches a target on activation, you snap into position and fire straight through it.", ru: "Удержание продлевает луч. Если при активации он захватывает цель, владелец резко сближается с ней и пробивает её насквозь." } },
+      { slot: "Utility",  name: { en: "Light Impale", ru: "Пронзание светом" }, desc: { en: "Pin the nearest target in place with several hard-light rods.", ru: "Прибивает ближайшую цель к месту несколькими стержнями твёрдого света." } },
+      { slot: "Special",  name: { en: "Skyfall Beams", ru: "Лучи с небес" }, desc: { en: "Rain vertical beams around yourself; each one tears through blocks and anything caught below.", ru: "Обрушивает вокруг вертикальные лучи, которые пробивают блоки и всё, что оказалось под ними." } },
+      { slot: "Supportive 1", name: { en: "Lightspeed Kick", ru: "Световой удар" }, desc: { en: "After a 2.5-second charge, rush forward and drive a powerful kick into the first target you meet.", ru: "После 2,5 секунды зарядки бросает владельца вперёд и обрушивает мощный удар ногой на первую встреченную цель." } }
     ],
     asset: undefined
   },
@@ -418,66 +418,89 @@ export const sorceries: SorceryEntry[] = [
   {
     id: "coin",
     name: { en: "Coin", ru: "Монета" },
-    character: { en: "-", ru: "-" },
+    character: { en: "Soshiro Azami", ru: "Сосиро Адзами" },
     element: "coin",
     elementLabel: { en: "Coins / Precision", ru: "Монеты / Точность" },
     tier: "sorcery",
-    role: { en: "Place up to six coins and use them as lightning relays", ru: "До шести монет, работающих как проводники для молнии" },
+    role: { en: "Set six coins, then turn their positions into an electric trap", ru: "Расстановка шести монет и превращение их позиций в электрическую ловушку" },
     summary: {
-      en: "Throw up to six coins into the arena. Lightning can jump between placed coins, and recalled coins orbit the caster and fire automatically. The remaining modes trade the coin setup for a speed or healing effect.",
-      ru: "Разместите на поле до шести монет. Молния перескакивает между ними, а отозванные монеты вращаются вокруг владельца и стреляют автоматически. Оставшиеся режимы позволяют обменять подготовленные монеты на ускорение или лечение."
+      en: "Coin rewards good placement. Scatter up to six coins, wait for an enemy to cross the space between them, then send lightning through the entire network. Recalled coins become a short-lived orbiting arsenal, while the two sustained modes trade SE for speed or healing.",
+      ru: "Монета награждает за точную расстановку. Разбросайте до шести монет, дождитесь, когда враг окажется между ними, и пропустите разряд через всю сеть. Отозванные монеты превращаются во временный орбитальный арсенал, а два постоянных режима обменивают SE на скорость или лечение."
     },
     abilities: [
-      { slot: "Primary",  name: { en: "Shoot Coin", ru: "Выстрел монетой" }, desc: { en: "Shoot a coin (max 6 active). On hit: damage, a 0.5s stun and stacking Weakness.", ru: "Выстрелить монетой (макс. 6). При попадании: урон, оглушение 0.5с и стаки Слабости." } },
-      { slot: "Secondary", name: { en: "Lightning Discharge", ru: "Разряд молнии" }, desc: { en: "Arc electricity between all shot coins, hitting enemies along the paths with a hard stun.", ru: "Пустить электричество между всеми монетами, поражая врагов на путях жёстким оглушением." } },
-      { slot: "Utility",  name: { en: "Blood Flow Acceleration", ru: "Ускорение кровотока" }, desc: { en: "Recall all coins (damaging on the way) into orbit; they auto-launch at nearby enemies one by one.", ru: "Отозвать монеты (с уроном на пути) в орбиту; они авто-стреляют по ближним врагам по очереди." } },
-      { slot: "Special",  name: { en: "Enhanced Speed", ru: "Усиленная скорость" }, desc: { en: "Toggle: +30% Power, +150% melee, and periodic direct damage that bypasses Stability. Drains SE.", ru: "Переключатель: +30% Силы, +150% ближнего урона и периодический прямой урон в обход Стабильности. Расход SE." } },
-      { slot: "Supportive 2", name: { en: "Coin Healing", ru: "Лечение монетами" }, desc: { en: "Toggle: drains SE to keep Regeneration I refreshed.", ru: "Переключатель: расход SE для поддержания Регенерации I." } }
+      { slot: "Primary",  name: { en: "Shoot Coin", ru: "Выстрел монетой" }, desc: { en: "Shoot one of up to six active coins. A direct hit deals damage, stuns for 0.5 seconds and adds a level of Weakness.", ru: "Выстреливает одну из шести доступных монет. Прямое попадание наносит урон, оглушает на 0,5 секунды и добавляет уровень Слабости." } },
+      { slot: "Secondary", name: { en: "Lightning Discharge", ru: "Разряд молнии" }, desc: { en: "Send electricity through every placed coin. Enemies standing between them take damage and suffer a longer stun.", ru: "Проводит электричество через все размещённые монеты. Враги между ними получают урон и более долгое оглушение." } },
+      { slot: "Utility",  name: { en: "Blood Flow Acceleration", ru: "Ускорение кровотока" }, desc: { en: "Call every coin back, striking enemies along the return path. Once in orbit, the coins fire at nearby targets one by one.", ru: "Возвращает все монеты, задевая врагов на обратном пути. На орбите они по очереди выстреливают в ближайшие цели." } },
+      { slot: "Special",  name: { en: "Enhanced Speed", ru: "Усиленная скорость" }, desc: { en: "Drain SE for 30% more Power, 150% more melee damage and periodic direct damage that bypasses Stability.", ru: "Расходует SE ради +30% к силе, +150% к урону в ближнем бою и периодического прямого урона в обход стойкости." } },
+      { slot: "Supportive 2", name: { en: "Coin Healing", ru: "Лечение монетами" }, desc: { en: "Keep spending SE to maintain Regeneration I.", ru: "Поддерживает Регенерацию I за постоянный расход SE." } }
     ],
     asset: assets.coinSorcery
   },
 
   {
     id: "daruma",
-    name: { en: "Daruma", ru: "Дарума" },
-    character: { en: "-", ru: "-" },
+    name: { en: "Invincible (Daruma)", ru: "Неуязвимый (Дарума)" },
+    character: { en: "Norisaku Madoka", ru: "Норисаку Мадока" },
     element: "doll",
     elementLabel: { en: "Dolls / Detonation", ru: "Куклы / Детонация" },
     tier: "sorcery",
-    role: { en: "Place Daruma dolls, move them and choose when they explode", ru: "Размещение кукол Дарума, их перемещение и управляемый подрыв" },
+    role: { en: "Plant explosive Darumas, reposition them and choose the moment", ru: "Расстановка взрывных дарум, их перемещение и выбор момента подрыва" },
     summary: {
-      en: "Throw dolls and leave them where enemies will have to pass. Telekinesis lets you adjust their position. Detonate the nearest doll for a small setup or trigger every active doll at once.",
-      ru: "Бросайте кукол в места, через которые придётся пройти врагу. Телекинез позволяет поправить их положение. Можно подорвать ближайшую куклу или одновременно активировать все размещённые."
+      en: "Daruma is a trap kit with room for improvisation. Place dolls where enemies are likely to move, steer them into better positions with Telekinesis, then detonate one precise charge or set off the entire field at once.",
+      ru: "Дарума — набор ловушек, который оставляет место для импровизации. Расставляйте кукол на вероятном пути врага, поправляйте их положение Телекинезом, а затем подрывайте одну точную ловушку или всё поле разом."
     },
     abilities: [
-      { slot: "Primary",  name: { en: "Daruma Launch", ru: "Запуск Дарумы" }, desc: { en: "Charge to launch a single Daruma - longer charge throws it faster.", ru: "Зарядить и запустить одну Даруму - дольше заряд, быстрее бросок." } },
-      { slot: "Secondary", name: { en: "Targeted Explosion", ru: "Точечный взрыв" }, desc: { en: "Explode the nearest Daruma in the direction you're looking.", ru: "Взорвать ближайшую Даруму в направлении взгляда." } },
-      { slot: "Utility",  name: { en: "Telekinesis Control", ru: "Телекинез" }, desc: { en: "While held, steer all active Darumas toward your aim point.", ru: "При удержании направлять всех активных Дарум к точке прицела." } },
-      { slot: "Special",  name: { en: "Mass Detonation", ru: "Массовая детонация" }, desc: { en: "Explode all active Darumas at once.", ru: "Одновременно взорвать всех активных Дарум." } },
-      { slot: "Supportive 1", name: { en: "Daruma Volley", ru: "Залп Дарум" }, desc: { en: "Launch multiple Darumas in a spread pattern.", ru: "Запустить несколько Дарум веером." } }
+      { slot: "Primary",  name: { en: "Daruma Launch", ru: "Запуск куклы дарума" }, desc: { en: "Charge and throw one Daruma. A longer charge sends the doll flying faster.", ru: "Заряжает и бросает одну куклу дарума. Чем дольше зарядка, тем выше скорость полёта." } },
+      { slot: "Secondary", name: { en: "Targeted Explosion", ru: "Точечный взрыв" }, desc: { en: "Detonate the nearest Daruma along your line of sight.", ru: "Подрывает ближайшую куклу дарума по направлению взгляда." } },
+      { slot: "Utility",  name: { en: "Telekinesis Control", ru: "Телекинез" }, desc: { en: "Hold to guide every active Daruma toward the point under your crosshair.", ru: "Пока кнопка удерживается, все активные дарумы движутся к точке под прицелом." } },
+      { slot: "Special",  name: { en: "Mass Detonation", ru: "Массовая детонация" }, desc: { en: "Set off every active Daruma in the same instant.", ru: "В один момент подрывает все активные дарумы." } },
+      { slot: "Supportive 1", name: { en: "Daruma Volley", ru: "Залп кукол дарума" }, desc: { en: "Throw several Darumas in a wide spread to prepare the area quickly.", ru: "Разбрасывает несколько дарум широким веером и быстро подготавливает область." } }
+    ],
+    asset: undefined
+  },
+
+  {
+    id: "armored-doll",
+    name: { en: "Armored Doll Creation", ru: "Создание бронированной куклы" },
+    character: { en: "Mod-original sorcery", ru: "Оригинальное колдовство мода" },
+    element: "doll",
+    elementLabel: { en: "Doll / Armor Plates", ru: "Кукла / Бронепластины" },
+    tier: "sorcery",
+    role: { en: "Fight beside a style-copying Doll and intercept attacks with armor plates", ru: "Бой рядом с копирующей стиль Куклой и перехват атак бронепластинами" },
+    summary: {
+      en: "This mod-original sorcery gives you a second fighter to command. The Armored Doll copies your Sword, Hand or Dual Katana style, can guard or pursue a chosen target, and may be controlled directly. Armor plates protect the owner when the Doll cannot be everywhere at once.",
+      ru: "Это оригинальное колдовство мода даёт владельцу второго бойца. Бронированная кукла копирует выбранный стиль — катану, рукопашный бой или две катаны, — умеет защищать владельца, преследовать указанную цель и переходить под прямое управление. Бронепластины прикрывают хозяина, когда Кукла не успевает оказаться рядом."
+    },
+    abilities: [
+      { slot: "Primary", name: { en: "Command", ru: "Команда" }, desc: { en: "Aim at an enemy to order the Doll to attack it. With no valid target, the Doll returns to Guard.", ru: "Наведитесь на врага, чтобы приказать Кукле атаковать. Если подходящей цели нет, она вернётся в режим защиты." } },
+      { slot: "Secondary", name: { en: "Armor Plate", ru: "Бронепластина" }, desc: { en: "Meet the nearest incoming attack with one disposable plate. It absorbs 24 damage; anything left over still reaches you.", ru: "Выставляет одноразовую пластину навстречу ближайшей атаке. Она поглощает 24 урона, а остаток всё равно проходит по владельцу." } },
+      { slot: "Utility", name: { en: "Full Armor", ru: "Полная броня" }, desc: { en: "Surround yourself with four directional plates, each with 24 durability. A heavier hit breaks its plate and carries the remaining damage through.", ru: "Окружает владельца четырьмя направленными пластинами прочностью 24 каждая. Более сильный удар ломает свою пластину и наносит оставшийся урон." } },
+      { slot: "Supportive 1", name: { en: "Interpose", ru: "Перехват" }, desc: { en: "Open a brief rescue window. A nearby Doll steps between you and the next attack to block, parry, clash or take the hit itself.", ru: "Открывает короткое окно для спасения. Ближайшая Кукла встаёт между владельцем и следующей атакой, чтобы заблокировать, парировать, встретить её в столкновении или принять удар на себя." } },
+      { slot: "Supportive 2", name: { en: "Remote Operation", ru: "Дистанционное управление" }, desc: { en: "See and fight through the Doll directly. Your real body remains where you left it and can still be attacked.", ru: "Переносит камеру и управление на Куклу. Настоящее тело остаётся на месте и всё ещё уязвимо для атак." } },
+      { slot: "Special", name: { en: "Summon / Recall Doll", ru: "Призыв / отзыв Куклы" }, desc: { en: "Backstep and summon one Doll with your current Sword, Hand or Dual Katana style. Use the slot again to recall it.", ru: "Отступает рывком и призывает одну Куклу с текущим стилем: катана, рукопашный бой или две катаны. Повторное применение отзывает её." } }
     ],
     asset: undefined
   },
 
   {
     id: "pine-tree",
-    name: { en: "Pine Tree", ru: "Сосна" },
-    character: { en: "-", ru: "-" },
+    name: { en: "Pine Tree Sorcery", ru: "Колдовство сосны" },
+    character: { en: "Yura", ru: "Юра" },
     element: "nature",
     elementLabel: { en: "Pine / Seeds", ru: "Сосна / Семена" },
     tier: "sorcery",
-    role: { en: "Plant pines, detonate them and block routes with new trees", ru: "Посадка сосен, их подрыв и перекрытие путей деревьями" },
+    role: { en: "Grow the battlefield into walls, traps and erupting roots", ru: "Превращение поля боя в стены, ловушки и вырывающиеся корни" },
     summary: {
-      en: "Primary sends a rotating trunk forward. Seeds grow into pines and can be detonated later. Another slot raises a line of trees as cover, while Catastrophe Labyrinth sends roots through the nearby ground for ten seconds.",
-      ru: "Primary запускает вперёд вращающийся ствол. Семена вырастают в сосны, которые позже можно подорвать. Другая способность поднимает линию деревьев как укрытие, а Лабиринт катастрофы в течение десяти секунд проводит корни по земле рядом."
+      en: "Pine Tree Sorcery steadily takes over the arena. Seeds become delayed traps, fresh trees close routes, and Spiral Trunk Thrust gives the kit a direct attack. Catastrophe Labyrinth is the payoff: ten seconds of roots and trunks erupting across a wide area.",
+      ru: "Колдовство сосны постепенно захватывает поле боя. Семена становятся отложенными ловушками, новые деревья перекрывают маршруты, а Спиральный ствол даёт прямую атаку. Лабиринт катастрофы завершает подготовку десятью секундами непрерывных прорывов корней и стволов."
     },
     abilities: [
-      { slot: "Primary",  name: { en: "Spiral Trunk Thrust", ru: "Спиральный ствол" }, desc: { en: "A narrow spiral surge of trunks that drills forward and pressures stability.", ru: "Узкий спиральный всплеск стволов, бурящий вперёд и давящий на стабильность." } },
-      { slot: "Secondary", name: { en: "Seed Shot", ru: "Выстрел семенем" }, desc: { en: "Fire a seed that implants in a target or anchors in terrain for manual detonation.", ru: "Выстрелить семя, вживляющееся в цель или закрепляющееся в рельефе для ручной детонации." } },
-      { slot: "Utility",  name: { en: "Pine Bastion Wall", ru: "Сосновый бастион" }, desc: { en: "Raise a temporary pine bastion that restores while active, then cleanly vanishes.", ru: "Поднять временный сосновый бастион, восстанавливающийся пока активен, затем чисто исчезающий." } },
-      { slot: "Special",  name: { en: "Catastrophe Labyrinth", ru: "Лабиринт катастрофы" }, desc: { en: "A 10s spread: roots and trunks keep erupting from a wide ring, some braiding toward enemies.", ru: "10с разрастание: корни и стволы извергаются из широкого кольца, часть плетётся к врагам." } },
-      { slot: "Supportive 1", name: { en: "Seed Detonation", ru: "Детонация семян" }, desc: { en: "Tap to detonate one seed in your aim; hold 1.5s to detonate every seed in the cone.", ru: "Нажатие - детонировать одно семя в прицеле; удержание 1.5с - все семена в конусе." } },
-      { slot: "Supportive 2", name: { en: "Chaotic Seed Bastion", ru: "Хаотичный бастион семян" }, desc: { en: "Detonate seeds in your aim into a dense chaotic wall of wood and leaves.", ru: "Детонировать семена в прицеле в плотную хаотичную стену из дерева и листьев." } }
+      { slot: "Primary",  name: { en: "Spiral Trunk Thrust", ru: "Спиральный ствол" }, desc: { en: "Drill a tight spiral of trunks forward, hitting Stability as it advances.", ru: "Пускает вперёд плотную спираль стволов, которая пробивает путь и бьёт по стойкости." } },
+      { slot: "Secondary", name: { en: "Seed Shot", ru: "Выстрел семенем" }, desc: { en: "Plant a seed in an enemy or anchor it to the terrain, then leave it there for a manual detonation.", ru: "Вживляет семя во врага или закрепляет его в земле, оставляя до ручного подрыва." } },
+      { slot: "Utility",  name: { en: "Pine Bastion Wall", ru: "Сосновый бастион" }, desc: { en: "Grow a temporary wall of pines that repairs itself while active and vanishes when its time runs out.", ru: "Выращивает временную стену из сосен. Пока она действует, повреждённые деревья отрастают заново, а затем вся преграда исчезает." } },
+      { slot: "Special",  name: { en: "Catastrophe Labyrinth", ru: "Лабиринт катастрофы" }, desc: { en: "For 10 seconds, roots and trunks keep bursting from a wide ring, with some growths bending toward nearby enemies.", ru: "В течение 10 секунд из широкого кольца непрерывно вырываются корни и стволы; часть побегов изгибается в сторону врагов." } },
+      { slot: "Supportive 1", name: { en: "Seed Detonation", ru: "Детонация семян" }, desc: { en: "Tap to burst one seed under your crosshair. Hold for 1.5 seconds to set off every seed in the cone.", ru: "Короткое нажатие подрывает одно семя под прицелом. Удержание в течение 1,5 секунды взрывает все семена в конусе." } },
+      { slot: "Supportive 2", name: { en: "Chaotic Seed Bastion", ru: "Хаотичный бастион семян" }, desc: { en: "Force the aimed seeds to erupt into a tangled wall of wood and leaves.", ru: "Заставляет семена в прицеле прорасти спутанной стеной из древесины и листвы." } }
     ],
     asset: undefined
   },
@@ -485,73 +508,73 @@ export const sorceries: SorceryEntry[] = [
   {
     id: "jikai",
     name: { en: "Jikai", ru: "Дзикай" },
-    character: { en: "-", ru: "-" },
+    character: { en: "Ikuto Hagiwara", ru: "Икуто Хагивара" },
     element: "magnet",
     elementLabel: { en: "Magnetism / Iron Sand", ru: "Магнетизм / Железный песок" },
     tier: "sorcery",
-    awakening: { en: "Schizophrenia", ru: "Шизофрения" },
-    role: { en: "Iron blades, magnetic push and pull, then black sand in Awakening", ru: "Железные клинки, притяжение и отталкивание; в Пробуждении - чёрный песок" },
+    awakening: { en: "Iron Sand Ascendance", ru: "Восхождение железного песка" },
+    role: { en: "Control metal at range, then overwhelm the field with iron sand", ru: "Дальний контроль металла и наступление железным песком" },
     summary: {
-      en: "Suspend iron blades, then launch them as a volley. The magnetic field can pull objects and enemies toward a point or push them away. At full Awakening, the regular slots are replaced by black-sand attacks and MRI Impale.",
-      ru: "Подвесьте железные клинки, затем выпустите их залпом. Магнитное поле притягивает предметы и врагов к точке либо отталкивает их. При полном Пробуждении обычные слоты заменяются атаками чёрным песком и MRI-пронзанием."
+      en: "Jikai controls both weapons and movement. Build a blade volley in the air, drag enemies and projectiles toward a magnetic point, or blast them away when they get too close. Awakening replaces that measured control with black-sand barrages, beams and MRI Impale.",
+      ru: "Дзикай управляет и оружием, и движением. Собирайте в воздухе залп клинков, тяните врагов и снаряды к магнитной точке или отбрасывайте их при сближении. В Пробуждении размеренный контроль сменяется шквалами чёрного песка, лучами и МРТ-пронзанием."
     },
     abilities: [
-      { slot: "Primary",  name: { en: "Iron Blade Volley", ru: "Залп железных клинков" }, desc: { en: "Hold to suspend a spread of iron blades, release to fire the full volley.", ru: "Удержание подвешивает веер железных клинков, отпускание - полный залп." } },
-      { slot: "Secondary", name: { en: "Magnetic Focus", ru: "Магнитный фокус" }, desc: { en: "Place a magnetic point that drags in enemies, projectiles and combat objects.", ru: "Поставить магнитную точку, втягивающую врагов, снаряды и боевые объекты." } },
-      { slot: "Utility",  name: { en: "Repulsion Ring", ru: "Кольцо отталкивания" }, desc: { en: "Blast everything away from your position - enemies, projectiles and objects.", ru: "Оттолкнуть всё от себя - врагов, снаряды и объекты." } },
-      { slot: "Special",  name: { en: "Iron Sand Mode", ru: "Режим железного песка" }, desc: { en: "G toggles an iron-sand orbit that auto-strikes and softens pressure. At 100%, press V to awaken.", ru: "G включает орбиту железного песка с авто-ударами и смягчением давления. При 100% - V для пробуждения." } },
-      { slot: "Supportive 1", name: { en: "Magnetic Polarity", ru: "Магнитная полярность" }, desc: { en: "Tap to repel, hold to pull; locks the nearest aimed target through blocks up to 128 blocks.", ru: "Нажатие - оттолкнуть, удержание - притянуть; захват ближайшей цели сквозь блоки до 128 блоков." } },
-      { slot: "Supportive 2", name: { en: "Iron Sand Detonation", ru: "Детонация железного песка" }, desc: { en: "Detonate all iron-sand stacks on the aimed target, splashing nearby enemies.", ru: "Детонировать все стаки железного песка на цели, задевая ближних врагов." } }
+      { slot: "Primary",  name: { en: "Iron Blade Volley", ru: "Залп железных клинков" }, desc: { en: "Hold to arrange iron blades in the air, then release the entire spread at once.", ru: "Удержание выстраивает в воздухе веер железных клинков, отпускание выпускает весь залп разом." } },
+      { slot: "Secondary", name: { en: "Magnetic Focus", ru: "Магнитный фокус" }, desc: { en: "Create a magnetic point that draws in enemies, projectiles and anything else it can move.", ru: "Создаёт магнитную точку, которая стягивает врагов, снаряды и другие подвижные объекты." } },
+      { slot: "Utility",  name: { en: "Repulsion Ring", ru: "Кольцо отталкивания" }, desc: { en: "Clear the space around you with a magnetic burst that throws back enemies, projectiles and loose objects.", ru: "Освобождает пространство магнитным взрывом, отбрасывая врагов, снаряды и подвижные объекты." } },
+      { slot: "Special",  name: { en: "Iron Sand Mode", ru: "Режим железного песка" }, desc: { en: "Surround yourself with iron sand that attacks nearby enemies and softens incoming pressure. Once the meter reaches 100%, press V to Awaken.", ru: "Окружает владельца железным песком, который атакует ближайших врагов и ослабляет входящее давление. Когда шкала достигнет 100%, нажмите V для Пробуждения." } },
+      { slot: "Supportive 1", name: { en: "Magnetic Polarity", ru: "Магнитная полярность" }, desc: { en: "Tap to repel the aimed target or hold to pull it toward you. The lock works through blocks at up to 128 blocks.", ru: "Короткое нажатие отталкивает цель в прицеле, удержание притягивает её. Захват работает сквозь блоки на расстоянии до 128 блоков." } },
+      { slot: "Supportive 2", name: { en: "Iron Sand Detonation", ru: "Детонация железного песка" }, desc: { en: "Burst every grain of iron sand built up on the aimed target and catch nearby enemies in the blast.", ru: "Взрывает весь железный песок, накопленный на цели в прицеле, и задевает врагов рядом." } }
     ],
     awakenedAbilities: [
-      { slot: "Primary",  name: { en: "Awakened Iron Sand Barrage", ru: "Пробуждённый залп железного песка" }, desc: { en: "Tap for a fast awakened volley that builds awakening faster and applies black-sand pressure. Hold to charge a steerable Black Sand Beam.", ru: "Нажатие - быстрый пробуждённый залп, ускоряющий пробуждение и давящий чёрным песком. Удержание - управляемый Луч чёрного песка." } },
-      { slot: "Secondary", name: { en: "Air Beam / Sand Cone", ru: "Луч воздуха / Конус песка" }, desc: { en: "Fire a focused magnetic air beam for precise ranged pressure, or unload a broad cone of iron sand that tags multiple targets.", ru: "Сфокусированный магнитный воздушный луч для точного давления или широкий конус железного песка, метящий несколько целей." } },
-      { slot: "Utility",  name: { en: "Spike Repulsion Ring", ru: "Шиповое кольцо отталкивания" }, desc: { en: "The repulsion burst now throws iron-sand spikes outward as a second wave after the push.", ru: "Взрыв отталкивания теперь выбрасывает шипы железного песка второй волной после толчка." } },
-      { slot: "Special",  name: { en: "MRI Impale", ru: "MRI-пронзание" }, desc: { en: "Scan through terrain with MRI sight, then press G again on a target to send the mask and black sand straight through the map for a heavy impale.", ru: "Сканировать сквозь рельеф MRI-зрением, затем снова нажать G на цели, чтобы пробить маской и чёрным песком сквозь карту мощным пронзанием." } },
-      { slot: "Supportive 1", name: { en: "Magnetic Polarity", ru: "Магнитная полярность" }, desc: { en: "Tap to repel, hold to pull; locks the nearest aimed target through blocks up to 128 blocks.", ru: "Нажатие - оттолкнуть, удержание - притянуть; захват ближайшей цели сквозь блоки до 128 блоков." } },
-      { slot: "Supportive 2", name: { en: "Iron Sand Detonation", ru: "Детонация железного песка" }, desc: { en: "Detonate all iron-sand stacks on the aimed target, splashing nearby enemies.", ru: "Детонировать все стаки железного песка на цели, задевая ближних врагов." } }
+      { slot: "Primary",  name: { en: "Awakened Iron Sand Barrage", ru: "Пробуждённый залп железного песка" }, desc: { en: "Tap for a quick black-sand volley, or hold to charge a beam that follows your aim.", ru: "Короткое нажатие выпускает быстрый залп чёрного песка; удержание заряжает луч, следующий за прицелом." } },
+      { slot: "Secondary", name: { en: "Air Beam / Sand Cone", ru: "Воздушный луч / Конус песка" }, desc: { en: "Choose between a focused air beam at long range and a wide cone of iron sand against a group.", ru: "Позволяет выбрать между дальним направленным лучом воздуха и широким конусом железного песка против группы." } },
+      { slot: "Utility",  name: { en: "Spike Repulsion Ring", ru: "Шиповое кольцо отталкивания" }, desc: { en: "After the magnetic push, a second wave scatters iron-sand spikes in every direction.", ru: "Сразу после магнитного толчка вторая волна разбрасывает шипы железного песка во все стороны." } },
+      { slot: "Special",  name: { en: "MRI Impale", ru: "МРТ-пронзание" }, desc: { en: "Scan through terrain with MRI sight, then aim at a found target and press G again to pierce it with the mask and black sand.", ru: "МРТ-зрение находит цели сквозь рельеф. Наведитесь на обнаруженного врага и снова нажмите G, чтобы пронзить его маской и чёрным песком." } },
+      { slot: "Supportive 1", name: { en: "Magnetic Polarity", ru: "Магнитная полярность" }, desc: { en: "Tap to repel the aimed target or hold to pull it toward you, even through blocks at up to 128 blocks.", ru: "Короткое нажатие отталкивает цель, удержание притягивает её даже сквозь блоки на расстоянии до 128 блоков." } },
+      { slot: "Supportive 2", name: { en: "Iron Sand Detonation", ru: "Детонация железного песка" }, desc: { en: "Burst the iron sand accumulated on the aimed target and catch nearby enemies in the blast.", ru: "Взрывает железный песок, накопленный на цели в прицеле, и задевает врагов рядом." } }
     ],
     asset: undefined
   },
 
   {
     id: "demon-bite",
-    name: { en: "Demon Bite", ru: "Укус Демона" },
-    character: { en: "-", ru: "-" },
+    name: { en: "Demon Bite", ru: "Укус демона" },
+    character: { en: "Bingo", ru: "Бинго" },
     element: "creature",
     elementLabel: { en: "Talisman / Charms", ru: "Талисман / Чары" },
     tier: "sorcery",
-    role: { en: "Talisman bites, charm projectiles and summoned flying charms", ru: "Укусы талисманами, чары-снаряды и призываемые летающие чары" },
+    role: { en: "Fight beside autonomous charms and feed the Demon Bite meter", ru: "Бой рядом с автономными чарами и накопление шкалы Укуса демона" },
     summary: {
-      en: "Close-range bites fill the Demon Bite meter. Charged charms provide the ranged attack, while summoned flying charms pursue targets on their own. Destroying one of those summons applies a penalty to the attacker.",
-      ru: "Укусы вблизи заполняют шкалу Укуса Демона. Заряжаемые чары дают дальнюю атаку, а призванные летающие чары сами преследуют цели. Уничтоживший такой призыв получает штраф."
+      en: "Demon Bite mixes direct attacks with disposable helpers. Bites build the meter up close, Charm Shot handles range, and flying charms hunt on their own. Killing those summons is useful, but the attacker pays a growing penalty for doing it repeatedly.",
+      ru: "Укус демона сочетает личные атаки с расходуемыми помощниками. Укусы наполняют шкалу вблизи, Выстрел чарами работает на расстоянии, а летающие чары сами ищут врагов. Призывы можно уничтожить, но за повторные убийства нападающий получает всё более сильный штраф."
     },
     abilities: [
-      { slot: "Primary",  name: { en: "Bite", ru: "Укус" }, desc: { en: "Manifest a talisman jaw at melee range and bite instantly. Fills the Demon Bite Gauge.", ru: "Создать талисманную пасть вблизи и мгновенно укусить. Наполняет шкалу Demon Bite." } },
-      { slot: "Secondary", name: { en: "Charm Shot", ru: "Выстрел чарами" }, desc: { en: "Tap for a small charm projectile; hold to full charge for a large destructive shot.", ru: "Нажатие - малый снаряд-чары; удержание до полного заряда - крупный разрушительный выстрел." } },
-      { slot: "Utility",  name: { en: "Swarm Summon", ru: "Призыв роя" }, desc: { en: "Summon multiple autonomous flying charms that hunt enemies around you.", ru: "Призвать несколько автономных летающих чар, охотящихся на врагов вокруг." } },
-      { slot: "Supportive 1", name: { en: "Charm Summon", ru: "Призыв чары" }, desc: { en: "Summon one autonomous flying charm. Killing charms burdens the killer with stacking penalties.", ru: "Призвать одну летающую чару. Убийство чар накладывает на убийцу растущие штрафы." } }
+      { slot: "Primary",  name: { en: "Bite", ru: "Укус" }, desc: { en: "Snap a talisman jaw shut at close range and add to the Demon Bite meter.", ru: "Мгновенно смыкает рядом пасть из талисмана и пополняет шкалу Укуса демона." } },
+      { slot: "Secondary", name: { en: "Charm Shot", ru: "Выстрел чарами" }, desc: { en: "Tap for a small charm projectile, or finish the charge for a much larger destructive shot.", ru: "Короткое нажатие выпускает небольшой снаряд из чар; полный заряд создаёт гораздо более крупный и разрушительный выстрел." } },
+      { slot: "Utility",  name: { en: "Swarm Summon", ru: "Призыв роя" }, desc: { en: "Release a group of flying charms that choose and chase nearby enemies on their own.", ru: "Выпускает группу летающих чар, которые сами выбирают и преследуют ближайших врагов." } },
+      { slot: "Supportive 1", name: { en: "Charm Summon", ru: "Призыв чар" }, desc: { en: "Call one autonomous flying charm. Whoever destroys it receives a penalty that grows with each repeated kill.", ru: "Призывает одни автономные летающие чары. Уничтоживший их противник получает штраф, который растёт с каждым повторным убийством." } }
     ],
     asset: undefined
   },
 
   {
     id: "smoke-axe",
-    name: { en: "Smoke Axe", ru: "Дымовой Топор" },
-    character: { en: "-", ru: "-" },
+    name: { en: "Smoke Axe", ru: "Дымовой топор" },
+    character: { en: "Fushimi", ru: "Фусими" },
     element: "smoke",
-    elementLabel: { en: "Smoke / Enbu", ru: "Дым / Enbu" },
+    elementLabel: { en: "Smoke / Enbu", ru: "Дым / Энбу" },
     tier: "sorcery",
-    role: { en: "A cutting dash, smoke projectiles and a field that breaks lock-on", ru: "Режущий рывок, дымовые снаряды и поле, сбивающее захват цели" },
+    role: { en: "Cut through targets, hide the approach and break enemy lock-on", ru: "Сквозные разрезы, скрытие подхода и срыв захвата цели" },
     summary: {
-      en: "Enbu moves through the target with a cut. The ranged slots fire smoke crescents, including a charged version. The smoke field interrupts lock-on, and marked enemies can be hit by a delayed crosscut.",
-      ru: "Энбу проходит через цель с разрезом. Дальние слоты выпускают дымовые полумесяцы, включая заряжаемый вариант. Дымовое поле сбивает захват цели, а отмеченного врага можно поразить отложенным крестовым разрезом."
+      en: "Smoke Axe is built around obscuring the approach. Enbu cuts straight through a target, smoke crescents keep pressure on at range, and Smoke Field makes it difficult for enemies to track you. Crosscut punishes a marked target after a short, visible wind-up.",
+      ru: "Дымовой топор скрывает момент сближения. Энбу проходит сквозь цель с разрезом, дымовые полумесяцы поддерживают давление на расстоянии, а Дымовое поле мешает врагам удерживать захват. Крестовый разрез наказывает отмеченную цель после короткого заметного замаха."
     },
     abilities: [
-      { slot: "Primary",  name: { en: "Enbu", ru: "Enbu" }, desc: { en: "Form a horizontal smoke-bolt between your arms, then dash through and cleave along the line.", ru: "Сформировать горизонтальный дымовой болт между рук, рвануть сквозь и рубануть вдоль линии." } },
-      { slot: "Secondary", name: { en: "Crescent / Grand Enbu", ru: "Полумесяц / Grand Enbu" }, desc: { en: "Tap for a fast smoke crescent; full charge releases Grand Enbu with a wider, stronger slash.", ru: "Нажатие - быстрый дымовой полумесяц; полный заряд - Grand Enbu с шире и сильнее разрезом." } },
-      { slot: "Utility",  name: { en: "Smoke Field", ru: "Дымовое поле" }, desc: { en: "Deploy a smoke zone that slows enemies and disrupts their lock-on while inside.", ru: "Развернуть дымовую зону, замедляющую врагов и сбивающую их захват внутри." } },
-      { slot: "Supportive 1", name: { en: "Crosscut", ru: "Крестовой срез" }, desc: { en: "Mark a target, then after a short telegraph perform a passing crosscut through the marked line.", ru: "Пометить цель, затем после короткого замаха пройти крестовым срезом по линии." } }
+      { slot: "Primary",  name: { en: "Enbu", ru: "Энбу" }, desc: { en: "Stretch a bar of smoke between your hands, then follow it through the target with a cleaving dash.", ru: "Растягивает между руками полосу дыма, а затем проходит по ней сквозь цель рубящим рывком." } },
+      { slot: "Secondary", name: { en: "Crescent / Grand Enbu", ru: "Полумесяц / Большой Энбу" }, desc: { en: "Tap for a quick smoke crescent. Complete the charge to turn it into Grand Enbu, a wider and heavier slash.", ru: "Короткое нажатие выпускает быстрый дымовой полумесяц. Полный заряд превращает его в Большой Энбу — более широкий и тяжёлый разрез." } },
+      { slot: "Utility",  name: { en: "Smoke Field", ru: "Дымовое поле" }, desc: { en: "Fill the area with smoke that slows enemies and breaks their lock-on while they remain inside.", ru: "Заполняет область дымом, который замедляет врагов и сбивает их захват цели, пока они остаются внутри." } },
+      { slot: "Supportive 1", name: { en: "Crosscut", ru: "Крестовый разрез" }, desc: { en: "Mark one target, endure the short wind-up, then pass through it with a cross-shaped cut.", ru: "Помечает одну цель и после короткого замаха проходит сквозь неё крестовым разрезом." } }
     ],
     asset: undefined
   },
@@ -564,20 +587,20 @@ export const sorceries: SorceryEntry[] = [
     elementLabel: { en: "Gravity / Directional Force", ru: "Гравитация / Направленная сила" },
     tier: "sorcery",
     awakening: { en: "Island Breaker: Burning Heaven Mass", ru: "Разрушитель острова: Пылающая небесная масса" },
-    role: { en: "Sustained gravity pressure, directional carry and destructive terrain mass", ru: "Непрерывное давление гравитацией, направленный перенос и разрушительная масса ландшафта" },
+    role: { en: "Pin enemies with gravity, carry them through terrain and weaponize the ground", ru: "Прижимание гравитацией, перенос сквозь рельеф и превращение земли в оружие" },
     summary: {
-      en: "Hold a gravity field at the aim point or pressure every enemy around you using two independent stored-duration pools. Rip a unified mass of real terrain free, carry targets through a directional dash, and pin nearby enemies under your weight. At full meter, Burning Heaven Mass forms high overhead and crashes down as a single catastrophic Awakening attack.",
-      ru: "Удерживайте гравитационное поле в точке прицела или давите на всех врагов вокруг, используя два независимых запаса длительности. Вырывайте цельный массив настоящих блоков, протаскивайте цели направленным рывком и прижимайте ближайшего врага собственным весом. При полной шкале Пылающая небесная масса собирается высоко в небе и обрушивается одной катастрофической атакой Пробуждения."
+      en: "Kurotsuchi controls weight on both a small and a massive scale. Hold enemies down with focused or wide pressure, tear a real chunk of terrain free and throw it, or catch targets in a directional dash. At full meter, Burning Heaven Mass turns all of that force into one catastrophic impact.",
+      ru: "Куротсучи управляет весом — от одной цели до огромного участка земли. Прижимайте врагов точечным или широким полем, вырывайте цельный массив настоящих блоков и бросайте его или подхватывайте цели направленным рывком. При полной шкале Пылающая небесная масса собирает всю эту силу в одном катастрофическом ударе."
     },
     abilities: [
-      { slot: "Primary",  name: { en: "Gravity Pressure", ru: "Гравитационное давление" }, desc: { en: "Hold R + LMB to maintain a 4-block pressure field at the aim point. It softly follows targets near the sightline, distorts the whole zone and continuously forces every affected enemy down. Capacity: 60 stored ticks; cost: 5 SE/tick; idle recovery: 1 tick every 2 ticks.", ru: "Удерживайте R + ЛКМ, чтобы поддерживать в точке прицела поле давления радиусом 4 блока. Оно слегка доводится к целям рядом с лучом, искажает всю область и непрерывно давит вниз на каждого попавшего врага. Запас: 60 тиков; расход: 5 SE/тик; восстановление без использования: 1 тик каждые 2 тика." } },
-      { slot: "Secondary", name: { en: "Gravity Terrain Mass", ru: "Гравитационная масса ландшафта" }, desc: { en: "Hold RMB to extract and visibly suspend one server-owned mass of real blocks; the 450 SE cost and cooldown are committed only after extraction succeeds. Aim while holding and release RMB to throw the same preserved block formation. It can breach several obstacles, shedding blocks, velocity and impact strength until its momentum is exhausted.", ru: "Удерживайте ПКМ, чтобы вырвать и видимо подвесить единую серверную массу настоящих блоков; 450 SE и перезарядка фиксируются только после успешного извлечения. Наводитесь во время удержания и отпустите ПКМ, чтобы бросить тот же сохранённый массив блоков. Он может пробить несколько препятствий, постепенно теряя блоки, скорость и силу удара." } },
-      { slot: "Utility",  name: { en: "Directional Gravity Dash", ru: "Направленный гравитационный рывок" }, desc: { en: "WASD chooses the dash direction, Space sends it upward, and an inputless midair use drives downward. Enemies touched by the dash are captured and carried; downward dashes breach surfaces no more than three solid blocks thick.", ru: "WASD задаёт направление рывка, Space направляет его вверх, а применение без направления в воздухе — вниз. Задетый враг захватывается и переносится вместе с игроком; рывок вниз пробивает поверхность толщиной не более трёх сплошных блоков." } },
-      { slot: "Supportive 1", name: { en: "Wide Gravity Pressure", ru: "Широкое гравитационное давление" }, desc: { en: "Hold Z to continuously pressure every enemy within roughly 32 blocks. Capacity: 60 independent stored ticks; cost: 4 SE/tick; idle recovery: 1 tick every 3 ticks. Its distortion covers the field and affected targets.", ru: "Удерживайте Z, чтобы непрерывно давить на всех врагов примерно в 32 блоках. Запас: 60 независимых тиков; расход: 4 SE/тик; восстановление без использования: 1 тик каждые 3 тика. Искажение покрывает поле и затронутые цели." } },
-      { slot: "Supportive 2", name: { en: "Null-Gravity Burst", ru: "Всплеск невесомости" }, desc: { en: "Cancel gravity around yourself and launch nearby enemies helplessly upward.", ru: "Отменить гравитацию вокруг себя и беспомощно подбросить ближайших врагов вверх." } },
-      { slot: "Special",  name: { en: "Kurotsuchi", ru: "Куротсучи" }, desc: { en: "Toggle the black sphere for empowered gravity output and controlled descent while it remains active.", ru: "Включить чёрный шар для усиленного гравитационного выхода и контроля падения, пока он активен." } },
-      { slot: "Passive", name: { en: "Ground Pressure", ru: "Давление весом" }, desc: { en: "Hold ordinary Shift while grounded and within about one block of an enemy to pin it under your weight. Moving away ends the pressure immediately and never drags the target horizontally.", ru: "Удерживайте обычный Shift на земле примерно в одном блоке от врага, чтобы прижать его своим весом. Отход немедленно прекращает давление и никогда не тянет цель горизонтально." } },
-      { slot: "Awakening", name: { en: "Burning Heaven Mass", ru: "Пылающая небесная масса" }, desc: { en: "At a full meter, press V to assemble an enormous burning block mass above the aimed point and drop it at extreme speed. The one-shot impact causes massive damage, a Stability reaction, burning and ultimate-tier terrain destruction.", ru: "При полной шкале нажмите V, чтобы собрать над точкой прицела огромную горящую массу из блоков и резко обрушить её. Разовый удар наносит огромный урон, вызывает мощную Stability-реакцию, поджигает и разрушает ландшафт." } }
+      { slot: "Primary",  name: { en: "Gravity Pressure", ru: "Гравитационное давление" }, desc: { en: "Hold a 4-block pressure field at the point under your crosshair. It tracks nearby targets and keeps forcing them down for up to 60 ticks. The field costs 5 SE per tick and restores 1 tick of reserve every 2 idle ticks.", ru: "Удерживает поле давления радиусом 4 блока в точке под прицелом. Оно следует за ближайшими целями и прижимает их вниз не более 60 тиков. Поле расходует 5 SE в тик и возвращает 1 тик запаса за каждые 2 тика без использования." } },
+      { slot: "Secondary", name: { en: "Gravity Terrain Mass", ru: "Гравитационная масса ландшафта" }, desc: { en: "Hold to tear out and suspend a chunk of real terrain, aim it, then release to throw. The 450 SE cost and cooldown apply only after a successful extraction. Each obstacle strips away some blocks, speed and impact force.", ru: "Удержание вырывает и поднимает цельный участок настоящего рельефа; наведите его и отпустите кнопку для броска. 450 SE и перезарядка списываются только после успешного захвата. Каждое препятствие отнимает часть блоков, скорости и силы удара." } },
+      { slot: "Utility",  name: { en: "Directional Gravity Dash", ru: "Направленный гравитационный рывок" }, desc: { en: "WASD sets the direction, Space sends you up, and using the move in midair without a direction drives you down. Enemies caught on the way are carried with you; a downward dash can punch through three solid blocks.", ru: "WASD задаёт направление, Пробел отправляет вверх, а применение в воздухе без направления — вниз. Задетые враги переносятся вместе с владельцем; рывок вниз способен пробить до трёх сплошных блоков." } },
+      { slot: "Supportive 1", name: { en: "Wide Gravity Pressure", ru: "Широкое гравитационное давление" }, desc: { en: "Hold to weigh down every enemy within roughly 32 blocks. This field has its own 60-tick reserve, costs 4 SE per tick and restores 1 tick after every 3 idle ticks.", ru: "Удержание прижимает всех врагов примерно в 32 блоках. У поля свой запас на 60 тиков, расход 4 SE в тик и восстановление 1 тика запаса за каждые 3 тика без использования." } },
+      { slot: "Supportive 2", name: { en: "Gravity Collapse", ru: "Гравитационный сброс" }, desc: { en: "Crush every nearby enemy downward, dealing damage, staggering them and making it difficult to recover.", ru: "С силой вдавливает всех ближайших врагов вниз, наносит урон, сбивает их и мешает быстро восстановиться." } },
+      { slot: "Special",  name: { en: "Kurotsuchi", ru: "Куротсучи" }, desc: { en: "Call out the black sphere to strengthen the rest of the kit and gain control over your descent.", ru: "Призывает чёрную сферу, которая усиливает остальные приёмы и позволяет управлять падением." } },
+      { slot: "Passive", name: { en: "Ground Pressure", ru: "Давление весом" }, desc: { en: "While grounded, hold ordinary Shift within about one block of an enemy to pin it beneath your weight. Step away and the pressure ends immediately without dragging the target.", ru: "Стоя на земле примерно в одном блоке от врага, удерживайте обычный Shift, чтобы прижать его своим весом. Стоит отойти — давление сразу прекратится, не потащив цель следом." } },
+      { slot: "Awakening", name: { en: "Burning Heaven Mass", ru: "Пылающая небесная масса" }, desc: { en: "At full meter, assemble an enormous burning mass above the point under your crosshair and send it down at extreme speed. The impact devastates health, Stability and terrain, and sets survivors alight.", ru: "При полной шкале собирает над точкой под прицелом огромную горящую массу и с чудовищной скоростью обрушивает её вниз. Удар сокрушает здоровье, стойкость и рельеф, а выживших поджигает." } }
     ],
     asset: undefined
   },
@@ -585,43 +608,44 @@ export const sorceries: SorceryEntry[] = [
   {
     id: "sumika",
     name: { en: "Sumika", ru: "Сумика" },
-    character: { en: "Ariu Mikaboshi", ru: "Ариу Микабоши" },
+    status: { en: "WIP", ru: "В разработке" },
+    character: { en: "Ariu Mikaboshi", ru: "Ариу Микабоси" },
     element: "creature",
     elementLabel: { en: "Living Ink / Anti-Sorcery", ru: "Живая тушь / Анти-колдовство" },
     tier: "sorcery",
-    awakening: { en: "True Realm of Sumika", ru: "Истинное Царство Сумики" },
-    role: { en: "Persistent anti-sorcery space and a one-shot cinematic execution", ru: "Постоянное анти-колдовское пространство и одноразовая кинематографичная казнь" },
+    awakening: { en: "True Realm of Sumika", ru: "Истинная область Сумики" },
+    role: { en: "A defensive anti-sorcery realm with one overwhelming finish", ru: "Защитная область против колдовства и один сокрушительный финал" },
     summary: {
-      en: "Sumika has only G and Awakening. G begins with a short, world-visible eruption of living darkness while an animated white centipede coils around the owner. Both summon visuals fade, leaving a restrained personal aura and the 20-block distortion field. The owner gains slow regeneration, a 50% attack-miss chance and ordinary-sorcery rejection. True Realm locks a 64-block scene and shows three varied spatial punctures through each cinematic target before the synchronized hit.",
-      ru: "У Сумики только G и Пробуждение. G начинается с короткого видимого всем выброса живой тьмы, пока анимированная белая сколопендра обвивает владельца. Оба призывных эффекта исчезают, оставляя сдержанную личную ауру и 20-блочное поле искажения. Владелец получает медленную регенерацию, 50% шанс полного промаха и защиту от обычного колдовства. Истинное Царство блокирует сцену радиусом 64 блока и показывает на каждой кинематографической цели три разных пространственных пробоя перед синхронизированным ударом."
+      en: "Sumika has only two actions, and both reshape the fight. Its living-ink field protects the owner from most foreign sorcery while adding regeneration and a chance to evade attacks. True Realm then freezes every valid target in a huge area and ends the scene with one synchronized hit.",
+      ru: "У Сумики всего два действия, и оба полностью меняют бой. Поле живой туши защищает владельца от большей части чужого колдовства, постепенно лечит и даёт шанс уклониться от атаки. Истинная область останавливает все подходящие цели на огромной территории и завершает сцену одним синхронным ударом."
     },
     abilities: [
-      { slot: "Special", name: { en: "Sumika", ru: "Сумика" }, desc: { en: "Toggle the living ink field with G. Camera motion intensifies distortion for enemies inside; ordinary foreign sorcery cannot directly move, bind, mark, teleport or debuff the owner. Enten, Cloud Gouger, Kumeyuri, Tobimune and Magatsumi remain exempt.", ru: "Включите поле живой туши на G. Движение камеры усиливает искажение для врагов внутри; обычное чужое колдовство не может напрямую двигать, связывать, отмечать, телепортировать или ослаблять владельца. Энтэн, Курэгумо, Кумэюри, Тобимунэ и Магатсуми остаются исключениями." } },
-      { slot: "Awakening", name: { en: "True Realm of Sumika", ru: "Истинное Царство Сумики" }, desc: { en: "A server-owned one-shot scene: lock every entity in 64 blocks, manifest True Realm and frame valid targets from the front with block-safe cameras. Three randomized punctures appear before each delayed hit, then vanish on impact. Damage ignores Stability. Lesser living entities die at the destructive phase; the cinematic target gamerule defaults to 10 close-ups without reducing hits.", ru: "Одноразовая server-owned сцена: блокирует все сущности в 64 блоках, проявляет Истинное Царство и показывает допустимые цели спереди камерой, не входящей в блоки. Перед отложенным ударом появляются три случайно расположенных пробоя и исчезают в момент попадания. Урон игнорирует Stability. Слабые существа погибают в разрушительной фазе; gamerule по умолчанию даёт 10 крупных планов, не уменьшая число ударов." } }
+      { slot: "Special", name: { en: "Sumika", ru: "Сумика" }, desc: { en: "Toggle a 20-block living-ink field. Camera movement deepens the distortion seen by enemies inside, while most foreign sorcery can no longer move, bind, mark, teleport or weaken you. Enchanted Blades are exempt.", ru: "Включает поле живой туши радиусом 20 блоков. Движение камеры усиливает искажение для врагов внутри, а большая часть чужого колдовства больше не может перемещать, связывать, отмечать, телепортировать или ослаблять владельца. Зачарованные клинки — исключение." } },
+      { slot: "Awakening", name: { en: "True Realm of Sumika", ru: "Истинная область Сумики" }, desc: { en: "At full meter, freeze every valid target within 64 blocks. Up to ten receive a close-up by default, but all are struck after three spatial ruptures. The hit bypasses Stability and kills weaker creatures outright.", ru: "При полной шкале останавливает все подходящие цели в радиусе 64 блоков. По умолчанию крупным планом показываются до десяти, но удар получают все — после трёх пространственных разрывов. Атака обходит стойкость и сразу убивает слабых существ." } }
     ],
     asset: undefined
   },
 
   {
     id: "di-algodze",
-    name: { en: "Di Algodze", ru: "Ди Агольце" },
+    name: { en: "Diagoldze", ru: "Диагользе" },
     character: { en: "-", ru: "-" },
     element: "spear",
     elementLabel: { en: "Gold / Transmutation", ru: "Золото / Трансмутация" },
     tier: "sorcery",
     awakening: { en: "Sage of Destruction", ru: "Мудрец разрушения" },
-    role: { en: "Apply Gild, launch golden weapons and turn a target into a statue", ru: "Накопление Позолоты, золотое оружие и превращение цели в статую" },
+    role: { en: "Build Gild with golden weapons, then transmute the target completely", ru: "Накопление Позолоты золотым оружием и полная трансмутация цели" },
     summary: {
-      en: "Attacks apply Gild and create golden swords or a trident. With enough setup, one ability turns the target into a living golden statue. The Awakening, Sage of Destruction, replaces the regular attacks with stronger gold constructs.",
-      ru: "Атаки накладывают Позолоту и создают золотые мечи или трезубец. После подготовки одну цель можно превратить в живую золотую статую. Пробуждение Мудрец разрушения заменяет обычные атаки усиленными золотыми конструкциями."
+      en: "Diagoldze is a bonus crossover sorcery built around Gild. Close strikes, golden weapons and area transmutation add it to the target; once enough has accumulated, Living Statue makes the change permanent. Sage of Destruction upgrades the regular constructs into a far more destructive set.",
+      ru: "Диагользе — бонусное кроссоверное колдовство, построенное вокруг Позолоты. Ближние удары, золотое оружие и трансмутация области накапливают её на цели; когда Позолоты достаточно, Живая статуя делает превращение постоянным. Мудрец разрушения заменяет обычные конструкции гораздо более разрушительным набором."
     },
     abilities: [
-      { slot: "Primary",  name: { en: "Golden Bite", ru: "Золотой укус" }, desc: { en: "A close transmutation strike that applies gild stacks and feeds your Di Algodze progress.", ru: "Ближний удар-трансмутация: накладывает стаки позолоты и копит прогресс Di Algodze." } },
-      { slot: "Secondary", name: { en: "Golden Sword Volley", ru: "Залп золотых мечей" }, desc: { en: "Tap launches a flying golden sword; hold for a wider volley - charge raises count and area.", ru: "Нажатие - летящий золотой меч; удержание - шире залп; заряд повышает число и площадь." } },
-      { slot: "Utility",  name: { en: "Golden Domain Burst", ru: "Взрыв золотого домена" }, desc: { en: "Charge and release to transmute the area around you to gold and briefly stun nearby targets.", ru: "Зарядить и выпустить: превратить область вокруг в золото и кратко оглушить ближних." } },
-      { slot: "Special",  name: { en: "Living Statue", ru: "Живая статуя" }, desc: { en: "Spend your gild stacks on a target in sight to permanently transmute it into a living golden statue.", ru: "Потратить стаки позолоты на цель в прицеле, навсегда обратив её в живую золотую статую." } },
-      { slot: "Supportive 1", name: { en: "Point Transmutation", ru: "Точечная трансмутация" }, desc: { en: "Charge and release on blocks to gild an area; on an entity it applies gild stacks.", ru: "Зарядить и выпустить по блокам для позолоты области; по сущности - стаки позолоты." } },
-      { slot: "Supportive 2", name: { en: "Golden Sword", ru: "Золотой меч" }, desc: { en: "Toggle a custom golden sword (8 attack damage) into your main hand.", ru: "Переключить золотой меч (8 урона) в основную руку." } }
+      { slot: "Primary",  name: { en: "Golden Bite", ru: "Золотой укус" }, desc: { en: "A close transmutation strike that adds Gild to the target and fills the Diagoldze meter.", ru: "Ближний трансмутирующий удар добавляет цели Позолоту и заполняет шкалу Диагользе." } },
+      { slot: "Secondary", name: { en: "Golden Sword Volley", ru: "Залп золотых мечей" }, desc: { en: "Tap to throw one golden sword. Keep charging to widen the volley and add more blades.", ru: "Короткое нажатие бросает один золотой меч. Дальнейшая зарядка расширяет залп и добавляет клинки." } },
+      { slot: "Utility",  name: { en: "Golden Domain Burst", ru: "Взрыв золотого домена" }, desc: { en: "Finish the charge to turn the space around you to gold and briefly stun everyone nearby.", ru: "Полный заряд превращает пространство вокруг в золото и ненадолго оглушает всех поблизости." } },
+      { slot: "Special",  name: { en: "Living Statue", ru: "Живая статуя" }, desc: { en: "Spend all Gild stored on a visible target and permanently turn it into a living golden statue.", ru: "Расходует всю Позолоту на видимой цели и навсегда превращает её в живую золотую статую." } },
+      { slot: "Supportive 1", name: { en: "Point Transmutation", ru: "Точечная трансмутация" }, desc: { en: "Charge while aiming at terrain to gild an area, or aim at a living target to apply Gild directly.", ru: "Зарядите приём, наведясь на рельеф, чтобы позолотить область, или на живую цель, чтобы сразу наложить Позолоту." } },
+      { slot: "Supportive 2", name: { en: "Golden Sword", ru: "Золотой меч" }, desc: { en: "Call an 8-damage golden sword into your main hand, or use the slot again to dismiss it.", ru: "Призывает в основную руку золотой меч с 8 единицами урона. Повторное применение убирает его." } }
     ],
     asset: assets.diAlgodze
   },
@@ -633,17 +657,17 @@ export const sorceries: SorceryEntry[] = [
     element: "adapt",
     elementLabel: { en: "Adaptation / Wheel", ru: "Адаптация / Колесо" },
     tier: "sorcery",
-    role: { en: "Record the last hostile sorcery and build resistance to it", ru: "Запоминание последнего вражеского колдовства и накопление сопротивления" },
+    role: { en: "Study one hostile technique until it stops being a threat", ru: "Изучение одной вражеской техники до полной устойчивости к ней" },
     summary: {
-      en: "After a hostile sorcery hits you, lock that effect as the current phenomenon. Surviving further hits and negative effects turns the wheel and raises resistance to the locked sorcery. Adaptation resets on death unless the server changes that rule.",
-      ru: "После попадания вражеского колдовства зафиксируйте его как текущее явление. Последующие попадания и пережитые негативные эффекты поворачивают колесо и повышают сопротивление выбранному колдовству. По умолчанию Адаптация сбрасывается после смерти."
+      en: "Adaptation is a bonus crossover kit that studies one threat at a time. Lock the last hostile technique that truly affected you, then turn the wheel through repeated exposure and negative effects until resistance builds. Death clears that progress unless the server rule says otherwise.",
+      ru: "Адаптация — бонусный кроссоверный набор, который изучает по одной угрозе за раз. Зафиксируйте последнюю враждебную технику, действительно подействовавшую на владельца, а затем поворачивайте колесо повторными попаданиями и вредными эффектами, пока не вырастет сопротивление. По умолчанию смерть сбрасывает прогресс."
     },
     abilities: [
-      { slot: "Primary",  name: { en: "Lock Phenomenon", ru: "Зафиксировать явление" }, desc: { en: "Lock the last hostile sorcery phenomenon that actually affected you as the adaptation target.", ru: "Зафиксировать последнее враждебное колдовство, реально подействовавшее на вас, как цель адаптации." } },
-      { slot: "Secondary", name: { en: "Wheel Turn", ru: "Поворот колеса" }, desc: { en: "Rotate the wheel one step for the locked phenomenon (5s cooldown).", ru: "Повернуть колесо на шаг для зафиксированного явления (кд 5с)." } },
-      { slot: "Utility",  name: { en: "Sword Manifest", ru: "Призыв меча" }, desc: { en: "Draw or sheath the Sword of Extermination. Adapted techniques are disabled on a sword hit.", ru: "Достать или убрать Sword of Extermination. Адаптированные техники отключаются при ударе мечом." } },
-      { slot: "Supportive 1", name: { en: "Taunt / Status Turn", ru: "Провокация / Оборот статуса" }, desc: { en: "Taunt briefly; gain +1 turn per active negative status, plus +1 from the first hostile technique during the stance.", ru: "Краткая провокация; +1 оборот за каждый активный негативный статус и +1 от первой враждебной техники в стойке." } },
-      { slot: "Supportive 2", name: { en: "Reset Adaptation", ru: "Сброс адаптации" }, desc: { en: "Clear the current target and wheel progress so you can pivot to a different technique.", ru: "Сбросить текущую цель и прогресс колеса, чтобы перейти на другую технику." } }
+      { slot: "Primary",  name: { en: "Lock Phenomenon", ru: "Зафиксировать явление" }, desc: { en: "Choose the last hostile sorcery that genuinely affected you as the wheel's current target.", ru: "Выбирает последнюю враждебную технику, действительно подействовавшую на владельца, как текущую цель колеса." } },
+      { slot: "Secondary", name: { en: "Wheel Turn", ru: "Поворот колеса" }, desc: { en: "Advance the wheel one step against the recorded technique. Each manual turn has a 5-second cooldown.", ru: "Продвигает колесо на один шаг против записанной техники. Ручной поворот восстанавливается 5 секунд." } },
+      { slot: "Utility",  name: { en: "Sword Manifest", ru: "Призыв меча" }, desc: { en: "Draw or sheath the Sword of Extermination. Its hits disable techniques you have already adapted to.", ru: "Достаёт или убирает Меч истребления. Его удары отключают техники, к которым владелец уже приспособился." } },
+      { slot: "Supportive 1", name: { en: "Taunt / Status Turn", ru: "Провокация / Оборот статуса" }, desc: { en: "Enter a brief taunt stance. Gain one wheel turn for each active negative effect, plus one for the first hostile technique that hits during the stance.", ru: "Входит в короткую провоцирующую стойку. Даёт по одному обороту за каждый активный вредный эффект и ещё один — за первую враждебную технику, попавшую во время стойки." } },
+      { slot: "Supportive 2", name: { en: "Reset Adaptation", ru: "Сброс адаптации" }, desc: { en: "Abandon the current target and all wheel progress so you can begin adapting to something else.", ru: "Отказывается от текущей цели и всего прогресса колеса, чтобы начать адаптацию к другой технике." } }
     ],
     asset: undefined
   }

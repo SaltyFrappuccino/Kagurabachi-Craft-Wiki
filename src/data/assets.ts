@@ -5,11 +5,9 @@ import flameBoneArt from "../assets/FlameBone.png";
 import diAlgodzeArt from "../assets/golden_trident.png";
 import kumeyuriArt from "../assets/kumeyuri_unsheathed.png";
 import magatsumiArt from "../assets/magatsumi_dragonfly_sheathed.png";
-import logoArt from "../assets/renders/kagurabachicraftlogo.png";
 import tobimuneArt from "../assets/tobimune_unsheathed.png";
 
 export const assets = {
-  logo: logoArt,
   enten: entenArt,
   cloudGouger: cloudGougerArt,
   flameBone: flameBoneArt,
@@ -23,17 +21,17 @@ export const assets = {
 export const assetPlaceholders = [
   {
     id: "screenshots",
-    title: { en: "Gameplay screenshots", ru: "Скриншоты геймплея" },
+    title: { en: "Gameplay screenshots", ru: "Скриншоты из игры" },
     path: "docs/src/assets/screenshots/"
   },
   {
     id: "icons",
-    title: { en: "Ability and HUD icons", ru: "Иконки способностей и HUD" },
+    title: { en: "Ability and HUD icons", ru: "Иконки способностей и интерфейса" },
     path: "docs/src/assets/icons/"
   },
   {
     id: "renders",
-    title: { en: "Blade and NPC renders", ru: "Рендеры клинков и NPC" },
+    title: { en: "Blade and NPC renders", ru: "Рендеры клинков и персонажей" },
     path: "docs/src/assets/renders/"
   },
   {
