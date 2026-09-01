@@ -16,8 +16,8 @@ export const wikiArticles: WikiArticle[] = [
         ru: "Kagurabachi Craft меняет боевую систему Minecraft. Мод добавляет боевой режим, оружейные и рукопашные стили, фирменные приёмы, парирование, столкновения атак, стойкость, выносливость и разрушение блоков."
       },
       {
-        en: "The mod also includes Enchanted Blades from the manga and many standalone sorceries built around teleportation, illusions, chains, fire, lightning and summons. A survival mode is in development.",
-        ru: "В моде также есть зачарованные клинки из манги и множество отдельных колдовств: телепортация, иллюзии, цепи, огонь, молния и призывы. Режим выживания находится в разработке."
+        en: "The mod also includes Enchanted Blades from the manga and many standalone sorceries built around teleportation, illusions, chains, fire, lightning and summons. The survival mode is WIP.",
+        ru: "В моде также есть зачарованные клинки из манги и множество отдельных колдовств: телепортация, иллюзии, цепи, огонь, молния и призывы. Режим выживания имеет статус WIP."
       },
       {
         en: "Major combat NPCs react to distance, threats, position, defence and cooldowns. Cascade and Quasar provide their visual effects, while Veil adds distortion and post-processing.",
@@ -221,8 +221,8 @@ export const wikiArticles: WikiArticle[] = [
     },
     body: [
       {
-      en: "When the meter reaches 100%, press V. Tobimune, Jikai and Diagoldze enter empowered modes, while Sumika's True Realm and Kurotsuchi's Burning Heaven Mass are single finishing attacks.",
-      ru: "Когда шкала заполнится до 100%, нажмите V. Тобимунэ, Дзикай и Диагользе входят в усиленные режимы, а Истинная область Сумики и Пылающая небесная масса Куротсучи срабатывают как одиночные завершающие атаки."
+      en: "When the meter reaches 100%, press V. Tobimune, Jikai and Diagoldze enter empowered modes, while Sumika at full power and Kurotsuchi's Burning Heaven Mass are single finishing attacks.",
+      ru: "Когда шкала заполнится до 100%, нажмите V. Тобимунэ, Дзикай и Диагользе входят в усиленные режимы, а Сумика на полной силе и Пылающая небесная масса Куротсучи срабатывают как одиночные завершающие атаки."
       },
       {
         en: "Server rules control Awakenings: kbcAwakeningsEnabled enables the mechanic, kbcAwakeningDurationTicks sets its duration, and kbcInfiniteAwakenings removes the timer.",

@@ -22,7 +22,7 @@ const paths: Array<{
   {
     section: "sorcery", index: "03",
     title: { en: "Sorcery index", ru: "Указатель колдовств" },
-    text: { en: "Browse abilities, slots, awakenings and development status.", ru: "Способности, слоты, пробуждения и статус разработки." },
+    text: { en: "Browse abilities, slots, awakenings and WIP status.", ru: "Способности, слоты, пробуждения и метки WIP." },
     scope: { en: "29 ability kits", ru: "29 наборов" }
   },
   {

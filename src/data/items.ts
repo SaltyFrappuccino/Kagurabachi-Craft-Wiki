@@ -61,13 +61,13 @@ export const items: ItemEntry[] = [
   {
     id: "magatsumi-blade",
     name: { en: "Magatsumi", ru: "Магацуми" },
-    status: { en: "WIP", ru: "В разработке" },
+    status: { en: "WIP", ru: "WIP" },
     type: { en: "Enchanted Blade", ru: "Зачарованный клинок" },
     element: "wither",
     elementLabel: { en: "Curse / Creatures", ru: "Проклятие / Существа" },
     summary: {
-      en: "The current build implements five insect manifestations shown in the manga: Spider, Dragonfly, Centipede, Butterfly and Bee. While unsheathed, the blade also applies a Curse around its wielder. The kit is still in development, so some mechanics and visuals may change.",
-      ru: "В текущей версии реализованы пять показанных в манге образов-насекомых: Паук, Стрекоза, Сороконожка, Бабочка и Пчела. Пока клинок обнажён, он также накладывает проклятие на ближайшие цели. Набор ещё в разработке, поэтому часть механик и визуальных эффектов может измениться."
+      en: "The current build implements five insect manifestations shown in the manga: Spider, Dragonfly, Centipede, Butterfly and Bee. While unsheathed, the blade also applies a Curse around its wielder. The kit remains WIP, so some mechanics and visuals may change.",
+      ru: "В текущей версии реализованы пять показанных в манге образов-насекомых: Паук, Стрекоза, Сороконожка, Бабочка и Пчела. Пока клинок обнажён, он также накладывает проклятие на ближайшие цели. Набор остаётся WIP, поэтому часть механик и визуальных эффектов может измениться."
     },
     details: [
       { en: "Spider controls movement; Dragonfly handles repositioning; the remaining insects provide direct attacks.", ru: "Паук ограничивает движение, Стрекоза отвечает за перемещение, остальные насекомые дают прямые атаки." },

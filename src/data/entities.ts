@@ -94,7 +94,7 @@ export const entityEntries: EntityEntry[] = [
     sorcery: { en: "Sumika", ru: "Сумика" },
     recommendedLevel: 19,
     health: 140,
-    tags: ["ariu", "mikaboshi", "ариу", "микабоси", "sumika", "сумика", "true realm", "centipede", "shokoku"],
+    tags: ["ariu", "mikaboshi", "ариу", "микабоси", "sumika", "сумика", "full power", "centipede", "shokoku", "crown prince", "guardian"],
     asset: ariuMikaboshiArt
   }
 ];

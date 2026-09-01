@@ -1,6 +1,6 @@
 import type { ProgressionEntry } from "../types";
 
-const wip = { en: "WIP", ru: "В разработке" } as const;
+const wip = { en: "WIP", ru: "WIP" } as const;
 
 export const progressionSystems: ProgressionEntry[] = [
   {
@@ -273,8 +273,8 @@ export const clans: ProgressionEntry[] = [
   {
     id: "sazanami",
     title: { en: "Sazanami", ru: "Садзанами" },
-    summary: { en: "The most common clan lineage, tied to Isou and the Storehouse (WIP).", ru: "Самая распространённая клановая линия, связанная с Исоу и Хранилищем (в разработке)." },
-    details: [{ en: "15% birth chance · initial sorcery: Isou 75%, another random sorcery 20%, Storehouse (WIP) 5%.", ru: "Шанс рождения 15% · начальное колдовство: Исоу 75%, другое случайное колдовство 20%, Хранилище (в разработке) 5%." }]
+    summary: { en: "The most common clan lineage, tied to Isou and the Storehouse (WIP).", ru: "Самая распространённая клановая линия, связанная с Исоу и Хранилищем (WIP)." },
+    details: [{ en: "15% birth chance · initial sorcery: Isou 75%, another random sorcery 20%, Storehouse (WIP) 5%.", ru: "Шанс рождения 15% · начальное колдовство: Исоу 75%, другое случайное колдовство 20%, Хранилище (WIP) 5%." }]
   },
   {
     id: "kyonagi",

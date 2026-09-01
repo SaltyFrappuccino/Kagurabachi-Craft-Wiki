@@ -79,7 +79,7 @@ export const sorceries: SorceryEntry[] = [
   {
     id: "magatsumi",
     name: { en: "Magatsumi", ru: "Магацуми" },
-    status: { en: "WIP", ru: "В разработке" },
+    status: { en: "WIP", ru: "WIP" },
     character: { en: "Akemura Soga", ru: "Акэмура Сога" },
     element: "wither",
     elementLabel: { en: "Insects / Curse", ru: "Насекомые / Проклятие" },
@@ -264,7 +264,7 @@ export const sorceries: SorceryEntry[] = [
   {
     id: "gansui",
     name: { en: "Gansui", ru: "Гансуй" },
-    status: { en: "WIP", ru: "В разработке" },
+    status: { en: "WIP", ru: "WIP" },
     character: { en: "Shiyumi Harima", ru: "Сиюми Харима" },
     element: "spike",
     elementLabel: { en: "Earth / Rock", ru: "Земля / Камень" },
@@ -372,7 +372,7 @@ export const sorceries: SorceryEntry[] = [
   {
     id: "storehouse",
     name: { en: "Storehouse", ru: "Хранилище" },
-    status: { en: "WIP", ru: "В разработке" },
+    status: { en: "WIP", ru: "WIP" },
     character: { en: "Sazanami Clan", ru: "клан Садзанами" },
     element: "storage",
     elementLabel: { en: "Territory / Storehouse", ru: "Территория / Хранилище" },
@@ -462,6 +462,7 @@ export const sorceries: SorceryEntry[] = [
   {
     id: "armored-doll",
     name: { en: "Armored Doll Creation", ru: "Создание бронированной куклы" },
+    status: { en: "WIP", ru: "WIP" },
     character: { en: "Mod-original sorcery", ru: "Оригинальное колдовство мода" },
     element: "doll",
     elementLabel: { en: "Doll / Armor Plates", ru: "Кукла / Бронепластины" },
@@ -608,20 +609,20 @@ export const sorceries: SorceryEntry[] = [
   {
     id: "sumika",
     name: { en: "Sumika", ru: "Сумика" },
-    status: { en: "WIP", ru: "В разработке" },
+    status: { en: "WIP", ru: "WIP" },
     character: { en: "Ariu Mikaboshi", ru: "Ариу Микабоси" },
     element: "creature",
-    elementLabel: { en: "Living Ink / Anti-Sorcery", ru: "Живая тушь / Анти-колдовство" },
+    elementLabel: { en: "Space", ru: "Пространство" },
     tier: "sorcery",
-    awakening: { en: "True Realm of Sumika", ru: "Истинная область Сумики" },
-    role: { en: "A defensive anti-sorcery realm with one overwhelming finish", ru: "Защитная область против колдовства и один сокрушительный финал" },
+    awakening: { en: "Sumika", ru: "Сумика" },
+    role: { en: "Spatial control, regeneration and one overwhelming full activation", ru: "Контроль пространства, восстановление и одна сокрушительная полная активация" },
     summary: {
-      en: "Sumika has only two actions, and both reshape the fight. Its living-ink field protects the owner from most foreign sorcery while adding regeneration and a chance to evade attacks. True Realm then freezes every valid target in a huge area and ends the scene with one synchronized hit.",
-      ru: "У Сумики всего два действия, и оба полностью меняют бой. Поле живой туши защищает владельца от большей части чужого колдовства, постепенно лечит и даёт шанс уклониться от атаки. Истинная область останавливает все подходящие цели на огромной территории и завершает сцену одним синхронным ударом."
+      en: "Sumika is the kit's only named ability. Its partial manifestation alters the space around the owner, obscures their movement, regenerates them and prevents certain foreign sorcery from affecting them. At full power, the same ability stops every valid target in a huge area and pierces each one three times.",
+      ru: "Сумика — единственная именованная способность этого набора. Её частичное проявление изменяет пространство вокруг владельца, мешает противникам воспринимать его движения, восстанавливает здоровье и не даёт части чужого колдовства воздействовать на него. На полной силе та же способность останавливает все подходящие цели на огромной территории и трижды пронзает каждую."
     },
     abilities: [
-      { slot: "Special", name: { en: "Sumika", ru: "Сумика" }, desc: { en: "Toggle a 20-block living-ink field. Camera movement deepens the distortion seen by enemies inside, while most foreign sorcery can no longer move, bind, mark, teleport or weaken you. Enchanted Blades are exempt.", ru: "Включает поле живой туши радиусом 20 блоков. Движение камеры усиливает искажение для врагов внутри, а большая часть чужого колдовства больше не может перемещать, связывать, отмечать, телепортировать или ослаблять владельца. Зачарованные клинки — исключение." } },
-      { slot: "Awakening", name: { en: "True Realm of Sumika", ru: "Истинная область Сумики" }, desc: { en: "At full meter, freeze every valid target within 64 blocks. Up to ten receive a close-up by default, but all are struck after three spatial ruptures. The hit bypasses Stability and kills weaker creatures outright.", ru: "При полной шкале останавливает все подходящие цели в радиусе 64 блоков. По умолчанию крупным планом показываются до десяти, но удар получают все — после трёх пространственных разрывов. Атака обходит стойкость и сразу убивает слабых существ." } }
+      { slot: "Special", name: { en: "Sumika", ru: "Сумика" }, desc: { en: "Partially manifest Sumika within 20 blocks. Nearby enemies struggle to read your movement, you regenerate, and certain foreign sorcery cannot affect you. Enchanted Blades are exempt.", ru: "Частично проявляет Сумику в радиусе 20 блоков. Противникам сложнее воспринимать движения владельца, он восстанавливает здоровье, а часть чужого колдовства не может на него воздействовать. Зачарованные клинки — исключение." } },
+      { slot: "Awakening", name: { en: "Sumika", ru: "Сумика" }, desc: { en: "Fully activate Sumika at a full meter. Every valid target within 64 blocks is stopped and pierced three times. The attack ignores Stability and instantly kills weaker creatures.", ru: "При полной шкале полностью активирует Сумику. Все подходящие цели в радиусе 64 блоков останавливаются и получают три пробивающих отверстия. Атака обходит стойкость и сразу убивает слабых существ." } }
     ],
     asset: undefined
   },
