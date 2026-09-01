@@ -24,13 +24,13 @@ export const items: ItemEntry[] = [
 
   {
     id: "cloud-gouger-blade",
-    name: { en: "Cloud Gouger", ru: "Рассекающий облака" },
+    name: { en: "Cloud Gouger", ru: "Пронзающее Облако" },
     type: { en: "Enchanted Blade", ru: "Зачарованный клинок" },
     element: "ice",
     elementLabel: { en: "Weather", ru: "Погода" },
     summary: {
       en: "Cloud Gouger spends Thunder charges on lightning, ice and water techniques. It works at several ranges and shapes the battlefield with weather effects, but has no dedicated guard or counter ability.",
-      ru: "Рассекающий облака расходует заряды грома на техники молнии, льда и воды. Клинок работает на разных дистанциях и меняет поле боя погодными эффектами, но не даёт отдельной защитной способности или контратаки."
+      ru: "«Пронзающее Облако» расходует заряды грома на техники молнии, льда и воды. Клинок работает на разных дистанциях и меняет поле боя погодными эффектами, но не даёт отдельной защитной способности или контратаки."
     },
     details: [
       { en: "Thunder charges accumulate during combat and appear on the blade's HUD.", ru: "Заряды грома накапливаются в бою и отображаются на интерфейсе клинка." },

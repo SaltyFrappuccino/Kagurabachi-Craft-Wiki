@@ -44,7 +44,7 @@ export function HeroPanel({ locale, onSelect }: { locale: Locale; onSelect: (sec
         <div className="hero-blades">
         {[
           { src: assets.enten, name: { en: "Enten", ru: "Энтен" } },
-          { src: assets.cloudGouger, name: { en: "Cloud Gouger", ru: "Рассекающий облака" } },
+          { src: assets.cloudGouger, name: { en: "Cloud Gouger", ru: "Пронзающее Облако" } },
           { src: assets.tobimune, name: { en: "Tobimune", ru: "Тобимунэ" } },
         ].map((b) => (
           <div className="hero-blade-card" key={b.name.en} title={b.name[locale]}>

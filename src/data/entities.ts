@@ -14,10 +14,10 @@ export const entityEntries: EntityEntry[] = [
     title: { en: "Genichi Sojo", ru: "Гэнъити Содзё" },
     relation: { en: "Boss · Hishaku affiliate", ru: "Босс · союзник Хисяку" },
     faction: { en: "Hishaku", ru: "Хисяку" },
-    sorcery: { en: "Cloud Gouger", ru: "Рассекающий облака" },
+    sorcery: { en: "Cloud Gouger", ru: "Пронзающее Облако" },
     recommendedLevel: 12,
     health: 75,
-    tags: ["sojo", "hishaku", "hishaku affiliate", "cloud gouger", "kuregumo", "рассекающий облака", "курэгумо", "weather"],
+    tags: ["sojo", "hishaku", "hishaku affiliate", "cloud gouger", "kuregumo", "пронзающее облако", "курэгумо", "weather"],
     asset: sojoArt
   },
   {

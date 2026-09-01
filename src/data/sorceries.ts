@@ -32,7 +32,7 @@ export const sorceries: SorceryEntry[] = [
 
   {
     id: "cloud-gouger",
-    name: { en: "Cloud Gouger", ru: "Рассекающий облака" },
+    name: { en: "Cloud Gouger", ru: "Пронзающее Облако" },
     character: { en: "Genichi Sojo", ru: "Гэнъити Содзё" },
     element: "ice",
     elementLabel: { en: "Weather / Thunder", ru: "Погода / Гром" },
@@ -40,7 +40,7 @@ export const sorceries: SorceryEntry[] = [
     role: { en: "Weather control that rewards careful use of Thunder charges", ru: "Управление погодой с расчётливым расходом зарядов грома" },
     summary: {
       en: "Cloud Gouger turns Mei, Yui and Kou into a broad weather-control kit. Thunder charges can be spent on a precise strike, chain lightning or a full storm, while fog, rain and ice make it easier to control the fight. Wet enemies take extra damage from Mei.",
-      ru: "Рассекающий облака превращает Мэй, Юи и Ко в полноценный набор для управления погодой. Заряды грома можно потратить на точный удар, цепную молнию или целую грозу, а туман, дождь и лёд помогают держать поле боя под контролем. Мэй наносит больше урона мокрым целям."
+      ru: "«Пронзающее Облако» превращает Мэй, Юи и Ко в полноценный набор для управления погодой. Заряды грома можно потратить на точный удар, цепную молнию или целую грозу, а туман, дождь и лёд помогают держать поле боя под контролем. Мэй наносит больше урона мокрым целям."
     },
     abilities: [
       { slot: "Primary",  name: { en: "Mei: Thunder Strike", ru: "Мэй: Удар грома" }, desc: { en: "A near-instant lightning strike for 1 Thunder charge and 300 SE. It deals 50% more Stability damage, and wet targets take 50% more damage.", ru: "Почти мгновенный удар молнии за 1 заряд грома и 300 SE. Он наносит на 50% больше урона по стойкости, а мокрые цели получают на 50% больше обычного урона." } },
