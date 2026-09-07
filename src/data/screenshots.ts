@@ -88,7 +88,7 @@ export const screenshots: ScreenshotEntry[] = [
     src: tobimuneBlackFlamesAirborne,
     section: "movement",
     title: { en: "Air combat", ru: "Бой в воздухе" },
-    caption: { en: "Movement abilities keep combat active above the city.", ru: "Способности перемещения продолжают бой над городом." },
+    caption: { en: "Movement abilities let you keep fighting above the city.", ru: "Способности перемещения позволяют продолжать бой в воздухе над городом." },
     shape: "wide"
   },
   {

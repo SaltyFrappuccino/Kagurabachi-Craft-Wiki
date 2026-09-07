@@ -124,9 +124,6 @@ function SorceryCard({ sorcery, locale, expanded, onToggle }: {
                   : (locale === "ru" ? "Колдовство" : "Sorcery")
                 }
               </span>
-              <span className="sc2-element" style={{ color }}>
-                {sorcery.elementLabel[locale]}
-              </span>
               {sorcery.awakening && (
                 <span className="sc2-awakening" title={locale === "ru" ? "Пробуждение" : "Awakening"}>
                   ✦ {sorcery.awakening[locale]}
@@ -145,6 +142,7 @@ function SorceryCard({ sorcery, locale, expanded, onToggle }: {
 
       {expanded && (
         <div className="sc2-abilities" id={`sorcery-details-${sorcery.id}`}>
+          <p className="sc2-summary">{sorcery.summary[locale]}</p>
           <div className="sc2-abilities-head">
             <h4 className="sc2-abilities-title">
               {locale === "ru" ? "Способности" : "Abilities"}
@@ -186,8 +184,8 @@ function SorceryCard({ sorcery, locale, expanded, onToggle }: {
           {sorcery.awakening && (
             <p className="sc2-awakening-note">
               {locale === "ru"
-                ? <>Пробуждение <strong>{sorcery.awakening.ru}</strong>: накопите шкалу до 100% и нажмите <kbd>V</kbd>, чтобы активировать его особый эффект.{hasAwakenedSet ? " Переключатель выше показывает изменённые приёмы." : ""}</>
-                : <>Awakening <strong>{sorcery.awakening.en}</strong>: charge the meter to 100% and press <kbd>V</kbd> to activate its special effect.{hasAwakenedSet ? " Use the switch above to compare the changed abilities." : ""}</>
+                ? <>Для Пробуждения <strong>{sorcery.awakening.ru}</strong> заполните шкалу и нажмите <kbd>V</kbd>.{hasAwakenedSet ? " Изменения приёмов показаны на вкладке Пробуждения." : ""}</>
+                : <>Fill the meter and press <kbd>V</kbd> to activate <strong>{sorcery.awakening.en}</strong>.{hasAwakenedSet ? " See the Awakening tab for the changed moves." : ""}</>
               }
             </p>
           )}
@@ -203,7 +201,7 @@ export function SorceryGrid({ locale, query = "" }: { locale: Locale; query?: st
 
   const q = query.toLowerCase();
   const filtered = sorceries.filter((s) => {
-    const haystack = `${s.name.en} ${s.name.ru} ${s.character[locale]} ${s.elementLabel[locale]} ${s.abilities.map((a) => `${a.name[locale]} ${a.desc[locale]}`).join(" ")}`.toLowerCase();
+    const haystack = `${s.name.en} ${s.name.ru} ${s.character[locale]} ${s.elementLabel[locale]} ${s.summary[locale]} ${s.abilities.map((a) => `${a.name[locale]} ${a.desc[locale]}`).join(" ")}`.toLowerCase();
     const matchesQuery = !q || haystack.includes(q);
     const matchesTier = tierFilter === "all" || s.tier === tierFilter;
     return matchesQuery && matchesTier;

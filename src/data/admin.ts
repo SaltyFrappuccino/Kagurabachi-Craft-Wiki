@@ -53,7 +53,7 @@ export const commands: CommandEntry[] = [
   { command: "/kbc debug storedHeat <value> [targets]", access: admin, description: { en: "Sets Stored Heat for Twilight Wave tests.", ru: "Устанавливает запас жара для тестирования Сумеречной волны." } },
   { command: "/kbc debug kumeyuriIllusion <type> [duration]", access: admin, description: { en: "Applies a Kumeyuri illusion test.", ru: "Применяет тестовую иллюзию Кумэюри." } },
   { command: "/kbc debug kumeyuriStack <set|add|clear|profile|pulse> ...", access: admin, description: { en: "Controls Kumeyuri Intoxication levels, profiles and test pulses.", ru: "Управляет уровнями опьянения Кумэюри, профилями и тестовыми импульсами." } },
-  { command: "/kbc debug magatsumiWither <set|add|clear> ...", access: admin, description: { en: "Controls Magatsumi's in-development wither effect.", ru: "Управляет тестовым эффектом иссушения Магацуми." } }
+  { command: "/kbc debug magatsumiWither <set|add|clear> ...", access: admin, description: { en: "Controls Magatsumi's WIP wither effect.", ru: "Управляет WIP-эффектом иссушения Магацуми." } }
 ];
 
 export const gamerules: RuleEntry[] = [

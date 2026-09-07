@@ -42,7 +42,7 @@ export function createSearchIndex(locale: Locale): SearchEntry[] {
 
   return [
     ...wikiArticles.map((item) => entry(item.id, item.section, kinds.article, item.title[locale], item.summary[locale], `${item.body.map((paragraph) => paragraph[locale]).join(" ")} ${item.tags.join(" ")}`)),
-    ...sorceries.map((item) => entry(`sorcery-${item.id}`, "sorcery", kinds.sorcery, item.name[locale], `${item.character[locale]} · ${item.elementLabel[locale]}`, item.abilities.map((ability) => `${ability.name[locale]} ${ability.desc[locale]}`).join(" "))),
+    ...sorceries.map((item) => entry(`sorcery-${item.id}`, "sorcery", kinds.sorcery, item.name[locale], `${item.character[locale]} · ${item.elementLabel[locale]}`, `${item.summary[locale]} ${item.abilities.map((ability) => `${ability.name[locale]} ${ability.desc[locale]}`).join(" ")}`)),
     ...items.map((item) => entry(`item-${item.id}`, "items", kinds.item, item.name[locale], item.summary[locale], item.details.map((detail) => detail[locale]).join(" "))),
     ...styleEntries.map((item) => entry(`style-${item.id}`, "styles", kinds.style, item.title[locale], item.role[locale], `${item.activation[locale]} ${item.actions.map((action) => action[locale]).join(" ")}`)),
     ...signatureEntries.map((item) => entry(`signature-${item.id}`, "signatures", kinds.signature, item.title[locale], item.summary[locale], `${item.requirement[locale]} ${item.details.map((detail) => detail[locale]).join(" ")}`)),

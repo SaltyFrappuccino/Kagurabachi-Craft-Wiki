@@ -7,21 +7,21 @@ export const wikiArticles: WikiArticle[] = [
     section: "overview",
     title: { en: "What is Kagurabachi Craft?", ru: "Что такое Kagurabachi Craft?" },
     summary: {
-      en: "A NeoForge 1.21.1 combat mod inspired by Kagurabachi, with weapon styles, hand-to-hand combat, signature techniques and sorcery.",
-      ru: "Боевой мод по манге Кагурабати для NeoForge 1.21.1. В моде есть оружейные стили, рукопашный бой, фирменные приёмы и колдовство."
+      en: "A NeoForge 1.21.1 combat mod based on Kagurabachi, with weapon styles, sorcery, signature techniques, and hand-to-hand combat.",
+      ru: "Боевой мод по манге «Кагурабати» для NeoForge 1.21.1: оружейные стили, колдовство, фирменные приёмы и рукопашный бой."
     },
     body: [
       {
-        en: "Kagurabachi Craft changes Minecraft combat. It adds combat mode, weapon and hand-to-hand styles, signature techniques, parries, clashes, Stability, stamina and block destruction.",
-        ru: "Kagurabachi Craft меняет боевую систему Minecraft. Мод добавляет боевой режим, оружейные и рукопашные стили, фирменные приёмы, парирование, столкновения атак, стойкость, выносливость и разрушение блоков."
+        en: "Kagurabachi Craft replaces ordinary Minecraft exchanges with its own combat mode: authored weapon styles, parries, clashes, Stability, stamina, signature techniques, and controlled block destruction.",
+        ru: "Kagurabachi Craft заменяет обычные схватки Minecraft собственным боевым режимом: оружейными стилями, парированием, столкновениями атак, стойкостью, выносливостью, фирменными приёмами и управляемым разрушением блоков."
       },
       {
-        en: "The mod also includes Enchanted Blades from the manga and many standalone sorceries built around teleportation, illusions, chains, fire, lightning and summons. The survival mode is WIP.",
-        ru: "В моде также есть зачарованные клинки из манги и множество отдельных колдовств: телепортация, иллюзии, цепи, огонь, молния и призывы. Режим выживания имеет статус WIP."
+        en: "Five Enchanted Blades from the manga are playable alongside standalone sorceries. Some kits extend abilities that the manga has only shown briefly; mod-original and crossover content is identified in its own entry. Survival progression remains WIP.",
+        ru: "В моде доступны пять зачарованных клинков из манги и отдельные колдовства. Некоторые наборы развивают способности, которые в манге показаны лишь мельком; авторский и кроссоверный контент отмечен в соответствующих статьях. Развитие в выживании пока имеет статус WIP."
       },
       {
-        en: "Major combat NPCs react to distance, threats, position, defence and cooldowns. Cascade and Quasar provide their visual effects, while Veil adds distortion and post-processing.",
-        ru: "Основные боевые NPC учитывают дистанцию, угрозы, положение, защиту и перезарядки. Cascade и Quasar отвечают за визуальные эффекты, а Veil — за искажения и постобработку."
+        en: "Combat NPCs use the same melee, Stability, reaction, and sorcery systems as players. Their decisions account for distance, incoming threats, positioning, allies, defensive state, and cooldowns.",
+        ru: "Боевые NPC используют те же системы ближнего боя, стойкости, реакций и колдовства, что и игроки. При выборе действий они учитывают дистанцию, входящие угрозы, позицию, союзников, состояние защиты и перезарядки."
       }
     ],
     tags: ["overview", "combat", "sorcery"]
@@ -50,8 +50,8 @@ export const wikiArticles: WikiArticle[] = [
     section: "quickstart",
     title: { en: "First five minutes", ru: "Первые пять минут" },
     summary: {
-      en: "Enter combat mode, learn spacing and styles, then layer sorcery on top.",
-      ru: "Включите боевой режим, освойте дистанцию и выбранный стиль, а затем подключайте колдовство."
+      en: "Learn one fighting style first, then add sorcery to the same rhythm.",
+      ru: "Сначала освойте один боевой стиль, а затем вплетайте колдовство в тот же ритм."
     },
     body: [
       {
@@ -59,8 +59,8 @@ export const wikiArticles: WikiArticle[] = [
       ru: "Выберите происхождение и нажмите Y, чтобы войти в боевой режим. ЛКМ отвечает за атаки, Shift — за блок и парирование, Ctrl — за уклонение. R включает управление колдовством, а Tab применяет фирменные приёмы."
       },
       {
-        en: "Learn one style and its rhythm before piling on sorcery - combat fundamentals carry every fight.",
-      ru: "Сначала разберитесь с атаками, блоком и уклонением выбранного стиля. После этого подключайте колдовство."
+        en: "Spend the first few fights learning one style's reach, block, dodge, and attack timing. Sorcery works best between those actions, not in place of them.",
+        ru: "В первых боях разберитесь с дальностью, блоком, уклонением и ритмом атак одного стиля. Колдовство лучше вплетается между этими действиями, а не заменяет их."
       }
     ],
     tags: ["quickstart", "tutorial", "beginner"]
@@ -115,8 +115,8 @@ export const wikiArticles: WikiArticle[] = [
     },
     body: [
       {
-        en: "Press Y to enable combat controls and the HUD. Tap LMB for a light attack or hold it for 5 ticks to use your style's heavy attack. An input just before the cooldown ends may be queued. Pressing Shift attempts one parry, then continues as a block while held.",
-        ru: "Нажмите Y, чтобы включить боевое управление и интерфейс. Коротко нажмите ЛКМ для лёгкой атаки или удерживайте её 5 тиков для тяжёлой атаки текущего стиля. Нажатие перед концом перезарядки может встать в очередь. Shift сначала выполняет одну попытку парирования, а затем работает как блок, пока клавиша удерживается."
+        en: "Press Y to enable combat controls and the HUD. Release LMB before 5 ticks for a light attack; hold for at least 5 ticks and release for your style's heavy attack. Inputs made shortly before a cooldown ends may be queued. Pressing Shift opens one parry window, then becomes a block while held.",
+        ru: "Нажмите Y, чтобы включить боевое управление и интерфейс. Отпустите ЛКМ раньше 5 тиков для лёгкой атаки; удерживайте не меньше 5 тиков и отпустите для тяжёлой атаки текущего стиля. Нажатие незадолго до конца перезарядки может встать в очередь. Shift открывает одно окно парирования, а затем работает как блок, пока клавиша удерживается."
       }
     ],
     tags: ["combat", "attack", "basics"]
@@ -161,13 +161,13 @@ export const wikiArticles: WikiArticle[] = [
     section: "combat",
     title: { en: "Light-to-heavy input", ru: "Переход от лёгкой к тяжёлой атаке" },
     summary: {
-      en: "Release LMB early for a light attack; keep holding for a heavy attack.",
-      ru: "Быстро отпустите ЛКМ для лёгкой атаки или продолжайте удерживать её для тяжёлой."
+      en: "The length of the LMB hold decides which attack is released.",
+      ru: "Тип атаки определяется тем, как долго вы удерживали ЛКМ перед отпусканием."
     },
     body: [
       {
-        en: "Release LMB before 5 ticks for a light attack. Hold it for 5 ticks to use the heavy attack of your current style; releasing afterward does not trigger a second move. Sword, Hand, Dual Katana, Sheathed Katana and Trident each have different heavy and dash attacks.",
-        ru: "Отпустите ЛКМ раньше 5 тиков для лёгкой атаки. Удерживайте её 5 тиков для тяжёлой атаки текущего стиля; последующее отпускание не запустит второй приём. У стилей одного меча, рукопашного боя, двух катан, катаны в ножнах и трезубца разные тяжёлые атаки и атаки в рывке."
+        en: "Release LMB before 5 ticks for a light attack. After holding for at least 5 ticks, the heavy attack is ready but does not fire until you release LMB. Sword, Hand, Dual Katana, Sheathed Katana, and Trident each perform it differently.",
+        ru: "Отпустите ЛКМ раньше 5 тиков для лёгкой атаки. После удержания не меньше 5 тиков тяжёлая атака готова, но срабатывает только при отпускании ЛКМ. Стили одного меча, рукопашного боя, двух катан, катаны в ножнах и трезубца выполняют её по-разному."
       }
     ],
     tags: ["heavy", "combat", "input", "style"]
@@ -195,8 +195,8 @@ export const wikiArticles: WikiArticle[] = [
     section: "combat",
     title: { en: "Backstab bonus", ru: "Бонус за удар в спину" },
     summary: {
-      en: "A global positional rule: player-attributed damage is increased when the target is facing away.",
-      ru: "Глобальное позиционное правило: урон игрока повышается, когда цель отворачивается от атакующего."
+      en: "When the server rule is enabled, attacks from behind deal extra damage.",
+      ru: "Если правило сервера включено, атаки со спины наносят дополнительный урон."
     },
     body: [
       {
@@ -216,8 +216,8 @@ export const wikiArticles: WikiArticle[] = [
     section: "combat",
     title: { en: "Awakenings", ru: "Пробуждения" },
     summary: {
-      en: "In the mod, some sorceries fill an Awakening meter and unlock a stronger mode or a single finishing attack at 100%.",
-      ru: "В моде некоторые колдовства заполняют шкалу пробуждения и при 100% открывают усиленный режим или один завершающий приём."
+      en: "Some sorceries fill a meter that releases an empowered mode or a single finishing attack at 100%.",
+      ru: "Некоторые колдовства заполняют шкалу, которая при 100% открывает усиленный режим или одиночный завершающий приём."
     },
     body: [
       {

@@ -18,8 +18,8 @@ export function StyleGuide({ locale, query }: { locale: Locale; query: string })
       <section className="system-callout">
         <strong>{locale === "ru" ? "Стиль выбирается экипировкой" : "Equipment selects your style"}</strong>
         <p>{locale === "ru"
-          ? "Это не косметика: стиль меняет урон по здоровью и стойкости, давление на блок, дальность, ширину атаки, число целей и силу защиты. Отпустите ЛКМ раньше 5 тиков для лёгкой атаки или удерживайте её не менее 5 тиков для тяжёлой."
-          : "This is not cosmetic: style changes health and Stability damage, guard pressure, reach, attack width, target count and defence. Release LMB before 5 ticks for a light attack, or hold it for at least 5 ticks for a heavy attack."}</p>
+          ? "Стиль меняет урон по здоровью и стойкости, давление на блок, дальность, ширину атаки, число целей и силу защиты. Отпустите ЛКМ раньше 5 тиков для лёгкой атаки; удерживайте не меньше 5 тиков и отпустите для тяжёлой."
+          : "Your style changes health and Stability damage, guard pressure, reach, attack width, target count, and defence. Release LMB before 5 ticks for a light attack; hold for at least 5 ticks and release for a heavy attack."}</p>
       </section>
 
       <div className="style-grid">

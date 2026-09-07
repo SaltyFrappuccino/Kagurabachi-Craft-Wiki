@@ -11,8 +11,8 @@ export const controls = [
     action: { en: "Light / Heavy attack", ru: "Лёгкая / тяжёлая атака" },
     key: "Tap / hold LMB",
     description: {
-      en: "Tap for a light attack. Hold for at least 5 ticks to use the heavy attack of your current style. An input just before the cooldown ends may be queued.",
-      ru: "Короткое нажатие выполняет лёгкую атаку. Удерживайте кнопку не менее 5 тиков для тяжёлой атаки текущего стиля. Нажатие перед концом перезарядки может встать в очередь."
+      en: "Release before the 5-tick threshold for a light attack. Hold for at least 5 ticks, then release for the heavy attack of your current style. An input made shortly before a cooldown ends may be queued.",
+      ru: "Отпустите кнопку до порога в 5 тиков для лёгкой атаки. Удерживайте не меньше 5 тиков и отпустите для тяжёлой атаки текущего стиля. Нажатие незадолго до конца перезарядки может встать в очередь."
     }
   },
   {

@@ -12,7 +12,7 @@ export const entityEntries: EntityEntry[] = [
   {
     id: "sojo",
     title: { en: "Genichi Sojo", ru: "Гэнъити Содзё" },
-    relation: { en: "Boss · Hishaku affiliate", ru: "Босс · союзник Хисяку" },
+    relation: { en: "Boss · assigned to Hishaku in the mod", ru: "Босс · в моде относится к Хисяку" },
     faction: { en: "Hishaku", ru: "Хисяку" },
     sorcery: { en: "Cloud Gouger", ru: "Пронзающее Облако" },
     recommendedLevel: 12,
@@ -23,7 +23,7 @@ export const entityEntries: EntityEntry[] = [
   {
     id: "hiruhiko_kumeyuri",
     title: { en: "Hiruhiko — Kumeyuri", ru: "Хирухико — Кумэюри" },
-    relation: { en: "Boss · Hishaku combatant", ru: "Босс · боец Хисяку" },
+    relation: { en: "Boss · Hishaku member", ru: "Босс · член Хисяку" },
     faction: { en: "Hishaku", ru: "Хисяку" },
     sorcery: { en: "Kumeyuri", ru: "Кумэюри" },
     recommendedLevel: 13,
@@ -45,7 +45,7 @@ export const entityEntries: EntityEntry[] = [
   {
     id: "samura_imposter",
     title: { en: "Samura Traitor", ru: "Предатель Самура" },
-    relation: { en: "Boss · Hishaku affiliate", ru: "Босс · союзник Хисяку" },
+    relation: { en: "Boss · alternate mod encounter", ru: "Босс · альтернативная встреча мода" },
     faction: { en: "Hishaku", ru: "Хисяку" },
     sorcery: { en: "Tobimune", ru: "Тобимунэ" },
     recommendedLevel: 18,
@@ -69,7 +69,7 @@ export const entityEntries: EntityEntry[] = [
     title: { en: "Togo Shiba", ru: "Того Сиба" },
     relation: { en: "Boss · Team Chihiro", ru: "Босс · Команда Тихиро" },
     faction: { en: "Team Chihiro", ru: "Команда Тихиро" },
-    sorcery: { en: "Teleportation", ru: "Телепортация" },
+    sorcery: { en: "Itazura", ru: "Итадзура" },
     recommendedLevel: 16,
     health: 125,
     tags: ["shiba", "boss", "босс", "team chihiro", "teleportation", "hand"],
@@ -78,7 +78,7 @@ export const entityEntries: EntityEntry[] = [
   {
     id: "hiroto_soga",
     title: { en: "Hiroto Soga", ru: "Хирото Сога" },
-    relation: { en: "Boss · Kamunabi combatant", ru: "Босс · боец Камунаби" },
+    relation: { en: "Soga clan head · assigned to Kamunabi in the mod", ru: "Глава клана Сога · в моде отнесён к Камунаби" },
     faction: { en: "Kamunabi", ru: "Камунаби" },
     sorcery: { en: "Kurotsuchi", ru: "Куротсучи" },
     recommendedLevel: 18,
@@ -89,7 +89,7 @@ export const entityEntries: EntityEntry[] = [
   {
     id: "ariu_mikaboshi",
     title: { en: "Ariu Mikaboshi", ru: "Ариу Микабоси" },
-    relation: { en: "Boss · hostile to every faction", ru: "Босс · враг всех фракций" },
+    relation: { en: "Boss · hostile to every mod faction", ru: "Босс · враг всех игровых фракций" },
     faction: { en: "Mikaboshi", ru: "Микабоси" },
     sorcery: { en: "Sumika", ru: "Сумика" },
     recommendedLevel: 19,

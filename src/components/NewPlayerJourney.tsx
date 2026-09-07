@@ -4,7 +4,7 @@ const steps = [
   {
     number: "01",
     title: { en: "Choose an origin", ru: "Выберите происхождение" },
-    text: { en: "This picks your starting faction and reputation. You can still use any combat style or sorcery you obtain.", ru: "Происхождение задаёт стартовую фракцию и репутацию. Боевой стиль и доступное колдовство оно не ограничивает." },
+    text: { en: "Your origin sets the starting faction and reputation, but does not lock you out of any fighting style or sorcery.", ru: "Происхождение задаёт стартовую фракцию и репутацию, но не закрывает доступ к боевым стилям или колдовству." },
     link: "#progression"
   },
   {
@@ -16,7 +16,7 @@ const steps = [
   {
     number: "03",
     title: { en: "Add sorcery and signature techniques", ru: "Освойте колдовство и фирменные приёмы" },
-    text: { en: "Sorcery uses Spirit Energy. Signature techniques use Style Points and are selected or activated with Tab.", ru: "Колдовство расходует духовную энергию. Для фирменных приёмов нужны очки стиля; выбирать и применять их можно через Tab." },
+    text: { en: "Sorcery spends Spirit Energy. Signature techniques draw from Style Points and are selected or activated with Tab.", ru: "Колдовство расходует духовную энергию. Фирменные приёмы тратят очки стиля; их выбирают и применяют клавишей Tab." },
     link: "#signatures"
   },
   {
@@ -34,8 +34,8 @@ export function NewPlayerJourney({ locale }: { locale: Locale }) {
         <span>{locale === "ru" ? "С чего начать" : "Start here"}</span>
         <h2>{locale === "ru" ? "Путь нового персонажа" : "Your first character path"}</h2>
         <p>{locale === "ru"
-        ? "Если вы запускаете мод впервые, проходите эти разделы по порядку."
-          : "If this is your first time with the mod, read these sections in order."}</p>
+          ? "Если вы запускаете мод впервые, откройте эти разделы по порядку."
+          : "New to the mod? Read these sections in order."}</p>
       </div>
       <div className="journey-steps">
         {steps.map((step) => (

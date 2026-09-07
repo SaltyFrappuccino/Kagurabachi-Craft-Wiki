@@ -40,7 +40,7 @@ export const faq: FaqEntry[] = [
   {
     question: { en: "Why can't I use my sorcery abilities?", ru: "Почему не работают мои способности колдовства?" },
     answer: {
-      en: "Check: (1) Are you in combat mode? Press Y to enable. (2) Is R held or toggled to sorcery mode? (3) Do you have enough SE? (4) Are you in a cooldown period? Check the HUD for resource and cooldown indicators.",
+      en: "Check that combat mode is enabled with Y, sorcery mode is active on R, you have enough SE, and the ability is off cooldown. The combat HUD shows your resources and cooldowns.",
       ru: "Проверьте четыре вещи: включён ли боевой режим клавишей Y; активен ли режим колдовства на R; хватает ли духовной энергии; закончилась ли перезарядка. Текущее состояние видно в боевом интерфейсе."
     }
   },
@@ -61,15 +61,15 @@ export const faq: FaqEntry[] = [
   {
     question: { en: "How does Enten's Aka ability work?", ru: "Как работает Ака у Энтена?" },
     answer: {
-      en: "Enten's Aka goldfish absorbs an attack the blade comes into contact with and stores it. You can then release that stored attack back at the enemy via the secondary slot (R + RMB). Only one attack is held at a time.",
-      ru: "Золотая рыбка Ака у Энтена поглощает атаку, которой коснулся клинок, и сохраняет её. Затем сохранённую атаку можно вернуть врагу через дополнительный слот (R + ПКМ). Одновременно хранится только одна атака."
+      en: "Aka absorbs an attack through blade contact. In the mod, use Utility (R + Shift) to enter the absorption stance. If you catch a supported technique, the same slot lets you release the stored attack. Only one attack is held at a time.",
+      ru: "Ака поглощает атаку при контакте с клинком. В моде нажмите Utility (R + Shift), чтобы принять стойку поглощения. Если поймать поддерживаемую технику, тот же слот позволит выпустить сохранённую атаку. Одновременно хранится только одна атака."
     }
   },
   {
-    question: { en: "What does Tobimune's Suzaku awakening do?", ru: "Что делает пробуждение Судзаку у Тобимунэ?" },
+    question: { en: "How do Tobimune's Black Flames work?", ru: "Как работает Чёрное пламя Тобимунэ?" },
     answer: {
-      en: "Suzaku Awakening changes feather abilities into black flame versions. Fired feathers become charges that detonate on contact. A charged mass detonation triggers every active charge.",
-      ru: "Пробуждение Судзаку превращает способности перьев в варианты чёрного пламени. Выпущенные перья становятся огненными зарядами: они взрываются при контакте или все сразу после полной зарядки массовой детонации."
+      en: "At a full meter, press V to activate Black Flames for 60 seconds. While Suzaku is active, Black Flames strengthens its damage, healing and restoration, and removes its SE drain. The flame burst and cross slash are already available with ordinary Suzaku. Unless infinite awakenings are enabled, running out of time or cancelling with V kills the wielder, even with a Totem of Undying.",
+      ru: "При полной шкале нажмите V, чтобы включить Чёрное пламя на 60 секунд. При активном Судзаку оно усиливает урон, лечение и восстановление, а также убирает расход SE на Судзаку. Огненная вспышка и крестовый разрез доступны уже с обычным Судзаку. Если бесконечные пробуждения выключены, конец таймера или отмена клавишей V убивает владельца — даже с тотемом бессмертия."
     }
   },
   {

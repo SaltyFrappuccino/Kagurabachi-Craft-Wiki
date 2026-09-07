@@ -1096,7 +1096,6 @@ code {
 }
 
 .sc2-tier,
-.sc2-element,
 .sc2-awakening,
 .item-type-badge,
 .item-element-badge,
@@ -1144,6 +1143,13 @@ code {
   padding: 16px;
   border-top: 1px solid var(--line);
   background: var(--surface-raised);
+}
+
+.sc2-summary {
+  margin-bottom: 16px;
+  color: var(--ink-muted);
+  font-size: 13px;
+  line-height: 1.6;
 }
 
 .sc2-abilities-head {
